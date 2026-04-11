@@ -16,7 +16,7 @@
 | Mirohl              | Mirohl                  | Warrior | Tank               | ?                | Officer, MT              |
 | Jar                 | Jar, Jardepli           | Druid   | Healer (Resto)     | DPS (Balance)    | Officer, 2 specs. Go-to Boomkin |
 | Glaivemaster Baebay | BaeBay                  | Rogue   | DPS (Combat)       | —                | Officer                  |
-| Kres/Dissi          | Kresniik, Dissi         | Priest  | DPS (Shadow)       | ?                | Officer, multiple chars  |
+| Kres/Dissi          | Kresniik, Dissi         | Priest  | DPS (Shadow)       | Healer (Holy)    | Officer, multiple chars  |
 | Greg                | Ucannotpass             | Mage    | DPS                | —                | Officer                  |
 
 ### Regular players
@@ -28,7 +28,7 @@
 | Gigakox            | Gigakox                  | Warrior | Tank (OT)           | ?                |                                |
 | Verysadge          | Verysadge                | Warrior | DPS                 | ?                |                                |
 | Dankyn             | Dankyn                   | Warrior | DPS                 | —                |                                |
-| Gresac             | Gresac                   | Druid   | Healer (Resto)      | —                | Strong preference for Resto    |
+| Gresac             | Gresac                   | Druid   | Healer (Resto)      | DPS (Balance)    | Extremely reluctant Balance. Strong Resto preference |
 | Roossy/Keatala     | Roossy, Keatala          | Druid   | Healer (Resto)      | —                | Same person, 2 chars. Only plays Resto |
 | Eselman            | Eselman                  | Druid   | Tank (OT, Kara)     | DPS (Feral, 25-man) | Feral druid, flexes between tank and DPS |
 | Yxanb              | Yxanb                    | Druid   | DPS (Feral, melee)  | —                | Pretty much always Feral       |
@@ -51,7 +51,7 @@
 | Ebonybolt          | Ebonybolt                | Shaman  | DPS (Enhancement, melee) | ?           | Usually Enhancement            |
 | Pergatori          | Pergatori                | Shaman  | DPS (Elemental, ranged)  | ?           | Usually Elemental              |
 | CodeHunt/Rainbound | CodeHunt, Rainbound      | Shaman  | Healer (Resto)           | —           | Only healer shaman. Was hunter (CodeHunt), now healer shaman (Rainbound). Sometimes still signs up under "CodeHunt" even when playing Rainbound |
-| Heligeman/Fuglema  | Heligeman, Fuglema       | Paladin | Healer              | ?                | Same person, 2 chars. Seen in 05.04 Gruul+Mag |
+| Heligeman/Fugleman  | Heligeman, Fugleman      | Paladin | Healer              | ?                | Same person, 2 chars. Seen in 05.04 Gruul+Mag |
 | Doughball          | Doughball                | Warrior | Tank (Kara)         | DPS (25-man)     | Switches role by raid format |
 | Sjwammie           | Sjwammie                 | Paladin | Healer              | ?                |                                |
 | Lightstarr         | Lightstarr               | Paladin | DPS (Ret)           | Tank             |                                |

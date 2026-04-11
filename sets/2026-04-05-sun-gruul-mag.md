@@ -5,7 +5,7 @@
 **Tanks (3):** Mirohl, Ostbirger, Marino-Varthier
 **Warrior (1):** Dankyn
 **Druids (4):** Yxanb, Gresac, Roossy/Keatala, Beaverfist
-**Paladins (2):** Heligeman/Fuglema, Thordrel
+**Paladins (2):** Heligeman/Fugleman, Thordrel
 **Rogue (1):** GlaivemasterBaeba
 **Hunters (3):** Vaelruna, Tonsen, Dwarfytron
 **Priests (2):** Ejlis, Bombzor
@@ -42,7 +42,7 @@ Raid ran with 24 instead of 25 because Jar couldn't make it.
 | 18 | Gresac              | Healer | Druid   |
 | 19 | Roossy/Keatala      | Healer | Druid   |
 | 20 | Beaverfist          | Healer | Druid   |
-| 21 | Heligeman/Fuglema   | Healer | Paladin |
+| 21 | Heligeman/Fugleman   | Healer | Paladin |
 | 22 | Thordrel            | Healer | Paladin |
 | 23 | Ejlis               | Healer | Priest  |
 | 24 | Bombzor             | Healer | Priest  |
@@ -61,4 +61,4 @@ McJudgin, Drillbabe, Rhoator, CodeHunt/Rainbound, Gigakox
 
 - Ran with 3 tanks instead of the usual 2 (all 3 tank mains signed up).
 - 7 healers instead of 6, 14 DPS instead of 17 — adjusted for being short one player.
-- Heligeman/Fuglema is a new player — Paladin healer.
+- Heligeman/Fugleman is a new player — Paladin healer.

@@ -21,7 +21,7 @@ All other non-officer players: 0 times benched from Karazhan.
 |-------------------|---------------|---------------|
 | Keatala           | 2             | 25.03, 12.04  |
 | Gresac            | 1             | 25.03         |
-| Heligeman/Fuglema | 1             | 12.04         |
+| Heligeman/Fugleman | 1             | 12.04         |
 | OomToDoom         | 1             | 12.04         |
 
 All other non-officer players: 0 times benched from Gruul+Mag.

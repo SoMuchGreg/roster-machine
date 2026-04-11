@@ -49,15 +49,13 @@ The user will provide Discord signup screenshots. From those, raid groups must b
 |----------------------|---------------------------|-----------------------------------------------|
 | Domain               | WoW TBC 20th Anniversary  | Raid composition planning                     |
 | Rule strictness      | Absolute                  | Every rule must be respected, no exceptions   |
-| Set ordering         | Sequential                | Sets are numbered and chained                 |
+| Set ordering         | Sequential                | Sets are date-named and chained chronologically |
 | Research allowed     | Yes                       | Online research for TBC class/raid knowledge  |
 | Output format        | Markdown/Text             | All deliverables as .md or .txt files         |
 | Input method         | Discord screenshots       | User provides signup screenshots              |
 
 ## What's next
 
-Awaiting:
-
-1. **First signup screenshot** — Discord signup for a raid night
-2. **Player-specific constraints** — Who must/must not be together
-3. **Player roster details** — Classes, specs, and roles as they come up
+- Continue generating weekly raid rosters from Discord signup screenshots
+- Refine rules as new edge cases emerge
+- Add 5-man group composition rules (upcoming)

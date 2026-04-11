@@ -22,15 +22,18 @@ Step-by-step guide for when to read and update each file, organized by trigger e
 
 ### Step 2 — Parse the screenshot
 
-1. Identify all signups by name, cross-referencing `04-player-specs.md` for class.
-2. **Check the spec icon for every player** — it shows their spec for THIS raid and overrides any previously recorded spec/role.
-3. For unknown players: use icon/color to determine class+spec. If unsure, ask the user.
-4. Note absent players and late signups.
+1. **Read the signup count header.** The format is `X (+Y)` where **X** = players who want to raid, **Y** = players marked as bench or tentative. Total signups = X + Y. There may also be an Absence section for players confirmed not coming.
+2. **Compare X against the raid cap** (25 for Gruul+Mag, 30 for Karazhan). If X exceeds the cap, additional players beyond Y must also be benched to bring the roster down to the cap.
+3. **Screenshots are point-in-time snapshots.** People can sign up, withdraw, change status, or be benched at any time before the raid. A screenshot received today may differ from one received tomorrow. Always treat the latest screenshot as the current state.
+4. Identify all signups by name, cross-referencing `04-player-specs.md` for class.
+5. **Check the spec icon for every player** — it shows their spec for THIS raid and overrides any previously recorded spec/role.
+6. For unknown players: use icon/color to determine class+spec. If unsure, ask the user.
+7. Note absent players and late signups.
 
 ### Step 3 — Build the roster (if asked to)
 
 1. Apply all rules from `rules/`.
-2. Determine bench based on `reference/bench-history.md` (bench those with fewest benches, never officers).
+2. Determine bench based on `reference/bench-history.md` (bench those with fewest benches **for the specific raid location being planned**, never officers).
 3. Respect player constraints from `rules/03-player-constraints.md`.
 4. Respect "last resort" and "low priority" flags from `rules/04-player-specs.md`.
 5. Present roster to user for approval.

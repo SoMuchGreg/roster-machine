@@ -13,7 +13,7 @@
 **Warlocks (2):** Jabbadhutt, BestPractice
 **Shamans (4):** Pergatori, Lynelen, Ebonybolt, Tymoti
 
-**Bench (3):** Roossy/Keatala, Heligeman/Fuglema, OomToDoom
+**Bench (3):** Roossy/Keatala, Heligeman/Fugleman, OomToDoom
 **Absent (2):** Kres/Dissi, Bombzor
 
 **Header stats:** Melee 9, Ranged 8, Healers 6
@@ -23,12 +23,12 @@
 | Player            | Bench count (cumulative) |
 |-------------------|--------------------------|
 | Keatala           | 2 (also 25.03)           |
-| Heligeman/Fuglema | 1                        |
+| Heligeman/Fugleman | 1                        |
 | OomToDoom         | 1                        |
 
-## Actual Roster (26-man)
+## Actual Roster (25-man)
 
-Ran with 26 instead of 25.
+Ran with 25 as expected.
 
 ### Tanks (3)
 

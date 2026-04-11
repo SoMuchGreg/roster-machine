@@ -41,7 +41,7 @@ See `reference/file-operations-manual.md` for the complete guide on which files 
 ```
 config/          → Raid schedule, officers, project settings
 rules/           → Composition rules, bench rules, player constraints, spec info
-sets/            → Generated raid rosters (numbered/ordered)
+sets/            → Generated raid rosters (date-named, chronologically ordered)
 reference/       → TBC class/raid research material
 changelog/       → Record of rule and roster changes over time
 ```
