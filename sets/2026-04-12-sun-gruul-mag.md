@@ -1,0 +1,82 @@
+# Gruul's Lair + Magtheridon — Sunday 12.04.2026
+
+## Signups (from Discord) — 26 (+3 bench)
+
+**Tanks (3):** Mirohl, Ostbirger, Marino-Varthier
+**Warriors (3):** Gigakox, Verysadge, Dankyn
+**Druids (3):** Gresac, Beaverfist, Jar
+**Paladins (3):** McJudgin, Thordrel, Leontes
+**Rogue (1):** GlaivemasterBaeba
+**Hunters (3):** Tonsen, Vaelruna, Dwarfytron
+**Priests (2):** Ejlis, Lightweit
+**Mage (1):** Greg/Ucannotpass
+**Warlocks (2):** Jabbadhutt, BestPractice
+**Shamans (4):** Pergatori, Lynelen, Ebonybolt, Tymoti
+
+**Bench (3):** Roossy/Keatala, Heligeman/Fuglema, OomToDoom
+**Absent (2):** Kres/Dissi, Bombzor
+
+**Header stats:** Melee 9, Ranged 8, Healers 6
+
+## Bench (3)
+
+| Player            | Bench count (cumulative) |
+|-------------------|--------------------------|
+| Keatala           | 2 (also 25.03)           |
+| Heligeman/Fuglema | 1                        |
+| OomToDoom         | 1                        |
+
+## Actual Roster (26-man)
+
+Ran with 26 instead of 25.
+
+### Tanks (3)
+
+| Player              | Class   |
+|---------------------|---------|
+| Mirohl              | Warrior |
+| Ostbirger           | Paladin |
+| Marino-Varthier     | Paladin |
+
+### Healers (6)
+
+| Player              | Class   |
+|---------------------|---------|
+| McJudgin            | Paladin |
+| Thordrel            | Paladin |
+| Ejlis               | Priest  |
+| Lightweit           | Priest  |
+| Gresac              | Druid   |
+| Beaverfist          | Druid   |
+
+### DPS (17)
+
+| Player              | Class   |
+|---------------------|---------|
+| Gigakox             | Warrior |
+| Verysadge           | Warrior |
+| Dankyn              | Warrior |
+| Jar                 | Druid   |
+| GlaivemasterBaeba   | Rogue   |
+| Tonsen              | Hunter  |
+| Vaelruna            | Hunter  |
+| Dwarfytron          | Hunter  |
+| Greg/Ucannotpass    | Mage    |
+| Jabbadhutt          | Warlock |
+| BestPractice        | Warlock |
+| Leontes             | Paladin |
+| Pergatori           | Shaman  |
+| Lynelen             | Shaman  |
+| Ebonybolt           | Shaman  |
+| Tymoti              | Shaman  |
+
+**Composition:** 3 tanks, 6 healers, 16 DPS (25 total)
+
+## Notes
+
+- Jar attended despite Sunday — exception to usual Sunday constraint.
+- Jar played Boomkin (DPS), not Resto.
+- McJudgin healed (Paladin healer in 25-mans, as expected).
+- Spot was signed up but is not coming.
+- Leontes played DPS — Paladin, spec still unclear (Ret?).
+- Keatala benched for 2nd time — should be prioritized for spots next time.
