@@ -37,9 +37,9 @@ Players competing for the same item drop **must be placed in different Karazhan 
 
 Some player professions affect raid group assignments.
 
-### Enchanters — must be spread across Karazhan groups
+### Enchanters — must be spread across Karazhan raid teams
 
-Each Karazhan group must have exactly one enchanter. The guild's enchanters are:
+Each Karazhan raid team must have exactly one enchanter. The guild's enchanters are:
 
 | Player              | Character     |
 |---------------------|---------------|
@@ -47,7 +47,7 @@ Each Karazhan group must have exactly one enchanter. The guild's enchanters are:
 | Kres/Dissi          | Kresniik      |
 | Greg                | Ucannotpass   |
 
-**Applies to:** Karazhan nights only (3 groups, 3 enchanters — one per group).
+**Applies to:** Karazhan nights only (3 raid teams, 3 enchanters — one per team).
 
 ## Notes
 

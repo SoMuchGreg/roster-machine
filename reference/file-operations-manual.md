@@ -18,6 +18,7 @@ Step-by-step guide for when to read and update each file, organized by trigger e
 | `rules/01-raid-compositions.md` | Know required tank/healer/DPS counts |
 | `rules/02-bench-rotation.md` | Know bench rules and officer exemptions |
 | `rules/03-player-constraints.md` | Know must-together, must-not-together, availability constraints |
+| `reference/party-group-composition-guide.md` | Buff synergies and party group assignment framework |
 | All files in `sets/` | Predecessor context, especially recent bench history |
 
 ### Step 2 — Parse the screenshot
@@ -113,23 +114,28 @@ This is the core deliverable. Follow the full "New signup screenshot received" f
 ## File dependency map
 
 ```
-config/project.md ─────────────┐
-                                │
-rules/01-raid-compositions.md ──┤
-rules/02-bench-rotation.md ─────┤
-rules/03-player-constraints.md ─┼──> INPUTS for generating a set
-rules/04-player-specs.md ───────┤
-                                │
-reference/bench-history.md ─────┤
-reference/class-colors-and-spec-icons.md ──> REFERENCE for parsing screenshots
-reference/icons/**/* ───────────┘
+INPUTS for generating a set:
+  ├── config/project.md
+  ├── rules/01-raid-compositions.md
+  ├── rules/02-bench-rotation.md
+  ├── rules/03-player-constraints.md
+  ├── rules/04-player-specs.md
+  └── reference/bench-history.md
 
-sets/*.md ──────────────────────> OUTPUTS (each set is also INPUT for the next)
+REFERENCE for parsing screenshots & assigning groups:
+  ├── reference/class-colors-and-spec-icons.md
+  ├── reference/party-group-composition-guide.md
+  └── reference/icons/**/*
 
-changelog/*.md ─────────────────> AUDIT TRAIL (written when rules change)
+OUTPUTS (each set is also INPUT for the next):
+  └── sets/*.md
 
-CLAUDE.md ──────────────────────> META (workflow instructions, read every session)
-README.md ──────────────────────> META (project overview, rarely updated)
+AUDIT TRAIL (written when rules change):
+  └── changelog/*.md
+
+META (read every session):
+  ├── CLAUDE.md
+  └── README.md
 ```
 
 ---

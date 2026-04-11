@@ -23,9 +23,12 @@ Three Karazhan raids are formed per Karazhan night (30 players total if full).
 
 ### Tank composition
 
-Each Karazhan team must have exactly:
-- **1 Warrior tank**
-- **1 Paladin tank**
+Each Karazhan team needs **2 tanks** that can collectively cover **3 duties**:
+- **Main tanking** — Warriors or Paladins (our usual MTs: Mirohl, Varthier, Ostbirger)
+- **Off-tanking** — Warriors, Paladins, or Feral Druids
+- **AoE tanking** — **Paladins only** (Consecration-based threat)
+
+This means every team **must have at least 1 Paladin tank** (for AoE) AND **at least 1 non-mana tank** (Warrior or Feral Druid) — two Paladin tanks on the same team is not feasible. A Feral Druid can off-tank if the main tank is a Paladin (who covers AoE duty).
 
 ### Healer composition
 
@@ -34,7 +37,7 @@ Each Karazhan team must have exactly:
 
 ### DPS composition
 
-- **1 Enhancement Shaman per team**
+- **1 Enhancement Shaman per team** (if possible — soft rule, depends on signups)
 - **Distribute evenly across the 3 teams:** Hunters, Mages, Fury Warriors, and Warlocks
 - **Pergatori** (Elemental Shaman) goes on the team with the most casters
 - **Yxanb** (Feral Druid) goes on the team with the most physical/melee DPS

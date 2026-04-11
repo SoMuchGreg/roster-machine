@@ -12,6 +12,10 @@ CoffeeBreak is a **raid composition planner** for **World of Warcraft: The Burni
 4. **Configuration** (raid schedule, officers, settings) lives in `config/project.md`.
 5. **Changelog** tracks rule and roster changes in `changelog/`.
 
+## Communication conventions
+
+- When the user says **"make a note of it"**, **"write it down"**, or similar — always save the information to the appropriate **project file** (rules/, config/, reference/, etc.), not just to Claude memory. Project files are the source of truth.
+
 ## Key principles
 
 - **Every rule matters.** Never skip, relax, or approximate a rule. If a conflict is discovered, flag it to the user before proceeding.

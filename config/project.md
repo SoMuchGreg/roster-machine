@@ -26,9 +26,17 @@ These are the foundational requirements as specified at project creation:
 
 The user will provide Discord signup screenshots. From those, raid groups must be formed respecting all active rules. The output is raid rosters for each raid night.
 
+## Terminology
+
+| Term | Meaning |
+|------|---------|
+| **Raid team** | The full 10 or 25-man group forming the raid squad (e.g., "Team Restaurant") |
+| **Raid location** | The specific raid instance: Karazhan, Gruul, Magtheridon, Serpentshrine Cavern, Tempest Keep, etc. |
+| **Party group** (or "party", "single group") | The 5-man unit within a raid team. 10-man raids = 2 party groups, 25-man raids = 5 party groups |
+
 ## Raid schedule
 
-| Night | Content            | Format                | Groups |
+| Night | Content            | Format                | Raid teams |
 |-------|--------------------|-----------------------|--------|
 | 1     | Karazhan           | 10-man raid           | 3      |
 | 2     | Gruul + Magtheridon| 25-man raid           | 1      |
