@@ -2,7 +2,7 @@
 
 ## Signups (from Discord)
 
-**Tanks (7):** Mirohl, Gigakox, Doughball, Kaczan, Marino-Varthier, McJudgin, Ostbirger
+**Tanks (7):** Mirohl, Gigakox, Doughball, CptKavior, Marino-Varthier, McJudgin, Ostbirger
 **Warriors (2):** Dankyn, Verysadge
 **Druids (5):** Gresac, Beaverfist, Roossy/Keatala, Yxanb, Jar
 **Paladins (3):** Lightstarr, Thordrel, Leontes
@@ -46,7 +46,7 @@
 | Greg/Ucannotpass | DPS    | Mage    |
 | Jabbadhutt       | DPS    | Warlock |
 | Pergatori        | DPS    | Shaman  |
-| Beaverfist       | Healer | Druid   |
+| Beaverfist       | DPS (Balance) | Druid |
 | Bombzor          | Healer | Priest  |
 
 ### Team BaeGlaives
@@ -58,7 +58,7 @@
 | Ebonybolt           | DPS    | Shaman  |
 | Verysadge           | DPS    | Warrior |
 | Roossy/Keatala      | Healer | Druid   |
-| Jar                 | Healer | Druid   |
+| Jar                 | DPS (Balance) | Druid |
 | Dwarfytron          | DPS    | Hunter  |
 | McHughes            | DPS    | Warlock |
 | OomToDoom           | DPS    | Mage    |
@@ -73,15 +73,13 @@
 |----------------|--------------------------|
 | McJudgin       | 1                        |
 | Varva          | 1 (also absent)          |
-| Kaczan         | 1                        |
+| CptKavior         | 1                        |
 | Leontes        | 1                        |
 
 ## Notes
 
 - Rainbound (CodeHunt's shaman) appears in roster under shaman name this time.
-- Team Bakery has 3 healers (Gresac, Beaverfist, Bombzor). Beaverfist again VERY RELUCTANTLY healed here — guild owes him for this.
+- **Spec correction (recorded retroactively):** Beaverfist and Jar both ran **Balance (DPS)** for this raid, not Resto. Team Bakery healers were Gresac + Bombzor (2). Team BaeGlaives healers were Roossy/Keatala + Lightweit (2). Total raid healers: 6 across 3 teams (normal). Earlier draft of this set incorrectly listed both as Healer.
 - Lightweit is a new Priest player — played Holy (healer) in Team BaeGlaives.
-- Kaczan is a DPS Warrior — last resort invite only.
 - Leontes is a Paladin — benched.
-- Varva is a DPS Warrior — last resort invite only. Signed up but was also absent.
 - Thalynora left the guild.

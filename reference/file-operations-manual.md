@@ -10,16 +10,18 @@ Step-by-step guide for when to read and update each file, organized by trigger e
 
 | File | Why |
 |------|-----|
-| `rules/04-player-specs.md` | Know existing players' classes, specs, and notes (last resort, no-show, etc.) |
+| `rules/04-player-specs.md` | Know existing players' classes, specs, raid spot priority, and notes |
 | `reference/class-colors-and-spec-icons.md` | Identify unknown players by icon/color |
 | `reference/icons/specs/*.jpg` | Compare spec icons side-by-side if needed |
 | `reference/icons/classes/*.png` | Compare class icons side-by-side if needed |
-| `reference/bench-history.md` | Know who has been benched most/least for fair rotation |
+| `derived/bench-history.md` | Know who has been benched most/least for fair rotation |
 | `rules/01-raid-compositions.md` | Know required tank/healer/DPS counts |
-| `rules/02-bench-rotation.md` | Know bench rules and officer exemptions |
+| `rules/02-bench-rotation.md` | Know bench rules, raid spot priority logic, and selection algorithm |
 | `rules/03-player-constraints.md` | Know must-together, must-not-together, availability constraints |
-| `reference/party-group-composition-guide.md` | Buff synergies and party group assignment framework |
+| `reference/party-group-composition-guide.md` | Comprehensive TBC raid composition reference: buff scope, Shaman totems, raid-wide debuffs, per-spec target counts (§8 — used by the 25-man fair-rotation tiebreaker in `rules/02-bench-rotation.md`). **§3, §4, §9 (party-group templates and assignment framework) are not yet in use — see the note below.** |
 | All files in `sets/` | Predecessor context, especially recent bench history |
+
+> **Party-group assignments are NOT currently produced.** Inside `reference/party-group-composition-guide.md`, only **§3 (Optimal Party Group Templates)**, **§4 (Karazhan Group Composition)**, and **§9 (Practical Group Assignment Framework)** are party-group-specific — those three sections are **future reference material only**. Do not apply them when forming a roster, and do not produce party-group (5-man sub-group) breakdowns inside any set file. The rest of that guide (§1, §2, §5, §6, §7, §8) is canonical reference material in active use, and §8 in particular is the canonical source for the 25-man fair-rotation tiebreaker. When the user formalizes party-group rules (see `config/project.md` → "What's next"), §3, §4, and §9 will become active and this note can be removed.
 
 ### Step 2 — Parse the screenshot
 
@@ -34,18 +36,21 @@ Step-by-step guide for when to read and update each file, organized by trigger e
 ### Step 3 — Build the roster (if asked to)
 
 1. Apply all rules from `rules/`.
-2. Determine bench based on `reference/bench-history.md` (bench those with fewest benches **for the specific raid location being planned**, never officers).
-3. Respect player constraints from `rules/03-player-constraints.md`.
-4. Respect "last resort" and "low priority" flags from `rules/04-player-specs.md`.
-5. Present roster to user for approval.
+2. Apply **raid spot priority** and the selection algorithm — see `rules/02-bench-rotation.md` (single source of truth for the algorithm). Per-player priority assignments are in `rules/04-player-specs.md`.
+3. Apply fair bench rotation **within each priority level** using counts from `derived/bench-history.md`. Never compare bench counts across priority levels.
+4. Respect player constraints from `rules/03-player-constraints.md`.
+5. Respect composition caps from `rules/01-raid-compositions.md`.
+6. Present roster to user for approval.
 
 ### Step 4 — Write/Update (after user confirms)
 
 | File | What to update |
 |------|----------------|
-| `sets/YYYY-MM-DD-day-raid.md` | **Create new file.** Record signups, roster, bench, notes. |
-| `reference/bench-history.md` | **Update.** Add new bench entries, increment counts. |
+| `sets/YYYY-MM-DD-day-raid.md` | **Create new file.** Start from `reference/templates/karazhan-set.md` (for Karazhan nights) or `reference/templates/25man-set.md` (for any 25-man raid). Copy the template into `sets/` with the date-based filename, fill in every `{placeholder}`, delete every section/sub-line marked `<!-- delete if … -->` that doesn't apply, and follow the section order as-is. |
+| `derived/bench-history.md` | **Update.** Add new bench entries, increment counts. |
 | `rules/04-player-specs.md` | **Update IF** a new player appeared, or an existing player's spec changed. |
+
+> **Set file format is templated.** Do not invent your own structure. If something genuinely doesn't fit either template, raise it to the user before deviating — the templates are the canonical structure for sets, and consistency across sets is what makes bench history and predecessor reads reliable.
 
 ---
 
@@ -72,11 +77,55 @@ Same as above, but:
 - Do any existing sets in `sets/` need to be re-evaluated?
 - Does `bench-history.md` need adjustment?
 
+### Changelog scope rule (important)
+
+Changelog entries are **short logs of what changed and why** — not rule files. Three separate constraints apply.
+
+#### 1. Brevity — do not duplicate the rule into the changelog
+
+Target length: **~15 lines per entry**. Use this structure:
+
+```
+# YYYY-MM-DD — Short title
+
+## Change
+1-2 sentences describing what changed.
+
+## Reason
+1-2 sentences explaining why.
+
+## Files touched
+- list of files
+```
+
+- ❌ Do **not** re-explain the rule. A pointer to the rule file is enough — the rule file is the single source of truth, and a changelog entry must never duplicate its content.
+- ❌ Do **not** include tables describing rule semantics (priority definitions, selection algorithms, vocabulary enumerations, mapping details). Those live in the rule file.
+- ❌ Do **not** add "practical subtleties", "interaction with existing rules", "scope", or "open questions" subsections. If a future reader needs to understand how the rule works, they read the rule file.
+- ✅ Describe the change abstractly, state the reason, list files touched. Then stop.
+
+#### 2. No player-specific references
+
+- ❌ No player names as examples ("e.g., player A and player B were benched...")
+- ❌ No per-player priority/spec/role assignments
+- ❌ No retroactive analysis of past sets in terms of named players
+- ❌ No "currently applies to" tables that list specific players
+- ✅ Generic rule statements, abstract examples, file-level impact descriptions
+
+Player data — names, classes, specs, priorities, bench counts, set rosters — lives in `rules/04-player-specs.md`, `derived/bench-history.md`, and `sets/*.md`. Duplicating player data into a changelog entry creates a stale snapshot the moment any player attribute changes.
+
+#### 3. Changelogs are excluded from roster-formation context
+
+**When forming a raid roster, or performing any session task that consumes active rules, do not read `changelog/*.md` at all.** The changelog is a historical audit trail of rule *transitions*, not a source of active rules. Reading it during roster formation risks confusing superseded wordings with the current rule, or applying transition-specific interaction notes that are no longer load-bearing.
+
+Active rules live in `rules/`, `config/`, and `reference/` (except the one you're reading, which is also a rule file). When in doubt about any rule, read the rule file directly. The changelog only tells you *when and why* something became what it is — never *what it is now*.
+
+The only legitimate reasons to read a changelog entry are: the user explicitly asks "what changed on date X", the user asks for a history of rule Y, or you are writing a new changelog entry and want to match the existing style. Roster formation is never one of those reasons.
+
 ---
 
 ## Event: User provides player-specific information
 
-(e.g., "X is a warrior", "Y has two specs", "Z is last resort only")
+(e.g., "X is a warrior", "Y has two specs", "Z is last resort only" → translates to raid spot priority 3)
 
 ### Update:
 
@@ -94,7 +143,7 @@ Same as above, but:
 | File | What to update |
 |------|----------------|
 | `rules/04-player-specs.md` | Add new player row, or strike through departed player |
-| `reference/bench-history.md` | Strike through departed player (keep for history) |
+| `derived/bench-history.md` | Strike through departed player (keep for history) |
 | `rules/03-player-constraints.md` | Remove any constraints involving departed player |
 
 ---
@@ -120,18 +169,23 @@ INPUTS for generating a set:
   ├── rules/02-bench-rotation.md
   ├── rules/03-player-constraints.md
   ├── rules/04-player-specs.md
-  └── reference/bench-history.md
+  └── derived/bench-history.md     ← summary derived from sets/, kept as a fast-lookup index
 
-REFERENCE for parsing screenshots & assigning groups:
-  ├── reference/class-colors-and-spec-icons.md
-  ├── reference/party-group-composition-guide.md
-  └── reference/icons/**/*
+REFERENCE for parsing screenshots and raid composition decisions:
+  ├── reference/class-colors-and-spec-icons.md       ← parsing screenshots (class colors, spec icons)
+  ├── reference/icons/**/*                            ← parsing screenshots (icon image files)
+  └── reference/party-group-composition-guide.md      ← TBC raid composition reference (§8 used by tiebreaker)
 
-OUTPUTS (each set is also INPUT for the next):
-  └── sets/*.md
+OUTPUTS:
+  ├── sets/*.md                    ← actual sets, one per raid night (each set is also INPUT for the next)
+  └── derived/bench-history.md     ← updated whenever a new set is created
 
-AUDIT TRAIL (written when rules change):
-  └── changelog/*.md
+REFERENCE for writing new sets (canonical structure for set files):
+  ├── reference/templates/karazhan-set.md   ← canonical structure for Karazhan sets
+  └── reference/templates/25man-set.md      ← canonical structure for 25-man sets
+
+AUDIT TRAIL — DO NOT READ during roster formation (written when rules change):
+  └── changelog/*.md      ← historical only; the rule file is the source of truth
 
 META (read every session):
   ├── CLAUDE.md

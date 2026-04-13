@@ -1,6 +1,6 @@
 # Bench History (Cumulative, Per Raid Location)
 
-Officers are exempt from bench rotation: Mirohl, Jar, Glaivemaster Baebay, Kres/Dissi, Greg (Ucannotpass).
+Players with **raid spot priority 1** are never benched and so do not appear in this history. Per-player priority assignments live in `rules/04-player-specs.md` (Priority column); the rule defining priority levels lives in `rules/02-bench-rotation.md`. Bench counts below are tracked for fair rotation **within a priority level** — never compare counts across levels.
 
 ## Karazhan
 
@@ -8,12 +8,12 @@ Officers are exempt from bench rotation: Mirohl, Jar, Glaivemaster Baebay, Kres/
 |-------------------|---------------|---------------------|
 | Dwarfytron        | 1             | 01.04               |
 | McJudgin          | 1             | 08.04               |
-| Kaczan            | 1             | 08.04               |
+| CptKavior         | 1             | 08.04               |
 | Leontes           | 1             | 08.04               |
 | Varva             | 1             | 08.04 — also absent |
 | ~~Thalynora~~     | 1             | 01.04 — left guild  |
 
-All other non-officer players: 0 times benched from Karazhan.
+All other priority-2 and priority-3 players: 0 times benched from Karazhan.
 
 ## Gruul + Magtheridon
 
@@ -24,4 +24,4 @@ All other non-officer players: 0 times benched from Karazhan.
 | Heligeman/Fugleman | 1             | 12.04         |
 | OomToDoom         | 1             | 12.04         |
 
-All other non-officer players: 0 times benched from Gruul+Mag.
+All other priority-2 and priority-3 players: 0 times benched from Gruul+Mag.

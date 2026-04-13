@@ -77,6 +77,6 @@ Ran with 25 as expected.
 - Jar attended despite Sunday — exception to usual Sunday constraint.
 - Jar played Boomkin (DPS), not Resto.
 - McJudgin healed (Paladin healer in 25-mans, as expected).
-- Spot was signed up but is not coming.
+- Spot/Yorek was signed up but is not coming.
 - Leontes played DPS — Paladin, spec still unclear (Ret?).
 - Keatala benched for 2nd time — should be prioritized for spots next time.

@@ -1,30 +1,6 @@
 # Project Configuration
 
-## Project metadata
-
-- **Name:** CoffeeBreak
-- **Created:** 2026-04-10
-- **Type:** Non-code, rule-based set generation
-- **Tool:** Claude Code (cognitive + research + memory)
-
-## Requirements
-
-These are the foundational requirements as specified at project creation:
-
-1. **No actual code.** This project produces markdown and text files only.
-2. **Rule completeness.** Every generated set must satisfy every active rule — no exceptions.
-3. **Set chaining.** Each new set is influenced by all predecessor sets (especially bench history).
-4. **Rule evolution.** Rules will change over time. When they do, downstream effects on existing and future sets must be considered.
-5. **Domain specificity.** The project operates within WoW TBC 20th Anniversary Edition raid planning.
-6. **Self-referencing.** All output files in this project form the input context for every subsequent prompt.
-7. **Traceability.** Changes to rules and their impact on sets are tracked in `changelog/`.
-8. **No assumptions about players.** If unsure about a player's class, spec, or role — ask the user. Never guess.
-
-## Domain
-
-**World of Warcraft: The Burning Crusade 20th Anniversary Edition** — raid and group composition planning.
-
-The user will provide Discord signup screenshots. From those, raid groups must be formed respecting all active rules. The output is raid rosters for each raid night.
+This file holds CoffeeBreak's **configuration data** — the canonical facts that other rules and workflows read. The project's purpose and structure live in `README.md`; the session workflow and key principles live in `CLAUDE.md`. This file is data only.
 
 ## Terminology
 
@@ -37,11 +13,13 @@ The user will provide Discord signup screenshots. From those, raid groups must b
 ## Raid schedule
 
 | Night | Content            | Format                | Raid teams |
-|-------|--------------------|-----------------------|--------|
-| 1     | Karazhan           | 10-man raid           | 3      |
-| 2     | Gruul + Magtheridon| 25-man raid           | 1      |
+|-------|--------------------|-----------------------|------------|
+| 1     | Karazhan           | 10-man raid           | 3          |
+| 2     | Gruul + Magtheridon| 25-man raid           | 1          |
 
-## Officers (exempt from bench rotation)
+## Officers
+
+Guild leadership list. This is project metadata — a record of who the guild's officers are. It is **not** what controls bench exemption. Bench exemption is enforced by the **raid spot priority** system in `rules/04-player-specs.md` (Priority column) and `rules/02-bench-rotation.md` (definitions and selection algorithm). Officer status and priority are conceptually distinct; if you ever need a non-officer to always play, or an officer to be bench-eligible, edit the Priority column in `rules/04-player-specs.md` — do not edit this list.
 
 | Officer name         | Notes                          |
 |----------------------|--------------------------------|

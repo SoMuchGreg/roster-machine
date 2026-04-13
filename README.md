@@ -6,35 +6,29 @@ Raid composition planner for **World of Warcraft: The Burning Crusade 20th Anniv
 
 Form raid groups from Discord signups, respecting strict composition rules, player constraints, and fair bench rotation.
 
-## Raid schedule
-
-| Night | Content             | Format    | Groups |
-|-------|---------------------|-----------|--------|
-| 1     | Karazhan            | 10-man    | 3      |
-| 2     | Gruul + Magtheridon | 25-man    | 1      |
-
 ## Structure
 
-| Directory    | Purpose                                              |
-|------------- |------------------------------------------------------|
-| `config/`    | Raid schedule, officers, project settings             |
-| `rules/`     | Composition rules, bench rotation, player constraints |
-| `sets/`      | Generated raid rosters (ordered, chained)             |
-| `reference/` | TBC class and raid research material                  |
-| `changelog/` | History of rule and roster changes                    |
+| Directory    | Purpose                                                       |
+|------------- |---------------------------------------------------------------|
+| `config/`    | Raid schedule, officers, terminology, settings (canonical configuration data) |
+| `rules/`     | Composition rules, bench rotation, player constraints, player specs |
+| `sets/`      | Generated raid rosters (one per raid night, chronologically chained) |
+| `derived/`   | Derived summaries computed from `sets/` (currently bench history) |
+| `reference/` | TBC research, file-operations manual, set templates, icons    |
+| `changelog/` | History of rule transitions (audit trail only — not read during roster formation) |
 
-## How it works
+The raid schedule itself lives in `config/project.md`.
 
-1. User provides a **Discord signup screenshot** for a raid night.
-2. Claude Code reads all rules and prior rosters (bench history).
-3. Raid groups are formed respecting every rule.
-4. Output is saved as a numbered set in `sets/`.
+## How Claude Code uses this folder
+
+Claude Code reads the rule files, parses Discord signup screenshots provided by the user, and produces raid rosters that satisfy every active rule. The full session workflow lives in `CLAUDE.md`. The detailed file-operations manual lives in `reference/file-operations-manual.md`.
 
 ## Key files
 
-- `CLAUDE.md` — Persistent instructions for Claude Code sessions
-- `config/project.md` — Active configuration (schedule, officers, settings)
-- `rules/01-raid-compositions.md` — Required tank/healer/DPS counts
-- `rules/02-bench-rotation.md` — Bench fairness and officer exemption
-- `rules/03-player-constraints.md` — Must-be-together / must-not-be-together
-- `rules/04-player-specs.md` — Player classes and specializations
+- `CLAUDE.md` — Persistent instructions for Claude Code sessions (workflow, principles, communication conventions)
+- `config/project.md` — Raid schedule, officers, terminology, settings
+- `rules/01-raid-compositions.md` — Tank/healer/DPS targets per raid type, plus dual-spec flex policy
+- `rules/02-bench-rotation.md` — Bench fairness, raid spot priority, selection algorithm, tiebreakers
+- `rules/03-player-constraints.md` — Must-be-together / must-not-be-together / availability constraints
+- `rules/04-player-specs.md` — Player classes, specializations, and raid spot priority
+- `reference/file-operations-manual.md` — Step-by-step guide for every type of session interaction
