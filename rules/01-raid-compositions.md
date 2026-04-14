@@ -10,10 +10,10 @@ The composition tables in this file (per-team for Karazhan, per-raid for 25-mans
 
 If signups don't include enough players for a required role at a raid's composition target (tanks, healers, or DPS), the raid leader should ask **dual-spec players** whether they'd be willing to switch to their secondary spec for this raid.
 
-- **Dual-spec players** are any player in `rules/04-player-specs.md` whose `Spec 2 (role)` column lists a specific spec (not "—", not "?", not blank). Their second spec is what they may switch to. A "?" in Spec 2 means we don't yet know whether the player has a second spec — those players are **not** eligible for flex by default; the user can clarify on a case-by-case basis.
+- **Dual-spec players** are any player in `rules/04-players.md` whose `Spec 2 (role)` column lists a specific spec (not "—", not "?", not blank). Their second spec is what they may switch to. A "?" in Spec 2 means we don't yet know whether the player has a second spec — those players are **not** eligible for flex by default; the user can clarify on a case-by-case basis.
 - The decision is **the player's**. They may decline. Never unilaterally reassign a player's spec — always ask first.
 - If the player declines, the raid runs short on that role rather than forcing the swap. Move on and ask the next eligible dual-spec player; if no one accepts, the raid runs under-target.
-- **Asking order — three tiers.** Notes in `rules/04-player-specs.md` reveal each player's flex disposition. Ask in this order, exhausting each tier before moving to the next:
+- **Asking order — three tiers.** Notes in `rules/04-players.md` reveal each player's flex disposition. Ask in this order, exhausting each tier before moving to the next:
   1. **Most flexible first** — players explicitly noted as flexible across roles (e.g., "Switches role by raid format", "flexes between tank and DPS"). They actively flex specs across raids and are the easiest first ask.
   2. **No-preference second** — players with confirmed dual specs but no note recording a strong preference one way or the other. Neutral.
   3. **Last resort last** — players with reluctance notes (e.g., "Strong Resto preference", "extremely reluctant Balance", "Balance spec only as absolute last resort"). Ask only if tiers 1 and 2 didn't fill the role. Respect the spirit of "absolute last resort" notes — these players genuinely don't want to play their off-spec.
@@ -96,7 +96,7 @@ The number of Karazhan teams depends on the signup count. The default raid forma
 When outside recruitment is triggered (the 27–29 case above, or the 25–26 case if the user chooses option b), follow these conventions:
 
 - **Name in the roster table:** literally `PUG Heal` or `PUG DPS` — whichever role they fill. Do not use a real character name. PUGs have **no persistent identity** in this project.
-- **Do not add PUGs to `rules/04-player-specs.md`.** The player roster tracks guild members only. PUGs never appear in `rules/04`.
+- **Do not add PUGs to `rules/04-players.md`.** The player roster tracks guild members only. PUGs never appear in `rules/04-players.md`.
 - **Do not count PUGs in `derived/bench-history.md`.** Fair bench rotation applies to guild members only. PUGs never appear in `derived/bench-history.md`.
 - **No cross-raid identity.** Even if the same real person returns as a PUG for multiple raids, record them as a fresh anonymous `PUG Heal` / `PUG DPS` entry each time. This project has no cross-raid knowledge of PUG identity and does not attempt to build one.
 - **Team placement — PUGs concentrated on a single team.** Of the three Karazhan teams, **two must be fully staffed with guild members** (10 guild members each). The **remaining team** (whichever one the raid leader designates) contains the leftover guild members plus the PUGs. Do not spread PUGs across multiple teams — concentrate them on one team so the other two stay fully internal.
@@ -106,7 +106,7 @@ When outside recruitment is triggered (the 27–29 case above, or the 25–26 ca
 
 Regardless of the signup count above, if the guild can't supply enough tanks to staff 3 teams under the Karazhan tank composition requirements (each team needs **1 Paladin tank** plus **1 non-mana tank** — Warrior or Feral Druid — so 3 teams need 3 of each type, 6 tanks total in the right mix), **drop to 2 teams**. This override applies even at 27+ signups: outside-of-guild recruitment never covers tank slots, so if the guild can't supply the tank mix, the team count must drop.
 
-The dual-spec flex rule from "General principles → Handling role shortages" must be exhausted **before** falling back: ask DPS-spec or Healer-spec players whose secondary spec is a tank spec (e.g., players whose `Spec 2 (role)` in `rules/04-player-specs.md` is a tank role) whether they would tank for this raid. Only if that doesn't yield enough tanks does the team count drop.
+The dual-spec flex rule from "General principles → Handling role shortages" must be exhausted **before** falling back: ask DPS-spec or Healer-spec players whose secondary spec is a tank spec (e.g., players whose `Spec 2 (role)` in `rules/04-players.md` is a tank role) whether they would tank for this raid. Only if that doesn't yield enough tanks does the team count drop.
 
 ## 25-man raids
 

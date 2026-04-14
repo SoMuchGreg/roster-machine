@@ -53,7 +53,7 @@ to bring the active roster down to 25.
 <!--
 Role-grouped tables. The Class column should record what the player ACTUALLY
 played that night (per the spec icon in the signup screenshot), not their default
-spec from rules/04-player-specs.md. For hybrid-class spec calls, write "Druid (Balance)"
+spec from rules/04-players.md. For hybrid-class spec calls, write "Druid (Balance)"
 or "Druid (Resto)" etc. when it's not obvious from the role section.
 -->
 
@@ -82,7 +82,7 @@ or "Druid (Resto)" etc. when it's not obvious from the role section.
 <!--
 Record any cases where a player was asked to switch to their secondary spec
 because the raid was short on a role (per rules/01-raid-compositions.md →
-"Handling role shortages"). Tier 1 = explicitly flexible note in 04-player-specs;
+"Handling role shortages"). Tier 1 = explicitly flexible note in 04-players;
 Tier 2 = no preference; Tier 3 = reluctance / "absolute last resort" note.
 -->
 
@@ -118,4 +118,4 @@ Delete the table and replace with `*(None — all 25 spots filled)*` if no one w
 ## Notes
 
 - Raid-specific observations: late signups, exceptions, new players seen for the first time, spec confirmations, anything noteworthy that future sets should know about.
-- Use bullets. Keep observations factual. Player-specific learnings (e.g., "X is actually Holy not Disc") should also be propagated to `rules/04-player-specs.md` per the file-operations-manual workflow.
+- Use bullets. Keep observations factual. Player-specific learnings (e.g., "X is actually Holy not Disc") should also be propagated to `rules/04-players.md` per the file-operations-manual workflow.

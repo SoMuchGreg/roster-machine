@@ -112,6 +112,6 @@ Each specialization has a unique icon shown next to the player name in signups. 
 - In the Discord signup tool, the **category header** (e.g., "Tank", "Warrior", "Druid") groups by class or role.
 - The **spec icon** next to each player name shows their chosen specialization for that raid.
 - Players signing up under "Tank" as a role category may be any tanking class (Warrior, Paladin, Druid).
-- **Primary identification method:** Cross-reference player names against `rules/04-player-specs.md` for class. But **always check the spec icon** — it shows the player's chosen spec for THIS raid and **takes precedence** over any previously recorded role. Players can and do change specs between raids.
+- **Primary identification method:** Cross-reference player names against `rules/04-players.md` for class. But **always check the spec icon** — it shows the player's chosen spec for THIS raid and **takes precedence** over any previously recorded role. Players can and do change specs between raids.
 - When unsure, open the reference image file (e.g., `Read icons/specs/shaman_enhancement.jpg`) and compare side by side.
 - If still uncertain about a new player's class or spec, ask the user.

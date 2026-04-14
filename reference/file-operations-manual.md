@@ -16,7 +16,7 @@ This table is the **canonical reading list** for every roster-generation task. D
 | `rules/01-raid-compositions.md` | Composition targets, dual-spec flex rule, under-cap behavior, Resto Druid cap |
 | `rules/02-bench-rotation.md` | Selection algorithm, raid spot priority, fair rotation, tiebreakers |
 | `rules/03-player-constraints.md` | Must-together / must-not-together / availability / loot / enchanter constraints |
-| `rules/04-player-specs.md` | Existing players' classes, specs, raid spot priority, notes |
+| `rules/04-players.md` | Existing players' classes, specs, raid spot priority, notes |
 | `derived/bench-history.md` | Cumulative bench counts per player per raid location — used for fair-rotation decisions |
 | `reference/class-colors-and-spec-icons.md` | Class colors and spec icon reference for parsing screenshots |
 | `reference/icons/specs/*.jpg` | Spec icon reference images (compare side-by-side when unsure) |
@@ -31,7 +31,7 @@ This table is the **canonical reading list** for every roster-generation task. D
 1. **Read the signup count header.** The format is `X (+Y)` where **X** = players who want to raid, **Y** = players marked as bench or tentative. Total signups = X + Y. There may also be an Absence section for players confirmed not coming.
 2. **Compare X against the raid cap** (25 for Gruul+Mag, 30 for Karazhan). If X exceeds the cap, additional players beyond Y must also be benched to bring the roster down to the cap.
 3. **Screenshots are point-in-time snapshots.** People can sign up, withdraw, change status, or be benched at any time before the raid. A screenshot received today may differ from one received tomorrow. Always treat the latest screenshot as the current state.
-4. Identify all signups by name, cross-referencing `04-player-specs.md` for class.
+4. Identify all signups by name, cross-referencing `04-players.md` for class.
 5. **Check the spec icon for every player** — it shows their spec for THIS raid and overrides any previously recorded spec/role.
 6. For unknown players: use icon/color to determine class+spec. If unsure, ask the user.
 7. Note absent players and late signups.
@@ -39,7 +39,7 @@ This table is the **canonical reading list** for every roster-generation task. D
 ### Step 3 — Build the roster (if asked to)
 
 1. Apply all rules from `rules/`.
-2. Apply **raid spot priority** and the selection algorithm — see `rules/02-bench-rotation.md` (single source of truth for the algorithm). Per-player priority assignments are in `rules/04-player-specs.md`.
+2. Apply **raid spot priority** and the selection algorithm — see `rules/02-bench-rotation.md` (single source of truth for the algorithm). Per-player priority assignments are in `rules/04-players.md`.
 3. Apply fair bench rotation **within each priority level** using counts from `derived/bench-history.md`. Never compare bench counts across priority levels.
 4. Respect player constraints from `rules/03-player-constraints.md`.
 5. Respect composition caps from `rules/01-raid-compositions.md`.
@@ -51,7 +51,7 @@ This table is the **canonical reading list** for every roster-generation task. D
 |------|----------------|
 | `sets/YYYY-MM-DD-day-raid.md` | **Create new file.** Start from `reference/templates/karazhan-set.md` (for Karazhan nights) or `reference/templates/25man-set.md` (for any 25-man raid). Copy the template into `sets/` with the date-based filename, fill in every `{placeholder}`, delete every section/sub-line marked `<!-- delete if … -->` that doesn't apply, and follow the section order as-is. |
 | `derived/bench-history.md` | **Update.** Add new bench entries, increment counts. |
-| `rules/04-player-specs.md` | **Update IF** a new player appeared, or an existing player's spec changed. |
+| `rules/04-players.md` | **Update IF** a new player appeared, or an existing player's spec changed. |
 
 > **Set file format is templated.** Do not invent your own structure. If something genuinely doesn't fit either template, raise it to the user before deviating — the templates are the canonical structure for sets, and consistency across sets is what makes bench history and predecessor reads reliable.
 
@@ -61,7 +61,7 @@ This table is the **canonical reading list** for every roster-generation task. D
 
 Same as above, but:
 - The roster is already decided — just record it.
-- Still update `bench-history.md` and `04-player-specs.md` with any new information.
+- Still update `bench-history.md` and `04-players.md` with any new information.
 
 ---
 
@@ -114,7 +114,7 @@ Target length: **~15 lines per entry**. Use this structure:
 - ❌ No "currently applies to" tables that list specific players
 - ✅ Generic rule statements, abstract examples, file-level impact descriptions
 
-Player data — names, classes, specs, priorities, bench counts, set rosters — lives in `rules/04-player-specs.md`, `derived/bench-history.md`, and `sets/*.md`. Duplicating player data into a changelog entry creates a stale snapshot the moment any player attribute changes.
+Player data — names, classes, specs, priorities, bench counts, set rosters — lives in `rules/04-players.md`, `derived/bench-history.md`, and `sets/*.md`. Duplicating player data into a changelog entry creates a stale snapshot the moment any player attribute changes.
 
 #### 3. Changelogs are excluded from roster-formation context
 
@@ -134,7 +134,7 @@ The only legitimate reasons to read a changelog entry are: the user explicitly a
 
 | File | What to update |
 |------|----------------|
-| `rules/04-player-specs.md` | Update player's class, spec, or notes |
+| `rules/04-players.md` | Update player's class, spec, or notes |
 | `rules/03-player-constraints.md` | Update if it's a must-together/must-not-together/availability constraint |
 
 ---
@@ -147,13 +147,13 @@ The only legitimate reasons to read a changelog entry are: the user explicitly a
 
 | File | What to update |
 |------|----------------|
-| `rules/04-player-specs.md` | Update the `Player` column to the new canonical name. Update the `Character(s)` column to match. If the old name should remain discoverable for cross-referencing older Discord screenshots, add a brief *"Previously known as X"* note in the `Notes` column. |
+| `rules/04-players.md` | Update the `Player` column to the new canonical name. Update the `Character(s)` column to match. If the old name should remain discoverable for cross-referencing older Discord screenshots, add a brief *"Previously known as X"* note in the `Notes` column. |
 | `derived/bench-history.md` | Update every row that references the old player name to the new canonical name. This is derived data, not a historical record — normalize it, don't preserve the old label. |
 | `sets/*.md` | Update every historical set that references the old name, wherever it appears (signup lists, roster tables, bench tables, Notes sections). A pure name normalization doesn't violate the sets-are-immutable principle — it updates the label without changing any factual content. |
 
 ### Afterwards:
 - **Do not write a changelog entry.** Player renames are per-player data changes, not rule changes, and per the "Changelog scope rule" above, player data never appears in changelogs.
-- **Verify completeness** by running `Grep <old_name>` across the whole project. The only legitimate remaining hit should be the optional alias note in `rules/04-player-specs.md` (if you added one). Any other hit is a missed reference that needs fixing.
+- **Verify completeness** by running `Grep <old_name>` across the whole project. The only legitimate remaining hit should be the optional alias note in `rules/04-players.md` (if you added one). Any other hit is a missed reference that needs fixing.
 
 ---
 
@@ -163,7 +163,7 @@ The only legitimate reasons to read a changelog entry are: the user explicitly a
 
 | File | What to update |
 |------|----------------|
-| `rules/04-player-specs.md` | Add new player row, or strike through departed player |
+| `rules/04-players.md` | Add new player row, or strike through departed player |
 | `derived/bench-history.md` | Strike through departed player (keep for history) |
 | `rules/03-player-constraints.md` | Remove any constraints involving departed player |
 
@@ -189,7 +189,7 @@ INPUTS for generating a set:
   ├── rules/01-raid-compositions.md
   ├── rules/02-bench-rotation.md
   ├── rules/03-player-constraints.md
-  ├── rules/04-player-specs.md
+  ├── rules/04-players.md
   └── derived/bench-history.md     ← summary derived from sets/, kept as a fast-lookup index
 
 REFERENCE for parsing screenshots and raid composition decisions:
@@ -219,10 +219,10 @@ META (read every session):
 
 After any interaction, check:
 
-- [ ] New player seen? → `04-player-specs.md`
+- [ ] New player seen? → `04-players.md`
 - [ ] Someone benched? → `bench-history.md`
-- [ ] Spec changed from previous? → `04-player-specs.md`
+- [ ] Spec changed from previous? → `04-players.md`
 - [ ] Rule added/changed? → `rules/*.md` + `changelog/`
-- [ ] Player left/joined? → `04-player-specs.md` + `03-player-constraints.md` + `bench-history.md`
+- [ ] Player left/joined? → `04-players.md` + `03-player-constraints.md` + `bench-history.md`
 - [ ] New set created? → `sets/YYYY-MM-DD-day-raid.md`
 - [ ] Constraint added? → `03-player-constraints.md`

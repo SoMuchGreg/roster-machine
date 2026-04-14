@@ -1,4 +1,4 @@
-# Rule 04 — Player Specializations
+# Rule 04 — Players
 
 ## General rules
 
@@ -49,7 +49,7 @@ currently held only by the players in the Officers sub-table below) or priority 
 
 | Player             | Character(s)        | Class   | Spec 1 (role)            | Spec 2 (role)           | Priority | Notes                                                                                                                       |
 |--------------------|---------------------|---------|--------------------------|-------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| Marino-Varthier    | Varthier            | Paladin | Tank                     | —                       | 2        | Primary offtank for 250mans                                                                                                 |
+| Marino-Varthier    | Varthier            | Paladin | Tank                     | —                       | 2        | Primary offtank for 25-mans                                                                                                 |
 | Ostbirger          | OstBirger           | Paladin | Tank                     | DPS (Ret)               | 2        | Primary 3rd tank for 25-mans, switches to DPS when not needed                                                               |
 | Gigakox            | Gigakox             | Warrior | Tank (OT)                | DPS (Fury)              | 2        |                                                                                                                             |
 | Verysadge          | Verysadge           | Warrior | DPS (Fury)               | —                       | 2        |                                                                                                                             |

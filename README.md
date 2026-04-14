@@ -11,7 +11,7 @@ Form raid groups from Discord signups, respecting strict composition rules, play
 | Directory    | Purpose                                                       |
 |------------- |---------------------------------------------------------------|
 | `config/`    | Raid schedule, terminology, settings (canonical configuration data) |
-| `rules/`     | Composition rules, bench rotation, player constraints, player specs |
+| `rules/`     | Composition rules, bench rotation, player constraints, player roster |
 | `sets/`      | Generated raid rosters (one per raid night, chronologically chained) |
 | `derived/`   | Derived summaries computed from `sets/` (currently bench history) |
 | `reference/` | TBC research, file-operations manual, set templates, icons    |
@@ -30,5 +30,5 @@ Claude Code reads the rule files, parses Discord signup screenshots provided by 
 - `rules/01-raid-compositions.md` — Tank/healer/DPS targets per raid type, plus dual-spec flex policy
 - `rules/02-bench-rotation.md` — Bench fairness, raid spot priority, selection algorithm, tiebreakers
 - `rules/03-player-constraints.md` — Must-be-together / must-not-be-together / availability constraints
-- `rules/04-player-specs.md` — Player classes, specializations, and raid spot priority
+- `rules/04-players.md` — Player classes, specializations, and raid spot priority
 - `reference/file-operations-manual.md` — Step-by-step guide for every type of session interaction

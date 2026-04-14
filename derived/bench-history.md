@@ -1,6 +1,6 @@
 # Bench History (Cumulative, Per Raid Location)
 
-Players with **raid spot priority 1** are never benched and so do not appear in this history. Per-player priority assignments live in `rules/04-player-specs.md` (Priority column); the rule defining priority levels lives in `rules/02-bench-rotation.md`. Bench counts below are tracked for fair rotation **within a priority level** — never compare counts across levels.
+Players with **raid spot priority 1** are never benched and so do not appear in this history. Per-player priority assignments live in `rules/04-players.md` (Priority column); the rule defining priority levels lives in `rules/02-bench-rotation.md`. Bench counts below are tracked for fair rotation **within a priority level** — never compare counts across levels.
 
 ## Karazhan
 

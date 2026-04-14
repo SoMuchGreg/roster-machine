@@ -9,7 +9,7 @@ If the number of signups exceeds the available raid spots for a given night, exc
 
 ## Raid spot priority (selection order)
 
-> **This section is the single source of truth for what each priority level *means* and how the selection algorithm works.** Per-player priority assignments live in `rules/04-player-specs.md` (Priority column). Do not duplicate the definitions or algorithm below into other files — link to this section instead.
+> **This section is the single source of truth for what each priority level *means* and how the selection algorithm works.** Per-player priority assignments live in `rules/04-players.md` (Priority column). Do not duplicate the definitions or algorithm below into other files — link to this section instead.
 
 Every player has a **raid spot priority** — an integer 1, 2, or 3. Priority is the **first filter** when assigning raid spots; it runs before fair bench rotation.
 
@@ -67,10 +67,10 @@ Practical guidance when breaking a tie:
 
 #### Mapping imprecise roster specs to Section 8
 
-`rules/04-player-specs.md` records DPS specs at lower fidelity than Section 8 in several cases — e.g., "DPS Warrior" without Arms vs Fury, "DPS Hunter" without BM vs Marksmanship vs Survival, "DPS Warlock" without Destruction vs Affliction vs Demonology. For tiebreaker purposes, when the roster spec is less specific than Section 8's rows:
+`rules/04-players.md` records DPS specs at lower fidelity than Section 8 in several cases — e.g., "DPS Warrior" without Arms vs Fury, "DPS Hunter" without BM vs Marksmanship vs Survival, "DPS Warlock" without Destruction vs Affliction vs Demonology. For tiebreaker purposes, when the roster spec is less specific than Section 8's rows:
 
 - **Combine the ranges of all Section 8 rows that match the roster spec.** For example, "DPS Warrior" spans Arms Warrior (1) + Fury Warrior (0-2) = combined range **1-3**. "DPS Hunter" spans BM (2-4) + Survival (0-1) = **2-5**. "DPS Warlock" spans Destruction (3-5) + Affliction (0-1) = **3-6**.
-- **If a player's exact spec is unknown (`?` in `04-player-specs.md`)**, treat them as the combined-range case above. Do not guess a specific spec just to force a finer tiebreaker decision.
+- **If a player's exact spec is unknown (`?` in `04-players.md`)**, treat them as the combined-range case above. Do not guess a specific spec just to force a finer tiebreaker decision.
 
 This is a rough mapping and not always discriminating. That's acceptable — the tiebreaker is supposed to nudge the roster toward the target, not compute an exact optimum.
 
@@ -86,9 +86,19 @@ Note that this tier may require an iterative pass: you may need to tentatively a
 
 If both Tier 1 and Tier 2 leave the tie unresolved (e.g., the tied candidates share the same class, or their classes have equal Section 8 sums), fall through to the final fallback below (alphabetical).
 
+#### Cross-location bench total (any raid format)
+
+When the composition-target / Karazhan class tiebreakers above don't discriminate, apply this rule before falling through to alphabetical: **prefer to play the tied candidate with the highest cumulative bench count summed across every raid location the project currently tracks.** Equivalently, prefer to bench the tied candidate with the lowest cross-location total.
+
+"Every raid location" means every location for which bench counts are maintained in `derived/bench-history.md` at the time the roster is being formed — no location is excluded, and this rule automatically extends to any future raid location added to the project without needing to be reworded.
+
+The reasoning: per-location fair rotation (the primary rule) can leave a player who has been benched heavily on other locations still sitting at a tied per-location count here. Giving them the spot in this tie nudges their overall raid participation back toward parity with peers who have been benched less globally.
+
+This tiebreaker is still strictly **within** fair rotation and within a single priority level. It never overrides a candidate with a lower per-location bench count, never overrides priority, and never overrides the composition-target or Karazhan class tiebreakers above it — it only resolves ties those leave open.
+
 #### Final fallback (any raid format)
 
-When the composition-target tiebreaker doesn't discriminate — either because Section 8 doesn't apply (Karazhan), or because all tied candidates are in-range, or because the choice doesn't change any spec's over/under status — fall back to **alphabetical order by player name**. This is a deterministic last resort, not a preference; it exists so that identical inputs always produce identical rosters.
+When none of the tiebreakers above discriminate — composition target, Karazhan class tiers, and cross-location bench total all leave the tie open — fall back to **alphabetical order by player name**. This is a deterministic last resort, not a preference; it exists so that identical inputs always produce identical rosters.
 
 #### Interaction with composition caps
 
