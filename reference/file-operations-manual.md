@@ -68,7 +68,7 @@ This table is the **canonical reading list** for every roster-generation task. D
 | File | What to update |
 |------|----------------|
 | `sets/YYYY-MM-DD-day-raid.md` | **Create new file.** Start from `reference/templates/karazhan-set.md` (for Karazhan nights) or `reference/templates/25man-set.md` (for any 25-man raid). Copy the template into `sets/` with the date-based filename, fill in every `{placeholder}`, delete every section/sub-line marked `<!-- delete if … -->` that doesn't apply, and follow the section order as-is. |
-| `derived/bench-history.md` | **Update.** Add new bench entries, increment counts. |
+| `derived/bench-history.md` | **Update.** For each player benched this raid: find their row (or insert a new one in alphabetical position if absent), increment the count cell for the relevant raid-location column, append the new date to that location's dates cell, and recompute the **Total** cell. The `Total` column is a sum across all raid-location count columns — keep it in sync on every edit. |
 | `rules/04-players.md` | **Update IF** a new player appeared, or an existing player's spec changed. |
 
 > **Set file format is templated.** Do not invent your own structure. If something genuinely doesn't fit either template, raise it to the user before deviating — the templates are the canonical structure for sets, and consistency across sets is what makes bench history and predecessor reads reliable.
