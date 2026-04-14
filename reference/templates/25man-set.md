@@ -112,5 +112,10 @@ Delete the table and replace with `*(None — all 25 spots filled)*` if no one w
 
 ## Notes
 
-- Raid-specific observations: late signups, exceptions, new players seen for the first time, spec confirmations, anything noteworthy that future sets should know about.
-- Use bullets. Keep observations factual. Player-specific learnings (e.g., "X is actually Holy not Disc") should also be propagated to `rules/04-players.md` per the file-operations-manual workflow.
+<!--
+What belongs here, what does not, and how to phrase it: see
+`reference/file-operations-manual.md` → "Writing the `## Notes` section of a set file"
+(single source of truth — do not duplicate that guidance into this template).
+-->
+
+- ...

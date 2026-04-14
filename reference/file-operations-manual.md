@@ -73,6 +73,34 @@ This table is the **canonical reading list** for every roster-generation task. D
 
 > **Set file format is templated.** Do not invent your own structure. If something genuinely doesn't fit either template, raise it to the user before deviating — the templates are the canonical structure for sets, and consistency across sets is what makes bench history and predecessor reads reliable.
 
+### Writing the `## Notes` section of a set file
+
+The `## Notes` section is for **per-raid facts that aren't derivable from the rules + the rest of the set file**. It is not free-form commentary, and it is not a place to log rule compliance. Both set templates (`reference/templates/25man-set.md`, `reference/templates/karazhan-set.md`) point at this subsection — do not duplicate this guidance into the templates themselves.
+
+#### What belongs in Notes
+
+- **New player first appearance** — name, class, spec, priority. Always paired with a `rules/04-players.md` update; the note is a one-line pointer to that update, not a duplicate of it.
+- **New per-player information learned this raid** — a previously-unknown offspec revealed by a signup column, an alt revealed, a constraint inferred. Always paired with an update to the relevant `rules/` file.
+- **Spec overrides** — when the spec icon in the signup screenshot doesn't match what the player actually ran, and the raid leader confirmed the override before the roster build. Record `icon → actual`. Group multiple overrides under one bullet with sub-bullets.
+- **Bench picks whose outcome required information not visible in the bench table** — alphabetical-fallback tiebreakers, raid-leader overrides on top of the algorithm, leader-choice surplus calls. Name the player, name the cap or rule that triggered the bench, name the resolution mechanism. **Do not** restate the rule mechanics or the cap numbers — point at the rule.
+- **Mid-week roster changes** — withdrawals, late additions, swaps after the initial roster was built. Record the change and any composition consequence (e.g. *"Warlock count fell to 2, below Section 8 lower bound of 3 — unfillable"*).
+- **Raid-leader overrides** — any case where the algorithm's output was overridden by a human decision. Name the player, name what the algorithm would have done, name what was done instead.
+
+#### What does NOT belong in Notes
+
+- **Rule restatements.** Never paraphrase a rule or repeat a cap number from `rules/` or `reference/`. Point at the rule file with a short link instead. (See `CLAUDE.md` → "Key principles" → single source of truth.)
+- **Rule-compliance logs.** *"Annotation ignored per the parsing rule"*, *"fair rotation correctly placed X in the roster"*, *"algorithm picked Y as expected"* — none of these belong. The rule says what should happen; logging that it happened is noise.
+- **Standing guild conditions.** Facts that are true every week (e.g. *"no Arms Warrior in the guild"*) are not per-raid facts. They belong in `rules/04-players.md` notes or `config/project.md`, not in every set's Notes.
+- **Restating information already in the set file.** Withdrawals, absences, late signups are already in the Signups section; bench reasons are already in the Bench table's Reason column. Notes only adds information the existing tables can't carry.
+- **Internal deliberation or "considered but rejected" alternatives.** Notes is a record of what happened, not a transcript of how the planner chose.
+
+#### Style
+
+- Bullets, factual, terse. One bullet per fact.
+- Group related facts under a single bullet with sub-bullets when it improves comprehension (e.g. multiple spec overrides on the same raid).
+- Each bullet should be readable in isolation; don't write notes that depend on the previous bullet for context.
+- Per `CLAUDE.md` → "Be brief": use the fewest words that still convey the full meaning. If a sentence can be replaced with a pointer to a rule file, replace it.
+
 ---
 
 ## Event: User provides historical roster data
@@ -90,7 +118,7 @@ Same as above, but:
 | File | What to update |
 |------|----------------|
 | The relevant `rules/*.md` file | Add/modify the rule |
-| `changelog/*.md` | **Create entry** documenting what changed and when |
+| `changelog/*.md` | **Create entry only if** the change clears the threshold in "Changelog scope rule" → "When to write a changelog entry at all" below. Most edits should skip this. |
 | `config/project.md` | Update if it affects raid schedule, terminology, or settings |
 | `CLAUDE.md` | Update if it affects the workflow process |
 
@@ -100,9 +128,25 @@ Same as above, but:
 
 ### Changelog scope rule (important)
 
-Changelog entries are **short logs of what changed and why** — not rule files. Three separate constraints apply.
+Changelog entries are **short logs of what changed and why** — not rule files. Four separate constraints apply.
 
-#### 1. Brevity — do not duplicate the rule into the changelog
+#### Filename format
+
+Every changelog file is named `YYYY-MM-DD-NN-slug.md`, where `NN` is a zero-padded two-digit sequence number that orders entries created on the same day, starting at `01`. When adding a new entry, look at the highest existing `NN` for today's date in `changelog/` and use the next number. The sequence resets to `01` each new day. Slugs stay short, lowercase, and hyphenated. The `NN` segment exists so chronological order is preserved by lexicographic sort — without it, multiple same-day entries are unorderable.
+
+#### 1. When to write a changelog entry at all
+
+Not every rule edit gets an entry. Write one only when **at least one** of these is true:
+
+- **Algorithm or vocabulary change** — a selection rule, tiebreaker, bench-reason label, composition target, or any term defined in `rules/`, `config/`, or `reference/` is added, removed, or redefined.
+- **Multi-file change** — the edit touches two or more files under `rules/`, `config/`, or `reference/` as part of the same conceptual change.
+- **Retroactive impact** — the change could invalidate, contradict, or reframe how prior sets in `sets/` should be read.
+
+Skip the entry for: typo fixes, wording clarifications, formatting, link updates, single-file tweaks that don't change rule meaning, and edits that purely improve readability. Git history already records these — the changelog only earns its keep when the change is consequential enough that a future reader would want a narrative summary on top of `git log`.
+
+**When in doubt, default to skipping and ask the user.** The point of this threshold is to reduce noise; if writing the entry feels marginal, it almost certainly is.
+
+#### 2. Brevity — do not duplicate the rule into the changelog
 
 Target length: **~15 lines per entry**. Use this structure:
 
@@ -124,7 +168,7 @@ Target length: **~15 lines per entry**. Use this structure:
 - ❌ Do **not** add "practical subtleties", "interaction with existing rules", "scope", or "open questions" subsections. If a future reader needs to understand how the rule works, they read the rule file.
 - ✅ Describe the change abstractly, state the reason, list files touched. Then stop.
 
-#### 2. No player-specific references
+#### 3. No player-specific references
 
 - ❌ No player names as examples ("e.g., player A and player B were benched...")
 - ❌ No per-player priority/spec/role assignments
@@ -134,7 +178,7 @@ Target length: **~15 lines per entry**. Use this structure:
 
 Player data — names, classes, specs, priorities, bench counts, set rosters — lives in `rules/04-players.md`, `derived/bench-history.md`, and `sets/*.md`. Duplicating player data into a changelog entry creates a stale snapshot the moment any player attribute changes.
 
-#### 3. Changelogs are excluded from roster-formation context
+#### 4. Changelogs are excluded from roster-formation context
 
 **When forming a raid roster, or performing any session task that consumes active rules, do not read `changelog/*.md` at all.** The changelog is a historical audit trail of rule *transitions*, not a source of active rules. Reading it during roster formation risks confusing superseded wordings with the current rule, or applying transition-specific interaction notes that are no longer load-bearing.
 

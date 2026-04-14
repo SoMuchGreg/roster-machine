@@ -8,4 +8,4 @@ The roster tables had grown in roughly chronological order, which made it hard t
 
 ## Files touched
 - `rules/04-players.md` — new **Table ordering** paragraph + both sub-tables reordered
-- `changelog/2026-04-14-roster-table-sort-order.md` — this file
+- `changelog/2026-04-14-07-roster-table-sort-order.md` — this file

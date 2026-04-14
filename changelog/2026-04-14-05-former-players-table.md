@@ -8,4 +8,4 @@ Tombstoned (`~~struck-through~~`) rows inside Regular players polluted the activ
 
 ## Files touched
 - `rules/04-players.md` — Table ordering paragraph updated; Thalynora removed from Regular players; new Former players sub-table added
-- `changelog/2026-04-14-former-players-table.md` — this file
+- `changelog/2026-04-14-05-former-players-table.md` — this file

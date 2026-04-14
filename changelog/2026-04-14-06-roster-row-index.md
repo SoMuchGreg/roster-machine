@@ -8,4 +8,4 @@ Referring to a specific player by "the shaman at position N" or "row N" was clum
 
 ## Files touched
 - `rules/04-players.md` — new `Row index (#)` paragraph, new `#` column in all three roster sub-tables, all rows numbered 1–43
-- `changelog/2026-04-14-roster-row-index.md` — this file
+- `changelog/2026-04-14-06-roster-row-index.md` — this file

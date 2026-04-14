@@ -6,6 +6,7 @@ CoffeeBreak's purpose, directory structure, and key file pointers are documented
 
 - When the user says **"make a note of it"**, **"write it down"**, or similar — always save the information to the appropriate **project file** (rules/, config/, reference/, etc.), not just to Claude memory. Project files are the source of truth.
 - **Be brief.** In both conversation and project files, use the fewest words that still convey the full meaning clearly to a human reader. Brevity is a constraint, not a goal: never drop meaning, nuance, or precision to hit a shorter wording. If a shorter phrasing would be ambiguous, harder to parse, or lose a load-bearing detail, keep the longer one. This applies to rule text, file edits, and chat replies alike.
+- **Stay within the scope of the prompt.** Only modify content directly tied to what the user just asked for. Changes that are a necessary consequence of the request are fine; opportunistic edits to unrelated files, sections, wording, or formatting are not — even if they look like improvements. If you notice something unrelated that seems wrong, mention it instead of fixing it, and let the user decide.
 - **Analyze screenshots thoroughly before asking.** When the user provides a screenshot, exhaust your own analysis first: zoom into details, cross-reference every visible icon, color, and label against `reference/class-colors-and-spec-icons.md` and `reference/icons/`, and re-read the relevant parsing steps in `reference/file-operations-manual.md`. Only ask the user about a screenshot's contents as a last resort, after the reference material genuinely cannot resolve the ambiguity.
 
 ## File and git workflow
@@ -33,7 +34,7 @@ CoffeeBreak's purpose, directory structure, and key file pointers are documented
 - **Sets are chained.** Bench history carries forward. Always read all prior sets before generating a new one.
 - **Self-referencing.** Every active project file — everything under `rules/`, `config/`, `reference/`, `sets/`, and `derived/` — becomes input for the next session. This recursion is intentional: past rosters constrain future ones, prior rules constrain new edits, derived state reflects accumulated history. Always read what's already there before adding to it; never write something that ignores the existing context. (Changelogs are deliberately *not* in this loop — they're a human-readable audit trail, not session input. See the changelog exclusion warning under "Before generating a raid roster" below.)
 - **Never assume player info.** If you don't know a player's class, spec, or role — ask. Do not guess.
-- **Rules evolve.** When the user updates rules, note the change in `changelog/` and re-evaluate affected sets.
+- **Rules evolve.** When the user updates rules, re-evaluate affected sets, and write a changelog entry **only if** the change clears the threshold in `reference/file-operations-manual.md` → "Changelog scope rule" → "When to write a changelog entry at all". Most edits don't.
 - **Research is allowed.** TBC class mechanics, raid requirements, etc. can be researched online. Store findings in `reference/`.
 
 ## Before generating a raid roster
