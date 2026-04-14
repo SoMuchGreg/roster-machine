@@ -53,7 +53,15 @@ This table is the **canonical reading list** for every roster-generation task. D
 3. Apply fair bench rotation **within each priority level** using counts from `derived/bench-history.md`. Never compare bench counts across priority levels.
 4. Respect player constraints from `rules/03-player-constraints.md`.
 5. Respect composition caps from `rules/01-raid-compositions.md`.
-6. Present roster to user for approval.
+6. **Sanity-check the roster with a sub-agent before presenting it.** Once the roster is finalized and you believe it's ready to show the user, spawn a fresh sub-agent (via the `Agent` tool) and have it independently verify rule compliance. The sub-agent must:
+   - Read every active rule file (`rules/*.md`, `config/project.md`, applicable sections of `reference/raid-composition-guide.md`) and the relevant inputs (the parsed signup, `derived/bench-history.md`, all prior `sets/*.md`).
+   - **Not** read `changelog/*.md` — same exclusion as roster formation itself.
+   - Walk through the proposed roster and check it against each rule.
+   - Return a clear verdict answering exactly one question: **"Does this roster adhere to all rules specified in this project? YES / NO"** — followed by a short list of any violations found (or "none" if YES).
+   - Make **no** changes to the roster, the set file, or any other project file. It is read-only.
+
+   After the sub-agent returns, **you must not modify the roster** based on its output, even if it reports violations. Present the roster exactly as it stood when you sent it to the sub-agent, paired with the sub-agent's verdict verbatim. The user decides what to do with any flagged violations.
+7. Present roster to user for approval, together with the sub-agent's YES/NO verdict and any violations it listed.
 
 ### Step 4 — Write/Update (after user confirms)
 

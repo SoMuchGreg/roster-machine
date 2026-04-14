@@ -5,6 +5,8 @@ CoffeeBreak's purpose, directory structure, and key file pointers are documented
 ## Communication conventions
 
 - When the user says **"make a note of it"**, **"write it down"**, or similar — always save the information to the appropriate **project file** (rules/, config/, reference/, etc.), not just to Claude memory. Project files are the source of truth.
+- **Be brief.** In both conversation and project files, use the fewest words that still convey the full meaning clearly to a human reader. Brevity is a constraint, not a goal: never drop meaning, nuance, or precision to hit a shorter wording. If a shorter phrasing would be ambiguous, harder to parse, or lose a load-bearing detail, keep the longer one. This applies to rule text, file edits, and chat replies alike.
+- **Analyze screenshots thoroughly before asking.** When the user provides a screenshot, exhaust your own analysis first: zoom into details, cross-reference every visible icon, color, and label against `reference/class-colors-and-spec-icons.md` and `reference/icons/`, and re-read the relevant parsing steps in `reference/file-operations-manual.md`. Only ask the user about a screenshot's contents as a last resort, after the reference material genuinely cannot resolve the ambiguity.
 
 ## File and git workflow
 
