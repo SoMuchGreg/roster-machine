@@ -13,7 +13,7 @@
 **Warlocks (3):** Jabbadhutt, McHughes, Ōtsu
 **Shamans (4):** Pergatori, Lynelen, Tymoti, Ebonybolt
 
-**Withdrew before raid (1):** Ōtsu
+**Withdrew before raid (2):** Ōtsu, Jabbadhutt
 **Absent (3):** Heligeman/Fugleman, CodeHunt/Rainbound, Jar
 
 **Header stats:** Melee 9, Ranged 9, Healers 7
@@ -45,6 +45,7 @@
 |---------------------|--------------------|
 | Dankyn              | Warrior (Fury)     |
 | Gigakox             | Warrior (Fury)     |
+| Verysadge           | Warrior (Fury)     |
 | Yxanb               | Druid (Feral)      |
 | Beaverfist          | Druid (Balance)    |
 | Glaivemaster Baebay | Rogue (Combat)     |
@@ -52,7 +53,6 @@
 | Kres/Dissi          | Priest (Shadow)    |
 | OomToDoom           | Mage               |
 | Greg (Ucannotpass)  | Mage               |
-| Jabbadhutt          | Warlock            |
 | McHughes            | Warlock            |
 | Vaelruna            | Hunter             |
 | Tonsen              | Hunter             |
@@ -60,14 +60,13 @@
 | Tymoti              | Shaman (Enhancement) |
 | Ebonybolt           | Shaman (Enhancement) |
 
-**Composition check:** Target 3/6/16 for Gruul+Mag (per `rules/01-raid-compositions.md`). Actual: 3/6/16 = 25. Status: ⚠️ Warlock count dropped to 2 (below Section 8's combined Destro+Affli lower bound of 3) when Ōtsu withdrew — unfillable since no other Warlocks signed up. Role targets (tank/healer/DPS) still on point.
+**Composition check:** Target 3/6/16 for Gruul+Mag (per `rules/01-raid-compositions.md`). Actual: 3/6/16 = 25. Status: ⚠️ Warlock count dropped to 1 (below Section 8's combined Destro+Affli lower bound of 3) after Ōtsu and Jabbadhutt withdrew — unfillable since no other Warlocks signed up. Role targets (tank/healer/DPS) still on point.
 
-## Bench (3)
+## Bench (2)
 
 | Player     | Priority | Bench count (cumulative, after this raid) | Reason        |
 |------------|----------|-------------------------------------------|---------------|
 | CptKavior  | 2        | 1                                         | leader choice |
-| Verysadge  | 2        | 1                                         | fair rotation |
 | Lynelen    | 2        | 1                                         | fair rotation |
 
 ## Notes
@@ -78,6 +77,5 @@
   - Beaverfist: signup Resto → ran Balance.
   - Kres/Dissi: signup Holy → ran Shadow.
   This is why the header reads 7 healers but the roster has 6.
-- **Verysadge benched** — Fury over Section 8 cap; tied on all tiebreakers, alphabetical fallback.
 - **Lynelen benched** — Enh over Section 8 cap. Algorithm picked Tymoti; raid leader overrode → Lynelen.
-- **Ōtsu withdrew pre-raid → Pergatori promoted.** Pergatori was the only bench candidate not holding a composition-cap slot, so the swap didn't reopen a cap question. Warlock count fell to 2, below Section 8's Destro+Affli lower bound of 3 — unfillable (no other Warlocks signed up).
+- **Ōtsu and Jabbadhutt withdrew pre-raid.** Pergatori promoted off bench for Ōtsu; Verysadge promoted off bench for Jabbadhutt (Fury cap no longer binding with only 1 Warlock DPS to fit). Warlock count fell to 1, below Section 8's Destro+Affli lower bound of 3 — unfillable (no other Warlocks signed up).
