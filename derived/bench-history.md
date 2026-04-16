@@ -10,17 +10,22 @@ Players are sorted alphabetically by name. Departed-guild players stay in their 
 
 | Player              | Karazhan | Karazhan dates       | Gruul+Mag | Gruul+Mag dates | Total |
 |---------------------|----------|----------------------|-----------|-----------------|-------|
+| Beaverfist          | 1        | 18.03                | 0         | —               | 1     |
 | CptKavior           | 1        | 08.04                | 1         | 15.04           | 2     |
+| Drillbabe           | 1        | 11.03                | 0         | —               | 1     |
 | Dwarfytron          | 1        | 01.04                | 0         | —               | 1     |
 | Gresac              | 0        | —                    | 1         | 25.03           | 1     |
 | Heligeman/Fugleman  | 1        | 19.04                | 1         | 12.04           | 2     |
 | Leontes             | 1        | 08.04                | 0         | —               | 1     |
 | Lynelen             | 0        | —                    | 1         | 15.04           | 1     |
+| McHughes            | 1        | 18.03                | 0         | —               | 1     |
 | McJudgin            | 1        | 08.04                | 0         | —               | 1     |
 | OomToDoom           | 0        | —                    | 1         | 12.04           | 1     |
-| Roossy/Keatala      | 0        | —                    | 2         | 25.03, 12.04    | 2     |
+| Roossy/Keatala      | 1        | 18.03                | 2         | 25.03, 12.04    | 3     |
 | ~~Thalynora~~       | 1        | 01.04 — left guild   | 0         | —               | 1     |
+| Tonsen              | 1        | 11.03                | 0         | —               | 1     |
 | Varva               | 1        | 08.04 — also absent  | 0         | —               | 1     |
 | Verysadge           | 0        | —                    | 1         | 15.04           | 1     |
+| Yxanb               | 0        | —                    | 1         | 22.03           | 1     |
 
 All other priority-2 and priority-3 players: 0 benches at every location.
