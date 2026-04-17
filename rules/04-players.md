@@ -45,7 +45,7 @@ currently held only by the players in the Officers sub-table below) or priority 
 |----|---------------------|--------------------------|---------|----------------|---------------|----------|--------------------------------------------------------------------------|
 | 1  | Jar                 | Jar, Jardepli            | Druid   | Healer (Resto) | DPS (Balance) | 1        | Officer, 2 specs. Go-to Boomkin                                          |
 | 2  | Greg                | Ucannotpass              | Mage    | DPS            | —             | 1        | Officer                                                                  |
-| 3  | Kres/Dissi          | Kresniik, Dissi, Griever | Priest  | DPS (Shadow)   | Healer (Holy) | 1        | Officer, multiple chars. Dissi = Druid alt; Griever = alt, class unknown |
+| 3  | Kres/Dissi          | Kresniik, Dissi, Griever | Priest  | DPS (Shadow)   | Healer (Holy) | 1        | Officer, multiple chars. Dissi = Druid alt; Griever = alt, class unknown | 
 | 4  | Glaivemaster Baebay | BaeBay                   | Rogue   | DPS (Combat)   | —             | 1        | Officer                                                                  |
 | 5  | Mirohl              | Mirohl                   | Warrior | Tank           | DPS (Arms)    | 1        | Officer, MT, Main Tank                                                   |
 

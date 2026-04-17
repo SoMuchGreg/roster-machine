@@ -14,6 +14,11 @@ CoffeeBreak's purpose, directory structure, and key file pointers are documented
 - **Whenever you create a new file in this project, also stage it with `git add` immediately after creating it.** This applies to any file added under any directory (rules/, sets/, reference/, derived/, changelog/, templates/, etc.). The point is that newly created files should appear in `git status` as staged additions, not as untracked, so the staging area always reflects the full intended change set. Do not commit — staging only. Committing is still the user's decision.
 - This rule does **not** apply to file edits. Edits to already-tracked files appear automatically as unstaged modifications in `git status`, and there's no benefit to pre-staging them.
 - This rule does **not** apply to files created by tooling outside the project's intent (e.g., IDE caches, OS detritus). Those should be excluded via `.gitignore`, not staged.
+- **Prefer pre-allowed command forms over equivalents.** `.claude/settings.json` (committed) auto-approves specific invocation patterns — e.g., bare `git status`, `git ls-files`, `git check-ignore`, `git add`, `git mv` run from the project cwd. Equivalents like `git -C /absolute/path status` aren't covered by those patterns and trigger a new permission prompt; any approval is then stored only on that machine, breaking cross-machine portability. Check `.claude/settings.json` before choosing an invocation form, and if a new command genuinely needs to be approved repeatedly, add it there so every machine gets it.
+
+## Rule enforcement
+
+- **When I violate a rule whose anti-pattern is mechanically detectable, add a runtime gate in `.claude/settings.json` in the same turn — without being asked.** Use `permissions.deny` for hard blocks on a specific command shape; a PreToolUse hook for anything conditional. The gate is not a rule restatement — it encodes enforcement of the same single concept, which preserves single-source-of-truth (the prose rule under `rules/` or in CLAUDE.md holds the *why*; the gate holds the *what-to-block*). The trigger is catching a violation — mine, or one the user flags. Skip this for rules whose anti-patterns aren't expressible as a permission matcher; runtime gates don't fit judgment-call rules.
 
 ## Auto-memory policy (important)
 

@@ -1,7 +1,24 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git add:*)"
+      "WebSearch",
+      "WebFetch(domain:wowpedia.fandom.com)",
+      "WebFetch(domain:warcraft.wiki.gg)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.wowhead.com)",
+      "WebFetch(domain:www.icy-veins.com)",
+      "WebFetch(domain:us.forums.blizzard.com)",
+      "WebFetch(domain:www.iggm.com)",
+      "WebFetch(domain:eu.forums.blizzard.com)",
+      "WebFetch(domain:www.warcrafttavern.com)",
+      "Bash(git add:*)",
+      "Bash(git mv:*)",
+      "Bash(git status:*)",
+      "Bash(git ls-files:*)",
+      "Bash(git check-ignore:*)"
+    ],
+    "deny": [
+      "Bash(git -C:*)"
     ]
   }
 }
