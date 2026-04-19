@@ -47,6 +47,12 @@ The **only** kinds of benching that can happen under-cap are:
 
 Format-specific under-cap rules live in the per-format sections below.
 
+### Party groups (out of scope)
+
+Roster formation produces **raid team** compositions only — never **party-group** (5-man sub-group) breakdowns. Inside `reference/raid-composition-guide.md`, sections **§3 (Optimal Party Group Templates)**, **§4 (Karazhan Group Composition)**, and **§9 (Practical Group Assignment Framework)** are out-of-scope reference material that must not be applied during roster formation.
+
+This scope will change when the user formalizes party-group rules (see `config/project.md` → "What's next"). Until then, do not produce 5-man sub-group breakdowns in any set file, and do not apply §3/§4/§9 when building a roster.
+
 ## Karazhan (10-man)
 
 Each Karazhan raid team should target the following composition:

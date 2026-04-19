@@ -33,6 +33,7 @@ For cadence (when to re-read the applicable tier within a session), see `CLAUDE.
 | `derived/bench-history.md` | Cumulative bench counts per player per raid location — used for fair-rotation decisions |
 | `derived/signup-history.md` | Cumulative signup counts per player — statistic only, not consulted by any active rule; read so the current state is in context when Step 4 increments it |
 | `derived/signup-history-karazhan-gruul-mag.md` | Scope-restricted counterpart of `signup-history.md` (Karazhan/Gruul/Mag only); read for the same reason |
+| `derived/signup-rate-karazhan-gruul-mag.md` | Per-member signup rate (percentage) in the same scope as `signup-history-karazhan-gruul-mag.md`; read for the same reason |
 | `reference/class-colors-and-spec-icons.md` | Class colors and spec icon reference for parsing screenshots |
 | `reference/icons/specs/*.jpg` | Spec icon reference images (compare side-by-side when unsure) |
 | `reference/icons/classes/*.png` | Class icon reference images (compare side-by-side when unsure) |
@@ -92,6 +93,7 @@ Read both **Tier 1** and **Tier 2** of the **Reading list** at the top of this f
 | `derived/bench-history.md` | **Update.** For each player benched this raid: find their row (or insert a new one in alphabetical position if absent), increment the count cell for the relevant raid-location column, append the new date to that location's dates cell, and recompute the **Total** cell. The `Total` column is a sum across all raid-location count columns — keep it in sync on every edit. |
 | `derived/signup-history.md` | **Update.** For each distinct canonical player appearing anywhere in the new set's `## Signups` section (any sub-line — class lists, Tentative, Late, Originally absent but raided, Bench, Absent): find their row in the sub-table matching their `rules/04-players.md` classification (Officers / Current members / Former members), or add a new row in that sub-table if absent. Increment **Signups** by 1. Then re-sort each sub-table whose rows changed (by `Signups` desc, alphabetical case-insensitive tiebreak) and renumber `#` from `1`. Count each player once per set regardless of how many sub-lines mention them. See that file's own "What counts as a signup" and "Maintenance" sections for the full rule. |
 | `derived/signup-history-karazhan-gruul-mag.md` | **Update IF** the new/edited set is in scope per that file's **Scope** section (currently: Karazhan, Gruul's Lair, Magtheridon's Lair). Apply the same delta logic as `derived/signup-history.md` above — same counting rule, same sort and renumber — but with two sub-tables (Officers / Current members) rather than three; this file tracks only current members. Skip entirely for out-of-scope sets (currently any old-world set). |
+| `derived/signup-rate-karazhan-gruul-mag.md` | **Update IF** the new/edited set is in scope. See that file's **Scope and maintenance** section — in brief: for every current non-officer member, recompute Signups and Raids-in-window from the player's First signup date, recompute Signup rate, refresh the "Computed as of" header, re-sort by Signup rate desc (alphabetical tiebreak), renumber. Skip for out-of-scope sets. |
 | `rules/04-players.md` | **Update IF** a new player appeared, or an existing player's spec changed. |
 
 > **Set file format is templated.** Do not invent your own structure. If something genuinely doesn't fit either template, raise it to the user before deviating — the templates are the canonical structure for sets, and consistency across sets is what makes bench history and predecessor reads reliable.
@@ -228,6 +230,7 @@ Player data — names, classes, specs, priorities, bench counts, set rosters —
 | `derived/bench-history.md` | Update every row that references the old player name to the new canonical name. This is derived data, not a historical record — normalize it, don't preserve the old label. |
 | `derived/signup-history.md` | Same as `bench-history.md` — rename the `Player` column value to the new canonical name. Derived data, normalize it. |
 | `derived/signup-history-karazhan-gruul-mag.md` | Same treatment as `derived/signup-history.md`. Row only exists if the player has in-scope signups; if absent, no action. |
+| `derived/signup-rate-karazhan-gruul-mag.md` | Same treatment as `derived/signup-history-karazhan-gruul-mag.md` — rename the `Player` cell. Row only exists if the player has in-scope signups; if absent, no action. |
 | `sets/*.md` | Update every historical set that references the old name, wherever it appears (signup lists, roster tables, bench tables, Notes sections). A pure name normalization doesn't violate the sets-are-immutable principle — it updates the label without changing any factual content. |
 
 ### Afterwards:
@@ -246,6 +249,7 @@ Player data — names, classes, specs, priorities, bench counts, set rosters —
 | `derived/bench-history.md` | Strike through departed player (keep for history) |
 | `derived/signup-history.md` | Move the row from Current members (or Officers) to Former members; re-sort and renumber both sub-tables. Do **not** strike through (sub-table placement conveys departed status, matching `rules/04-players.md`). |
 | `derived/signup-history-karazhan-gruul-mag.md` | Remove the departed player's row from Current members (or Officers) and renumber the affected sub-table. No Former members sub-table here — see the file's header for the full divergence from `signup-history.md`. Row only exists if the player has in-scope signups; if absent, no action. |
+| `derived/signup-rate-karazhan-gruul-mag.md` | Remove the departed player's row (or the officer-promoted player's row — this file tracks only non-officer current members) and renumber. Row only exists if the player has in-scope signups; if absent, no action. |
 | `rules/03-player-constraints.md` | Remove any constraints involving departed player |
 
 ---
@@ -273,7 +277,8 @@ INPUTS for generating a set:
   ├── rules/04-players.md
   ├── derived/bench-history.md     ← summary derived from sets/, kept as a fast-lookup index
   ├── derived/signup-history.md    ← derived from sets/ — statistic only, not used by any active rule
-  └── derived/signup-history-karazhan-gruul-mag.md  ← scope-restricted counterpart of signup-history.md
+  ├── derived/signup-history-karazhan-gruul-mag.md  ← scope-restricted counterpart of signup-history.md
+  └── derived/signup-rate-karazhan-gruul-mag.md     ← signup rate (percentage) in the same scope (statistic only)
 
 REFERENCE for parsing screenshots and raid composition decisions:
   ├── reference/class-colors-and-spec-icons.md       ← parsing screenshots (class colors, spec icons)
@@ -284,7 +289,8 @@ OUTPUTS:
   ├── sets/*.md                    ← actual sets, one per raid night (each set is also INPUT for the next)
   ├── derived/bench-history.md     ← updated whenever a new set is created
   ├── derived/signup-history.md    ← updated whenever a new set is created or edited
-  └── derived/signup-history-karazhan-gruul-mag.md  ← same, but only for in-scope sets (Karazhan/Gruul/Mag)
+  ├── derived/signup-history-karazhan-gruul-mag.md  ← same, but only for in-scope sets (Karazhan/Gruul/Mag)
+  └── derived/signup-rate-karazhan-gruul-mag.md     ← updated on the same trigger as the history (no calendar drift)
 
 REFERENCE for writing new sets (canonical structure for set files):
   ├── reference/templates/karazhan-set.md   ← canonical structure for Karazhan sets
@@ -306,7 +312,7 @@ After any interaction, check:
 
 - [ ] New player seen? → `04-players.md`
 - [ ] Someone benched? → `bench-history.md`
-- [ ] New set written or edited? → `signup-history.md` (increment for every player in `## Signups`); also `signup-history-karazhan-gruul-mag.md` if the set is in scope
+- [ ] New set written or edited? → `signup-history.md` (increment for every player in `## Signups`); also `signup-history-karazhan-gruul-mag.md` and `signup-rate-karazhan-gruul-mag.md` if the set is in scope
 - [ ] Spec changed from previous? → `04-players.md`
 - [ ] Rule added/changed? → `rules/*.md` + `changelog/`
 - [ ] Player left/joined? → `04-players.md` + `03-player-constraints.md` + `bench-history.md`
