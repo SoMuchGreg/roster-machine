@@ -15,7 +15,7 @@ Players are sorted alphabetically by name. Departed-guild players stay in their 
 | Drillbabe           | 1        | 11.03                | 0         | —               | 1     |
 | Dwarfytron          | 1        | 01.04                | 0         | —               | 1     |
 | Gresac              | 0        | —                    | 1         | 25.03           | 1     |
-| Heligeman/Fugleman  | 1        | 19.04                | 1         | 12.04           | 2     |
+| Heligeman/Fugleman  | 0        | —                    | 1         | 12.04           | 1     |
 | Leontes             | 1        | 08.04                | 0         | —               | 1     |
 | Lynelen             | 0        | —                    | 1         | 15.04           | 1     |
 | McHughes            | 1        | 18.03                | 0         | —               | 1     |

@@ -26,7 +26,7 @@
 | Yxanb               | DPS    | Druid (Feral)        |
 | Verysadge           | DPS    | Warrior (Fury)       |
 | Bergamotka          | DPS    | Shaman (Enhancement) |
-| Kres/Dissi          | DPS    | Priest (Shadow)      |
+| PUG DPS             | DPS    | —                    |
 | BestPractice        | DPS    | Warlock              |
 | Pergatori           | DPS    | Shaman (Elemental)   |
 | Lightweit           | Healer | Priest (Holy)        |
@@ -60,15 +60,13 @@
 | McHughes            | DPS    | Warlock              |
 | OomToDoom           | DPS    | Mage                 |
 | Thordrel            | Healer | Paladin (Holy)       |
-| Bombzor             | Healer | Priest               |
+| Heligeman/Fugleman  | Healer | Paladin (Holy)       |
 
 **Composition check:** Target per team: 2T / 2H / 6 DPS = 10. Total target across 3 teams: 30. Actual: 3 × 10 = 30. Status: ⚠️ Team Restaurant runs 2 Warrior tanks with no Paladin (Paladin shortage exemption — see Notes).
 
-## Bench (1)
+## Bench (0)
 
-| Player             | Priority | Bench count (cumulative, after this raid) | Reason        |
-|--------------------|----------|-------------------------------------------|---------------|
-| Heligeman/Fugleman | 2        | 1                                         | leader choice |
+*(None — all 30 spots filled)*
 
 ## Notes
 
@@ -76,7 +74,7 @@
 - **Siljes/Ejlis** signed up under "Siljes" character. Player renamed from Ejlis to Siljes/Ejlis in `rules/04-players.md`.
 - **Spot/Yorek** renamed to **Spot/Yorekbarn** per user. Updated in `rules/04-players.md`.
 - **Paladin tank shortage exemption applied.** Only 2 Paladin tanks signed up for 3 teams; per `rules/01-raid-compositions.md` → Tank composition → Paladin tank shortage exemption, Team Restaurant runs 2 Warrior tanks (no AoE coverage).
-- **Heligeman/Fugleman** benched by leader choice; algorithm would have benched Bombzor (Tier 2 tiebreaker, `rules/02-bench-rotation.md`).
+- **Last-minute drop-outs:** Kres/Dissi (DPS, Team Restaurant) and Bombzor (Healer, Team BaeGlaives) dropped out before start. Heligeman/Fugleman was pulled off the bench to fill the BaeGlaives healer slot; a PUG DPS was recruited to fill the Restaurant DPS slot.
 
 ## Loot conflicts
 
@@ -86,9 +84,9 @@ Per `rules/03-player-constraints.md` — items where 2+ competing players are in
 |-----------------------------|--------------------------------------------------------------|------------------------------|
 | Boots of the Incorrupt      | Lightweit (R), Siljes/Ejlis (Bak)                            | ✓ split                      |
 | Helm of the Fallen Champion | Bergamotka (R), Leontes (BG), Lynelen (BG)                   | ⚠️ Leontes + Lynelen         |
-| Helm of the Fallen Defender | Mirohl (R), Beaverfist (Bak), Bombzor (BG), Gigakox (BG)     | ⚠️ Bombzor + Gigakox         |
+| Helm of the Fallen Defender | Mirohl (R), Beaverfist (Bak), Gigakox (BG)                   | ✓ split                      |
 | King's Defender             | CptKavior (R), Doughball (Bak)                               | ✓ split                      |
-| Light's Justice             | Gresac (R), Siljes/Ejlis (Bak), Bombzor (BG), Thordrel (BG)  | ⚠️ Bombzor + Thordrel        |
+| Light's Justice             | Gresac (R), Siljes/Ejlis (Bak), Thordrel (BG)                | ✓ split                      |
 | Nathrezim Mindblade         | Pergatori (R), Beaverfist (Bak)                              | ✓ split                      |
 | Ring of a Thousand Marks    | Verysadge (R), Yorekbarn (Bak), Leontes (BG)                 | ✓ split                      |
 | Skulker's Greaves           | Yxanb (R), Dankyn (Bak), Gigakox (BG), Vaelruna (BG)         | ⚠️ Gigakox + Vaelruna        |
@@ -97,7 +95,7 @@ Per `rules/03-player-constraints.md` — items where 2+ competing players are in
 | The Lightning Capacitor     | Pergatori (R), OomToDoom (BG)                                | ✓ split                      |
 | Wrynn Dynasty Greaves       | Mirohl (R), Doughball (Bak)                                  | ✓ split                      |
 
-**8/12 fully split.** 4 violations are unavoidable (competitor count exceeds team count or interlocking constraint triangles). All 4 violations land on Team BaeGlaives.
+**10/12 fully split.** 2 violations are unavoidable (competitor count exceeds team count or interlocking constraint triangles). Both violations land on Team BaeGlaives.
 
 ## Sanity check
 
@@ -112,4 +110,7 @@ Per `rules/03-player-constraints.md` — items where 2+ competing players are in
 - Teams reshuffled by raid leader from sub-agent-verified version. Net effects:
   - Paladin tank shortage exemption now applies to Team Restaurant (2 Warrior tanks) instead of Team Bakery.
   - Enhancement Shaman distribution changed from 2/1/0 to 1/1/1 across R/Bak/BG, resolving the prior soft-rule deviation.
-  - Unavoidable loot-split violations (final): Helm of the Fallen Champion (Leontes + Lynelen, BG), Helm of the Fallen Defender (Bombzor + Gigakox, BG), Light's Justice (Bombzor + Thordrel, BG), Skulker's Greaves (Gigakox + Vaelruna, BG) — all four on Team BaeGlaives.
+- Last-minute drop-outs after the roster was finalised: Kres/Dissi (Restaurant DPS) → PUG DPS; Bombzor (BaeGlaives Healer) → Heligeman/Fugleman (pulled off bench). Net effects:
+  - Bench is empty; Heligeman/Fugleman no longer counts as benched for this raid.
+  - Two prior unavoidable BaeGlaives loot-split violations resolved with Bombzor's removal (Helm of the Fallen Defender, Light's Justice). Remaining unavoidable violations: Helm of the Fallen Champion (Leontes + Lynelen, BG), Skulker's Greaves (Gigakox + Vaelruna, BG) — both on Team BaeGlaives.
+  - Team BaeGlaives now runs 2 Holy Paladin healers (Thordrel + Heligeman/Fugleman) instead of 1 Holy Paladin + 1 Priest.

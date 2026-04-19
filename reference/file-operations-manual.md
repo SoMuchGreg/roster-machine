@@ -134,6 +134,28 @@ Same as above, but:
 
 ---
 
+## Event: Mid-week roster change (post-sanity-check)
+
+After a set is written and the sanity check has passed, last-minute changes can still happen: a signup drops out before raid start, a benched player is pulled in, a PUG is recruited to fill a gap, a spec is overridden at the start of the raid. Edit the existing set file in place — do **not** create a new one.
+
+> **Always walk the full update table below, even if only one file seems affected.** The common failure mode is updating the obvious derived file (usually `bench-history-tbc.md`) and forgetting to verify the others. Every roster change must be followed by an explicit pass over *every* derived file — including the ones that turn out to need no update. Stating "no update needed for X" is part of completing the task.
+
+### Update these files:
+
+| File | When it needs updating | What to update |
+|------|------------------------|----------------|
+| `sets/YYYY-MM-DD-day-raid.md` | Always. | Roster tables (swap players, PUGs use `PUG DPS` / `PUG Heal` per `rules/01-raid-compositions.md` → "Recording outside recruits (PUGs)"); bench table (replace with `*(None — all 30 spots filled)*` if empty); composition check; loot conflicts (removed players drop out of competitor lists, added players may introduce new conflicts — cross-check `rules/03-player-constraints.md`); Notes (add a "Mid-week roster changes" bullet per the Notes section guidance above); Post-check changes subsection under Sanity check (**extend** — do not rewrite the original sub-agent verdict). |
+| `derived/bench-history-tbc.md` | If someone was added to or removed from the bench. Pulling a benched player off the bench to fill a dropout → decrement their count at this location, remove the date, recompute Total. Newly benching someone post-check → increment count, append date, recompute Total. | Count + dates + Total columns. |
+| `derived/signup-history-total.md` | **Only if the `## Signups` section of the set changed.** Roster-only changes (swaps, PUG inserts, bench reshuffles) do **not** touch Signups — players who dropped out after signup still appear in their class sub-line. PUGs never appear in Signups. If the Signups section *did* change (e.g., a player recategorised from a class list to Absent), apply the net delta. | Increment/decrement Signups; re-sort + renumber affected sub-tables. |
+| `derived/signup-stats-tbc.md` | Same trigger as `signup-history-total.md`, scoped to in-scope sets (see that file's Scope section). If only the roster changed but Signups didn't, no update. | Same delta mechanics plus Raids-in-window / Signup rate recompute + "Computed as of" header. |
+| `rules/04-players.md` | If the roster change revealed new per-player info (a spec not previously recorded, a new alt, a new constraint). | The relevant player row. |
+
+### Afterwards
+
+Run the post-edit consistency grep per `CLAUDE.md` → "Post-edit consistency grep" if you changed any player name or renamed any field.
+
+---
+
 ## Event: User reports a new rule or rule change
 
 ### Update these files:
