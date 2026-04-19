@@ -22,29 +22,29 @@
 | Player              | Role   | Class                |
 |---------------------|--------|----------------------|
 | Mirohl              | MT     | Warrior              |
-| Ostbirger           | OT     | Paladin              |
-| Dankyn              | DPS    | Warrior (Fury)       |
+| CptKavior           | OT     | Warrior              |
+| Yxanb               | DPS    | Druid (Feral)        |
+| Verysadge           | DPS    | Warrior (Fury)       |
 | Bergamotka          | DPS    | Shaman (Enhancement) |
-| Ebonybolt           | DPS    | Shaman (Enhancement) |
-| Greg (Ucannotpass)  | DPS    | Mage                 |
+| Kres/Dissi          | DPS    | Priest (Shadow)      |
 | BestPractice        | DPS    | Warlock              |
-| Tonsen              | DPS    | Hunter               |
-| Gresac              | Healer | Druid (Resto)        |
+| Pergatori           | DPS    | Shaman (Elemental)   |
 | Lightweit           | Healer | Priest (Holy)        |
+| Gresac              | Healer | Druid (Resto)        |
 
 ### Team Bakery
 
 | Player              | Role   | Class                |
 |---------------------|--------|----------------------|
-| Gigakox             | MT     | Warrior              |
+| Ostbirger           | MT     | Paladin              |
 | Doughball           | OT     | Warrior              |
-| Leontes             | DPS    | Paladin (Ret)        |
 | Yorekbarn           | DPS    | Warrior (Fury)       |
-| Vaelruna            | DPS    | Hunter               |
-| Kres/Dissi          | DPS    | Priest (Shadow)      |
-| Pergatori           | DPS    | Shaman (Elemental)   |
-| McHughes            | DPS    | Warlock              |
-| Bombzor             | Healer | Priest               |
+| Dankyn              | DPS    | Warrior (Fury)       |
+| Ebonybolt           | DPS    | Shaman (Enhancement) |
+| Tonsen              | DPS    | Hunter               |
+| Beaverfist          | DPS    | Druid (Balance)      |
+| Greg (Ucannotpass)  | DPS    | Mage                 |
+| Siljes/Ejlis        | Healer | Priest               |
 | Roossy/Keatala      | Healer | Druid (Resto)        |
 
 ### Team BaeGlaives
@@ -52,17 +52,17 @@
 | Player              | Role   | Class                |
 |---------------------|--------|----------------------|
 | Marino-Varthier     | MT     | Paladin              |
-| CptKavior           | OT     | Warrior              |
+| Gigakox             | OT     | Warrior              |
 | Glaivemaster Baebay | DPS    | Rogue (Combat)       |
+| Leontes             | DPS    | Paladin (Ret)        |
 | Lynelen             | DPS    | Shaman (Enhancement) |
-| Verysadge           | DPS    | Warrior (Fury)       |
-| Beaverfist          | DPS    | Druid (Balance)      |
-| Yxanb               | DPS    | Druid (Feral)        |
+| Vaelruna            | DPS    | Hunter               |
+| McHughes            | DPS    | Warlock              |
 | OomToDoom           | DPS    | Mage                 |
-| Siljes/Ejlis        | Healer | Priest               |
 | Thordrel            | Healer | Paladin (Holy)       |
+| Bombzor             | Healer | Priest               |
 
-**Composition check:** Target per team: 2T / 2H / 6 DPS = 10. Total target across 3 teams: 30. Actual: 3 × 10 = 30. Status: ⚠️ Team Bakery runs 2 Warrior tanks with no Paladin (Paladin shortage exemption — see Notes).
+**Composition check:** Target per team: 2T / 2H / 6 DPS = 10. Total target across 3 teams: 30. Actual: 3 × 10 = 30. Status: ⚠️ Team Restaurant runs 2 Warrior tanks with no Paladin (Paladin shortage exemption — see Notes).
 
 ## Bench (1)
 
@@ -75,7 +75,7 @@
 - **Bergamotka/Tymoti** — same person confirmed. Rows merged in `rules/04-players.md`. Signed up as Bergamotka this raid.
 - **Siljes/Ejlis** signed up under "Siljes" character. Player renamed from Ejlis to Siljes/Ejlis in `rules/04-players.md`.
 - **Spot/Yorek** renamed to **Spot/Yorekbarn** per user. Updated in `rules/04-players.md`.
-- **Paladin tank shortage exemption applied.** Only 2 Paladin tanks signed up for 3 teams; per `rules/01-raid-compositions.md` → Tank composition → Paladin tank shortage exemption, Team Bakery runs 2 Warrior tanks (no AoE coverage).
+- **Paladin tank shortage exemption applied.** Only 2 Paladin tanks signed up for 3 teams; per `rules/01-raid-compositions.md` → Tank composition → Paladin tank shortage exemption, Team Restaurant runs 2 Warrior tanks (no AoE coverage).
 - **Heligeman/Fugleman** benched by leader choice; algorithm would have benched Bombzor (Tier 2 tiebreaker, `rules/02-bench-rotation.md`).
 
 ## Loot conflicts
@@ -84,20 +84,20 @@ Per `rules/03-player-constraints.md` — items where 2+ competing players are in
 
 | Item                        | Competitors                                                  | Status                       |
 |-----------------------------|--------------------------------------------------------------|------------------------------|
-| Boots of the Incorrupt      | Lightweit (R), Siljes/Ejlis (BG)                             | ✓ split                      |
-| Helm of the Fallen Champion | Bergamotka (R), Leontes (Bak), Lynelen (BG)                  | ✓ split                      |
-| Helm of the Fallen Defender | Mirohl (R), Beaverfist (BG), Bombzor (Bak), Gigakox (Bak)   | ⚠️ Bombzor + Gigakox         |
-| King's Defender             | CptKavior (BG), Doughball (Bak)                              | ✓ split                      |
-| Light's Justice             | Gresac (R), Siljes/Ejlis (BG), Thordrel (BG), Bombzor (Bak) | ⚠️ Siljes/Ejlis + Thordrel   |
-| Nathrezim Mindblade         | Beaverfist (BG), Pergatori (Bak)                             | ✓ split                      |
-| Ring of a Thousand Marks    | Verysadge (BG), Leontes (Bak), Yorekbarn (Bak)               | ⚠️ Leontes + Yorekbarn       |
-| Skulker's Greaves           | Dankyn (R), Yxanb (BG), Gigakox (Bak), Vaelruna (Bak)       | ⚠️ Gigakox + Vaelruna        |
-| Spiteblade                  | Dankyn (R), Baebay (BG)                                      | ✓ split                      |
-| The Decapitator             | Bergamotka (R), Lynelen (BG), Yorekbarn (Bak)                | ✓ split                      |
-| The Lightning Capacitor     | OomToDoom (BG), Pergatori (Bak)                              | ✓ split                      |
+| Boots of the Incorrupt      | Lightweit (R), Siljes/Ejlis (Bak)                            | ✓ split                      |
+| Helm of the Fallen Champion | Bergamotka (R), Leontes (BG), Lynelen (BG)                   | ⚠️ Leontes + Lynelen         |
+| Helm of the Fallen Defender | Mirohl (R), Beaverfist (Bak), Bombzor (BG), Gigakox (BG)     | ⚠️ Bombzor + Gigakox         |
+| King's Defender             | CptKavior (R), Doughball (Bak)                               | ✓ split                      |
+| Light's Justice             | Gresac (R), Siljes/Ejlis (Bak), Bombzor (BG), Thordrel (BG)  | ⚠️ Bombzor + Thordrel        |
+| Nathrezim Mindblade         | Pergatori (R), Beaverfist (Bak)                              | ✓ split                      |
+| Ring of a Thousand Marks    | Verysadge (R), Yorekbarn (Bak), Leontes (BG)                 | ✓ split                      |
+| Skulker's Greaves           | Yxanb (R), Dankyn (Bak), Gigakox (BG), Vaelruna (BG)         | ⚠️ Gigakox + Vaelruna        |
+| Spiteblade                  | Dankyn (Bak), Baebay (BG)                                    | ✓ split                      |
+| The Decapitator             | Bergamotka (R), Yorekbarn (Bak), Lynelen (BG)                | ✓ split                      |
+| The Lightning Capacitor     | Pergatori (R), OomToDoom (BG)                                | ✓ split                      |
 | Wrynn Dynasty Greaves       | Mirohl (R), Doughball (Bak)                                  | ✓ split                      |
 
-**8/12 fully split.** 4 violations are unavoidable (competitor count exceeds team count or interlocking constraint triangles). Mirohl has 0 competitors on Restaurant for both his items.
+**8/12 fully split.** 4 violations are unavoidable (competitor count exceeds team count or interlocking constraint triangles). All 4 violations land on Team BaeGlaives.
 
 ## Sanity check
 
@@ -108,4 +108,8 @@ Per `rules/03-player-constraints.md` — items where 2+ competing players are in
 - **Soft rule deviation:** Enhancement Shaman distribution 2/1/0 across R/BG/Bak — forced by must-together (Ostbirger + Ebonybolt) and loot constraints.
 
 **Post-check changes** (not re-verified by sub-agent):
-- Bench changed from Bombzor (algorithm pick) → Heligeman/Fugleman (leader choice). Added 2 unavoidable loot violations: Helm of the Fallen Defender (Bombzor + Gigakox, Bakery), Light's Justice (Siljes/Ejlis + Thordrel, BaeGlaives). Both are 4-competitor items on 3 teams.
+- Bench changed from Bombzor (algorithm pick) → Heligeman/Fugleman (leader choice).
+- Teams reshuffled by raid leader from sub-agent-verified version. Net effects:
+  - Paladin tank shortage exemption now applies to Team Restaurant (2 Warrior tanks) instead of Team Bakery.
+  - Enhancement Shaman distribution changed from 2/1/0 to 1/1/1 across R/Bak/BG, resolving the prior soft-rule deviation.
+  - Unavoidable loot-split violations (final): Helm of the Fallen Champion (Leontes + Lynelen, BG), Helm of the Fallen Defender (Bombzor + Gigakox, BG), Light's Justice (Bombzor + Thordrel, BG), Skulker's Greaves (Gigakox + Vaelruna, BG) — all four on Team BaeGlaives.
