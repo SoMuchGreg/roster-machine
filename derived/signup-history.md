@@ -7,7 +7,7 @@ Total number of times each player has appeared in the `## Signups (from Discord)
 - **One signup per set file per player**, regardless of which sub-line the player appears on. Every sub-line in the `## Signups (from Discord)` section counts: class lists (Tanks, Warriors, Druids, Paladins, Rogues, Hunters, Priests, Mages, Warlocks, Shamans), plus **Tentative**, **Late**, **Originally absent but raided**, **Bench**, and **Absent** sub-lines. The underlying signal is the Discord signup event — any reaction bucket is a signup.
 - **The `## Signups` section is the sole source.** Do not count references to a player in `## Notes`, `## Bench`, `## Actual Roster`, `## Loot conflicts`, or any other section. If a Notes bullet mentions a signup that isn't reflected in the Signups section, that is a data inconsistency in the set file itself — fix the set file, do not add a phantom count here.
 - **All set files are in scope, including old-world sets.** Old-world sets are signup-only records (no roster formed) but their `## Signups` section is structurally identical and counts the same way.
-- **Canonical player names from `rules/04-players.md`.** A signup under any of a player's listed character names (e.g., `Kresniik`, `Dissi`, or `Griever`) all collapse to the canonical Player (`Kres/Dissi`). Decorations like `Greg (Ucannotpass)` still count as a single signup for `Greg`.
+- **Canonical player names.** Every signup collapses to the player's canonical name as defined in `config/project.md` → "Terminology". One signup per set per canonical player, regardless of which character name or decoration (e.g., `Greg (Ucannotpass)`) the signup appeared under.
 
 ## Maintenance
 

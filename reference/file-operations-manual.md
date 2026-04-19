@@ -4,11 +4,18 @@ Step-by-step guide for when to read and update each file, organized by trigger e
 
 ---
 
-## Event: New signup screenshot received
+## Reading list
 
-### Step 1 — Read (before parsing)
+The **canonical reading list** — referenced by the `Before any file edit` rule in `CLAUDE.md` and by every roster-generation event below. Do not rely on any partial summary elsewhere.
 
-This table is the **canonical reading list** for every roster-generation task. Do not rely on any partial summary elsewhere — read every file listed here.
+The list is **tiered**:
+
+- **Tier 1 — every edit.** Applies to any `Edit` or `Write` call, regardless of what's being edited.
+- **Tier 2 — roster or screenshot edits only.** Additionally applies when the edit creates or modifies a `sets/*.md` file, touches `derived/*.md`, or parses a signup screenshot.
+
+For cadence (when to re-read the applicable tier within a session), see `CLAUDE.md` → "Before any file edit".
+
+### Tier 1
 
 | File | Why |
 |------|-----|
@@ -17,6 +24,12 @@ This table is the **canonical reading list** for every roster-generation task. D
 | `rules/02-bench-rotation.md` | Selection algorithm, raid spot priority, fair rotation, tiebreakers |
 | `rules/03-player-constraints.md` | Must-together / must-not-together / availability / loot / enchanter constraints |
 | `rules/04-players.md` | Existing players' classes, specs, raid spot priority, notes |
+| `reference/file-operations-manual.md` | This file — workflow procedures for every event type |
+
+### Tier 2
+
+| File | Why |
+|------|-----|
 | `derived/bench-history.md` | Cumulative bench counts per player per raid location — used for fair-rotation decisions |
 | `derived/signup-history.md` | Cumulative signup counts per player — statistic only, not consulted by any active rule; read so the current state is in context when Step 4 increments it |
 | `derived/signup-history-karazhan-gruul-mag.md` | Scope-restricted counterpart of `signup-history.md` (Karazhan/Gruul/Mag only); read for the same reason |
@@ -27,6 +40,14 @@ This table is the **canonical reading list** for every roster-generation task. D
 | All files in `sets/` | Predecessor context, especially recent bench history |
 
 > **Party-group assignments are NOT currently produced.** Inside `reference/raid-composition-guide.md`, only **§3 (Optimal Party Group Templates)**, **§4 (Karazhan Group Composition)**, and **§9 (Practical Group Assignment Framework)** are party-group-specific — those three sections are **future reference material only**. Do not apply them when forming a roster, and do not produce party-group (5-man sub-group) breakdowns inside any set file. The rest of that guide (§1, §2, §5, §6, §7, §8) is canonical reference material in active use, and §8 in particular is the canonical source for the 25-man fair-rotation tiebreaker. When the user formalizes party-group rules (see `config/project.md` → "What's next"), §3, §4, and §9 will become active and this note can be removed.
+
+---
+
+## Event: New signup screenshot received
+
+### Step 1 — Read (before parsing)
+
+Read both **Tier 1** and **Tier 2** of the **Reading list** at the top of this file — screenshot parsing is the canonical Tier 2 trigger.
 
 ### Step 2 — Parse the screenshot
 

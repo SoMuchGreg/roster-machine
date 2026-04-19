@@ -43,6 +43,20 @@ CoffeeBreak's purpose, directory structure, and key file pointers are documented
 - **Rules evolve.** When the user updates rules, re-evaluate affected sets, and write a changelog entry **only if** the change clears the threshold in `reference/file-operations-manual.md` → "Changelog scope rule" → "When to write a changelog entry at all". Most edits don't.
 - **Research is allowed.** TBC class mechanics, raid requirements, etc. can be researched online. Store findings in `reference/`.
 
+## Before any file edit
+
+Every `Edit` or `Write` call must be preceded by the reads defined in the **Reading list** at `reference/file-operations-manual.md`. That section is the single source of truth for which files belong in each tier and when each tier is triggered; this section only specifies the *cadence* — when to re-read the applicable tier(s) within a session.
+
+**Cadence.** Read the applicable tier(s) at the first edit of the session. On subsequent edits, trust cached content except when:
+
+- **(a)** a `system-reminder` attaches an open or selected file this turn or the previous one — re-read it (you may not have the user's current content);
+- **(b)** the file being edited, or any file in the Reading list that references it — always re-read (cheap, non-negotiable). Consult `reference/file-operations-manual.md` → "File dependency map" to identify referencers;
+- **(c)** you suspect context compaction has summarized the earlier read — re-read when unsure.
+
+### Post-edit consistency grep
+
+After any edit that changes rule text (`rules/*.md`), config semantics (`config/*.md`), reference material (`reference/*.md`, excluding icons), or a derived-file schema (sub-table or column layout in `derived/*.md`), grep the project for the term(s) you changed. Stale cross-file references are the primary failure mode this catches — single-source-of-truth depends on the grep to keep pointers live.
+
 ## Before generating a raid roster
 
 > ⚠️ **Do NOT read `changelog/*.md` during roster formation.** The changelog is a historical audit trail of rule transitions, not a source of active rules. Reading it risks applying superseded wordings or transition-specific notes that are no longer load-bearing. Active rules live in `rules/`, `config/`, and `reference/`. See `reference/file-operations-manual.md` → "Changelog scope rule" for the full policy.
