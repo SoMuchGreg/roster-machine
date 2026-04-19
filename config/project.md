@@ -38,10 +38,6 @@ Raids in this category:
 | Setting              | Value                     | Notes                                         |
 |----------------------|---------------------------|-----------------------------------------------|
 | Domain               | WoW TBC 20th Anniversary  | Raid composition planning                     |
-| Rule strictness      | Absolute                  | Every rule must be respected, no exceptions   |
-| Set ordering         | Sequential                | Sets are date-named and chained chronologically |
-| Research allowed     | Yes                       | Online research for TBC class/raid knowledge  |
-| Output format        | Markdown/Text             | All deliverables as .md or .txt files         |
 | Input method         | Discord screenshots       | User provides signup screenshots              |
 
 ## What's next

@@ -2,6 +2,38 @@
 
 CoffeeBreak's purpose, directory structure, and key file pointers are documented in `README.md` — read that first if you haven't. **This file is the session guide:** how to behave during a session, what principles to follow, and the workflow for generating a raid roster.
 
+## File purposes
+
+`README.md` → "Structure" lists what each top-level directory contains. This section adds the **category** each file falls into and the **"does not hold"** rule that prevents content drift. Before writing rule content, procedure content, or notes into any file: consult README for what the file is for; consult this section for what it shouldn't hold; if no file fits, propose a new file rather than force-fit into an existing one.
+
+### Categories
+
+- **Session behavior** — principles, rules, and procedures governing how Claude works during any turn, edit, or task. File: `CLAUDE.md`.
+- **Task workflows** — step-by-step procedures triggered by specific events (new signup, rule change, rename, etc.). File: `reference/file-operations-manual.md`.
+- **Domain rules** — authoritative, normative rules for roster selection. Files: `rules/*.md`.
+- **Project state** — operational settings and schedule. Files: `config/*.md`.
+- **Reference (non-normative)** — facts and structural templates consulted during tasks; not rules. Files: `reference/raid-composition-guide.md`, `reference/class-colors-and-spec-icons.md`, `reference/icons/`, `reference/templates/*.md`.
+- **Computed state** — derived from `sets/*.md`; never a source of truth. Files: `derived/*.md`.
+- **Historical record** — immutable records or audit trails. Files: `sets/*.md` (immutable raid records), `changelog/*.md` (audit trail; never read during roster formation).
+- **Enforcement** — runtime permission/hook configuration. File: `.claude/settings.json`.
+- **Overview (human-facing)** — high-level project description and directory map. File: `README.md`.
+
+### Negative routing
+
+Content that does NOT belong in each file:
+
+- `CLAUDE.md` — not event-specific task workflows; not domain rules; not reference facts.
+- `reference/file-operations-manual.md` — not session-behavior rules; not domain rules; not reference facts.
+- `rules/*.md` — not session behavior; not task workflows; not computed state; not reference facts.
+- `config/*.md` — not rules; not workflows; not reference facts.
+- `reference/*.md` (all non-manual) — not rules; not session behavior; not task workflows.
+- `derived/*.md` — not rules; not anything not mechanically derivable from `sets/`.
+- `sets/*.md` — not rules; not cross-raid analysis (that's `derived/`).
+- `changelog/*.md` — not active rules; not player-specific data.
+- `.claude/settings.json` — not rule prose (prose belongs in `CLAUDE.md` or `rules/`).
+- `MEMORY.md` — empty by policy; see "Auto-memory policy" below.
+- `README.md` — not rules; not procedures; not per-player data.
+
 ## Communication conventions
 
 - When the user says **"make a note of it"**, **"write it down"**, or similar — always save the information to the appropriate **project file** (rules/, config/, reference/, etc.), not just to Claude memory. Project files are the source of truth.
@@ -40,7 +72,7 @@ CoffeeBreak's purpose, directory structure, and key file pointers are documented
 - **Sets are chained.** Bench history carries forward. Always read all prior sets before generating a new one.
 - **Self-referencing.** Every active project file — everything under `rules/`, `config/`, `reference/`, `sets/`, and `derived/` — becomes input for the next session. This recursion is intentional: past rosters constrain future ones, prior rules constrain new edits, derived state reflects accumulated history. Always read what's already there before adding to it; never write something that ignores the existing context. (Changelogs are deliberately *not* in this loop — they're a human-readable audit trail, not session input. See the changelog exclusion warning under "Before generating a raid roster" below.)
 - **Never assume player info.** If you don't know a player's class, spec, or role — ask. Do not guess.
-- **Rules evolve.** When the user updates rules, re-evaluate affected sets, and write a changelog entry **only if** the change clears the threshold in `reference/file-operations-manual.md` → "Changelog scope rule" → "When to write a changelog entry at all". Most edits don't.
+- **Rules evolve.** When the user updates rules, re-evaluate affected sets, and write a changelog entry **only if** the change clears the threshold in `reference/file-operations-manual.md` → "Writing a changelog entry" → "When to write a changelog entry at all". Most edits don't.
 - **Research is allowed.** TBC class mechanics, raid requirements, etc. can be researched online. Store findings in `reference/`.
 
 ## Before any file edit
@@ -53,16 +85,37 @@ Every `Edit` or `Write` call must be preceded by the reads defined in the **Read
 - **(b)** the file being edited, or any file in the Reading list that references it — always re-read (cheap, non-negotiable). Consult `reference/file-operations-manual.md` → "File dependency map" to identify referencers;
 - **(c)** you suspect context compaction has summarized the earlier read — re-read when unsure.
 
+### Pre-write SSOT gate
+
+Before composing any content block into any project file, classify it against the six SSOT categories from "Key principles" → Single source of truth above:
+
+- **Rule** — a directive, cap, quota, cutoff, or requirement ("at most 25 players")
+- **Definition** — a term paired with its meaning
+- **Algorithm** — an ordered series of decision steps
+- **Vocabulary entry** — a canonical word, label, role name, or bench reason
+- **Structural convention** — file layout, column order, section order, naming pattern
+- **Per-player datum** — a player's class, spec, role, priority, attendance, or constraint
+
+If none fit (narrative explanation, inline example, per-set Notes bullet that only *references* a rule rather than restating it), the gate doesn't apply; continue.
+
+If any fit, Grep for it before writing:
+
+- **Canonical version exists elsewhere** → link; don't restate.
+- **No canonical version exists** → the file you're editing becomes the canonical home.
+- **Multiple near-matches exist** → stop; that's drift; surface to user before adding more.
+
+The Grep is non-optional — "I already know it's not duplicated" does not substitute. This gate catches duplication at creation; the Post-edit consistency grep below catches drift afterward.
+
 ### Post-edit consistency grep
 
 After any edit that changes rule text (`rules/*.md`), config semantics (`config/*.md`), reference material (`reference/*.md`, excluding icons), or a derived-file schema (sub-table or column layout in `derived/*.md`), grep the project for the term(s) you changed. Stale cross-file references are the primary failure mode this catches — single-source-of-truth depends on the grep to keep pointers live.
 
 ## Before generating a raid roster
 
-> ⚠️ **Do NOT read `changelog/*.md` during roster formation.** The changelog is a historical audit trail of rule transitions, not a source of active rules. Reading it risks applying superseded wordings or transition-specific notes that are no longer load-bearing. Active rules live in `rules/`, `config/`, and `reference/`. See `reference/file-operations-manual.md` → "Changelog scope rule" for the full policy.
+> ⚠️ **Do NOT read `changelog/*.md` when forming a raid roster or performing any session task that consumes active rules.**
+
+The changelog is a historical audit trail of rule *transitions*, not a source of active rules. Reading it during roster formation risks confusing superseded wordings with the current rule, or applying transition-specific interaction notes that are no longer load-bearing. Active rules live in `rules/`, `config/`, and `reference/` (except the one you're reading, which is also a rule file). When in doubt about any rule, read the rule file directly. The changelog only tells you *when and why* something became what it is — never *what it is now*.
+
+The only legitimate reasons to read a changelog entry are: the user explicitly asks "what changed on date X", the user asks for a history of rule Y, or you are writing a new changelog entry and want to match the existing style. Roster formation is never one of those reasons.
 
 For every roster-generation task, follow `reference/file-operations-manual.md`. That document is the **single source of truth** for the end-to-end workflow (reading list, parsing, roster building, presentation, set-writing). Do not paraphrase or summarize its steps here or anywhere else — read it fresh each session. The two events most relevant to roster generation are `"Event: New signup screenshot received"` and `"Event: User asks me to form raid groups"`; start from whichever matches the user's trigger.
-
-## File operations manual
-
-`reference/file-operations-manual.md` is the comprehensive guide for every type of interaction (new signup, rule change, player info, join/leave, etc.), including the canonical reading list, the file dependency map, and the quick-checklist. If a workflow question isn't answered by the rule files themselves, the manual has the answer.

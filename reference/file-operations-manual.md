@@ -36,10 +36,8 @@ For cadence (when to re-read the applicable tier within a session), see `CLAUDE.
 | `reference/class-colors-and-spec-icons.md` | Class colors and spec icon reference for parsing screenshots |
 | `reference/icons/specs/*.jpg` | Spec icon reference images (compare side-by-side when unsure) |
 | `reference/icons/classes/*.png` | Class icon reference images (compare side-by-side when unsure) |
-| `reference/raid-composition-guide.md` | Comprehensive TBC raid composition reference: buff scope, Shaman totems, raid-wide debuffs, per-spec target counts (§8 — used by the 25-man fair-rotation tiebreaker in `rules/02-bench-rotation.md`). **§3, §4, §9 (party-group templates and assignment framework) are not yet in use — see the note below.** |
+| `reference/raid-composition-guide.md` | Comprehensive TBC raid composition reference: buff scope, Shaman totems, raid-wide debuffs, per-spec target counts (§8 — used by the 25-man fair-rotation tiebreaker in `rules/02-bench-rotation.md`). **§3, §4, §9 (party-group templates and assignment framework) are out of scope for roster formation — see `rules/01-raid-compositions.md` → "Party groups (out of scope)" for the rule.** |
 | All files in `sets/` | Predecessor context, especially recent bench history |
-
-> **Party-group assignments are NOT currently produced.** Inside `reference/raid-composition-guide.md`, only **§3 (Optimal Party Group Templates)**, **§4 (Karazhan Group Composition)**, and **§9 (Practical Group Assignment Framework)** are party-group-specific — those three sections are **future reference material only**. Do not apply them when forming a roster, and do not produce party-group (5-man sub-group) breakdowns inside any set file. The rest of that guide (§1, §2, §5, §6, §7, §8) is canonical reference material in active use, and §8 in particular is the canonical source for the 25-man fair-rotation tiebreaker. When the user formalizes party-group rules (see `config/project.md` → "What's next"), §3, §4, and §9 will become active and this note can be removed.
 
 ---
 
@@ -143,7 +141,7 @@ Same as above, but:
 | File | What to update |
 |------|----------------|
 | The relevant `rules/*.md` file | Add/modify the rule |
-| `changelog/*.md` | **Create entry only if** the change clears the threshold in "Changelog scope rule" → "When to write a changelog entry at all" below. Most edits should skip this. |
+| `changelog/*.md` | **Create entry only if** the change clears the threshold in "Writing a changelog entry" → "When to write a changelog entry at all" below. Most edits should skip this. |
 | `config/project.md` | Update if it affects raid schedule, terminology, or settings |
 | `CLAUDE.md` | Update if it affects the workflow process |
 
@@ -151,9 +149,9 @@ Same as above, but:
 - Do any existing sets in `sets/` need to be re-evaluated?
 - Does `bench-history.md` need adjustment?
 
-### Changelog scope rule (important)
+### Writing a changelog entry
 
-Changelog entries are **short logs of what changed and why** — not rule files. Four separate constraints apply.
+Changelog entries are **short logs of what changed and why** — not rule files. The following constraints apply.
 
 #### Filename format
 
@@ -203,14 +201,6 @@ Target length: **~15 lines per entry**. Use this structure:
 
 Player data — names, classes, specs, priorities, bench counts, set rosters — lives in `rules/04-players.md`, `derived/bench-history.md`, and `sets/*.md`. Duplicating player data into a changelog entry creates a stale snapshot the moment any player attribute changes.
 
-#### 4. Changelogs are excluded from roster-formation context
-
-**When forming a raid roster, or performing any session task that consumes active rules, do not read `changelog/*.md` at all.** The changelog is a historical audit trail of rule *transitions*, not a source of active rules. Reading it during roster formation risks confusing superseded wordings with the current rule, or applying transition-specific interaction notes that are no longer load-bearing.
-
-Active rules live in `rules/`, `config/`, and `reference/` (except the one you're reading, which is also a rule file). When in doubt about any rule, read the rule file directly. The changelog only tells you *when and why* something became what it is — never *what it is now*.
-
-The only legitimate reasons to read a changelog entry are: the user explicitly asks "what changed on date X", the user asks for a history of rule Y, or you are writing a new changelog entry and want to match the existing style. Roster formation is never one of those reasons.
-
 ---
 
 ## Event: User provides player-specific information
@@ -241,7 +231,7 @@ The only legitimate reasons to read a changelog entry are: the user explicitly a
 | `sets/*.md` | Update every historical set that references the old name, wherever it appears (signup lists, roster tables, bench tables, Notes sections). A pure name normalization doesn't violate the sets-are-immutable principle — it updates the label without changing any factual content. |
 
 ### Afterwards:
-- **Do not write a changelog entry.** Player renames are per-player data changes, not rule changes, and per the "Changelog scope rule" above, player data never appears in changelogs.
+- **Do not write a changelog entry.** Player renames are per-player data changes, not rule changes, and per "Writing a changelog entry" above, player data never appears in changelogs.
 - **Verify completeness** by running `Grep <old_name>` across the whole project. The only legitimate remaining hit should be the optional alias note in `rules/04-players.md` (if you added one). Any other hit is a missed reference that needs fixing.
 
 ---
