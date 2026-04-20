@@ -95,7 +95,7 @@ currently held only by the players in the Officers sub-table below) or priority 
 
 ### Former players
 
-Players who have left the guild. Kept here so that old signup screenshots, set files, and changelog entries remain interpretable — never assign anyone from this table to a raid. Do **not** strike through names in this sub-table: the fact that the row lives under *Former players* already conveys that the player is no longer in the guild, and the strikethrough just makes the name harder to read when looking up an old reference.
+Players who have left the guild. Kept here so that old signup screenshots and set files remain interpretable — never assign anyone from this table to a raid. Do **not** strike through names in this sub-table: the fact that the row lives under *Former players* already conveys that the player is no longer in the guild, and the strikethrough just makes the name harder to read when looking up an old reference.
 
 | #  | Player             | Character(s)        | Class   | Spec 1 (role)            | Spec 2 (role)           | Priority | Notes                                                   |
 |----|--------------------|---------------------|---------|--------------------------|-------------------------|----------|---------------------------------------------------------|

@@ -76,7 +76,6 @@ Read both **Tier 1** and **Tier 2** of the **Reading list** at the top of this f
 5. Respect composition caps from `rules/01-raid-compositions.md`.
 6. **Sanity-check the roster with a sub-agent before presenting it.** Once the roster is finalized and you believe it's ready to show the user, spawn a fresh sub-agent (via the `Agent` tool) and have it independently verify rule compliance. The sub-agent must:
    - Read every active rule file (`rules/*.md`, `config/project.md`, applicable sections of `reference/raid-composition-guide.md`) and the relevant inputs (the parsed signup, `derived/bench-history-tbc.md`, all prior `sets/*.md`).
-   - **Not** read `changelog/*.md` — same exclusion as roster formation itself.
    - Walk through the proposed roster and check it against each rule.
    - Return a clear verdict answering exactly one question: **"Does this roster adhere to all rules specified in this project? YES / NO"** — followed by a short list of any violations found (or "none" if YES).
    - Make **no** changes to the roster, the set file, or any other project file. It is read-only.
@@ -163,65 +162,12 @@ Run the post-edit consistency grep per `CLAUDE.md` → "Post-edit consistency gr
 | File | What to update |
 |------|----------------|
 | The relevant `rules/*.md` file | Add/modify the rule |
-| `changelog/*.md` | **Create entry only if** the change clears the threshold in "Writing a changelog entry" → "When to write a changelog entry at all" below. Most edits should skip this. |
 | `config/project.md` | Update if it affects raid schedule, terminology, or settings |
 | `CLAUDE.md` | Update if it affects the workflow process |
 
 ### Then check:
 - Do any existing sets in `sets/` need to be re-evaluated?
 - Does `bench-history-tbc.md` need adjustment?
-
-### Writing a changelog entry
-
-Changelog entries are **short logs of what changed and why** — not rule files. The following constraints apply.
-
-#### Filename format
-
-Every changelog file is named `YYYY-MM-DD-NN-slug.md`, where `NN` is a zero-padded two-digit sequence number that orders entries created on the same day, starting at `01`. When adding a new entry, look at the highest existing `NN` for today's date in `changelog/` and use the next number. The sequence resets to `01` each new day. Slugs stay short, lowercase, and hyphenated. The `NN` segment exists so chronological order is preserved by lexicographic sort — without it, multiple same-day entries are unorderable.
-
-#### 1. When to write a changelog entry at all
-
-Not every rule edit gets an entry. Write one only when **at least one** of these is true:
-
-- **Algorithm or vocabulary change** — a selection rule, tiebreaker, bench-reason label, composition target, or any term defined in `rules/`, `config/`, or `reference/` is added, removed, or redefined.
-- **Multi-file change** — the edit touches two or more files under `rules/`, `config/`, or `reference/` as part of the same conceptual change.
-- **Retroactive impact** — the change could invalidate, contradict, or reframe how prior sets in `sets/` should be read.
-
-Skip the entry for: typo fixes, wording clarifications, formatting, link updates, single-file tweaks that don't change rule meaning, and edits that purely improve readability. Git history already records these — the changelog only earns its keep when the change is consequential enough that a future reader would want a narrative summary on top of `git log`.
-
-**When in doubt, default to skipping and ask the user.** The point of this threshold is to reduce noise; if writing the entry feels marginal, it almost certainly is.
-
-#### 2. Brevity — do not duplicate the rule into the changelog
-
-Target length: **~15 lines per entry**. Use this structure:
-
-```
-# YYYY-MM-DD — Short title
-
-## Change
-1-2 sentences describing what changed.
-
-## Reason
-1-2 sentences explaining why.
-
-## Files touched
-- list of files
-```
-
-- ❌ Do **not** re-explain the rule. A pointer to the rule file is enough — the rule file is the single source of truth, and a changelog entry must never duplicate its content.
-- ❌ Do **not** include tables describing rule semantics (priority definitions, selection algorithms, vocabulary enumerations, mapping details). Those live in the rule file.
-- ❌ Do **not** add "practical subtleties", "interaction with existing rules", "scope", or "open questions" subsections. If a future reader needs to understand how the rule works, they read the rule file.
-- ✅ Describe the change abstractly, state the reason, list files touched. Then stop.
-
-#### 3. No player-specific references
-
-- ❌ No player names as examples ("e.g., player A and player B were benched...")
-- ❌ No per-player priority/spec/role assignments
-- ❌ No retroactive analysis of past sets in terms of named players
-- ❌ No "currently applies to" tables that list specific players
-- ✅ Generic rule statements, abstract examples, file-level impact descriptions
-
-Player data — names, classes, specs, priorities, bench counts, set rosters — lives in `rules/04-players.md`, `derived/bench-history-tbc.md`, and `sets/*.md`. Duplicating player data into a changelog entry creates a stale snapshot the moment any player attribute changes.
 
 ---
 
@@ -253,7 +199,6 @@ Player data — names, classes, specs, priorities, bench counts, set rosters —
 | `sets/*.md` | Update every historical set that references the old name, wherever it appears (signup lists, roster tables, bench tables, Notes sections). A pure name normalization doesn't violate the sets-are-immutable principle — it updates the label without changing any factual content. |
 
 ### Afterwards:
-- **Do not write a changelog entry.** Player renames are per-player data changes, not rule changes, and per "Writing a changelog entry" above, player data never appears in changelogs.
 - **Verify completeness** by running `Grep <old_name>` across the whole project. The only legitimate remaining hit should be the optional alias note in `rules/04-players.md` (if you added one). Any other hit is a missed reference that needs fixing.
 
 ---
@@ -312,9 +257,6 @@ REFERENCE for writing new sets (canonical structure for set files):
   ├── reference/templates/karazhan-set.md   ← canonical structure for Karazhan sets
   └── reference/templates/25man-set.md      ← canonical structure for 25-man sets
 
-AUDIT TRAIL — DO NOT READ during roster formation (written when rules change):
-  └── changelog/*.md      ← historical only; the rule file is the source of truth
-
 META (read every session):
   ├── CLAUDE.md
   └── README.md
@@ -330,7 +272,7 @@ After any interaction, check:
 - [ ] Someone benched? → `bench-history-tbc.md`
 - [ ] New set written or edited? → `signup-history-total.md` (increment for every player in `## Signups`); also `signup-stats-tbc.md` if the set is in scope (TBC-era)
 - [ ] Spec changed from previous? → `04-players.md`
-- [ ] Rule added/changed? → `rules/*.md` + `changelog/`
+- [ ] Rule added/changed? → `rules/*.md`
 - [ ] Player left/joined? → `04-players.md` + `03-player-constraints.md` + `bench-history-tbc.md`
 - [ ] New set created? → `sets/YYYY-MM-DD-day-raid.md`
 - [ ] Constraint added? → `03-player-constraints.md`

@@ -15,7 +15,6 @@ Form raid groups from Discord signups, respecting strict composition rules, play
 | `sets/`      | Generated raid rosters (one per raid night, chronologically chained) |
 | `derived/`   | Derived summaries computed from `sets/` (bench history, signup history) |
 | `reference/` | TBC research, file-operations manual, set templates, icons    |
-| `changelog/` | History of rule transitions (audit trail only — not read during roster formation) |
 
 The raid schedule itself lives in `config/project.md`.
 

@@ -14,7 +14,7 @@ CoffeeBreak's purpose, directory structure, and key file pointers are documented
 - **Project state** — operational settings and schedule. Files: `config/*.md`.
 - **Reference (non-normative)** — facts and structural templates consulted during tasks; not rules. Files: `reference/raid-composition-guide.md`, `reference/class-colors-and-spec-icons.md`, `reference/icons/`, `reference/templates/*.md`.
 - **Computed state** — derived from `sets/*.md`; never a source of truth. Files: `derived/*.md`.
-- **Historical record** — immutable records or audit trails. Files: `sets/*.md` (immutable raid records), `changelog/*.md` (audit trail; never read during roster formation).
+- **Historical record** — immutable records or audit trails. File: `sets/*.md` (immutable raid records).
 - **Enforcement** — runtime permission/hook configuration. File: `.claude/settings.json`.
 - **Overview (human-facing)** — high-level project description and directory map. File: `README.md`.
 
@@ -29,7 +29,6 @@ Content that does NOT belong in each file:
 - `reference/*.md` (all non-manual) — not rules; not session behavior; not task workflows.
 - `derived/*.md` — not rules; not anything not mechanically derivable from `sets/`.
 - `sets/*.md` — not rules; not cross-raid analysis (that's `derived/`).
-- `changelog/*.md` — not active rules; not player-specific data.
 - `.claude/settings.json` — not rule prose (prose belongs in `CLAUDE.md` or `rules/`).
 - `MEMORY.md` — empty by policy; see "Auto-memory policy" below.
 - `README.md` — not rules; not procedures; not per-player data.
@@ -44,7 +43,7 @@ Content that does NOT belong in each file:
 
 ## File and git workflow
 
-- **Whenever you create a new file in this project, also stage it with `git add` immediately after creating it.** This applies to any file added under any directory (rules/, sets/, reference/, derived/, changelog/, templates/, etc.). The point is that newly created files should appear in `git status` as staged additions, not as untracked, so the staging area always reflects the full intended change set. Do not commit — staging only. Committing is still the user's decision.
+- **Whenever you create a new file in this project, also stage it with `git add` immediately after creating it.** This applies to any file added under any directory (rules/, sets/, reference/, derived/, templates/, etc.). The point is that newly created files should appear in `git status` as staged additions, not as untracked, so the staging area always reflects the full intended change set. Do not commit — staging only. Committing is still the user's decision.
 - This rule does **not** apply to file edits. Edits to already-tracked files appear automatically as unstaged modifications in `git status`, and there's no benefit to pre-staging them.
 - This rule does **not** apply to files created by tooling outside the project's intent (e.g., IDE caches, OS detritus). Those should be excluded via `.gitignore`, not staged.
 - **Prefer pre-allowed command forms over equivalents.** `.claude/settings.json` (committed) auto-approves specific invocation patterns — e.g., bare `git status`, `git ls-files`, `git check-ignore`, `git add`, `git mv` run from the project cwd. Equivalents like `git -C /absolute/path status` aren't covered by those patterns and trigger a new permission prompt; any approval is then stored only on that machine, breaking cross-machine portability. Check `.claude/settings.json` before choosing an invocation form, and if a new command genuinely needs to be approved repeatedly, add it there so every machine gets it.
@@ -55,7 +54,7 @@ Content that does NOT belong in each file:
 
 ## Auto-memory policy (important)
 
-**CoffeeBreak does not use Claude Code auto-memory.** Do not write any project context, rules, conventions, feedback, or player data to the per-project memory directory. All durable information must live in the repository (`CLAUDE.md`, `rules/`, `config/`, `reference/`, `sets/`, `changelog/`).
+**CoffeeBreak does not use Claude Code auto-memory.** Do not write any project context, rules, conventions, feedback, or player data to the per-project memory directory. All durable information must live in the repository (`CLAUDE.md`, `rules/`, `config/`, `reference/`, `sets/`).
 
 **Why:** The auto-memory directory is machine-local. The user runs this project on multiple computers and needs identical behavior on each. Anything stored in auto-memory exists on one machine only and silently diverges from the others — exactly the kind of hidden state we want to avoid.
 
@@ -66,13 +65,13 @@ Content that does NOT belong in each file:
 
 ## Key principles
 
-- **Single source of truth.** Every rule, definition, algorithm, vocabulary table, structural convention, and piece of per-player data lives in **exactly one file**. When the same concept needs to be referenced from elsewhere, the other places must point at the canonical location with a short link — they must never restate or paraphrase the content. Before adding any rule content to a file, check whether the same content already exists somewhere else in the repo; if it does, link to it instead of duplicating it. Duplication drifts: the moment one copy is updated and the other isn't, future sessions can't tell which copy is authoritative. This principle applies to rule files, reference files, templates, set files, and changelog entries alike.
+- **Single source of truth.** Every rule, definition, algorithm, vocabulary table, structural convention, and piece of per-player data lives in **exactly one file**. When the same concept needs to be referenced from elsewhere, the other places must point at the canonical location with a short link — they must never restate or paraphrase the content. Before adding any rule content to a file, check whether the same content already exists somewhere else in the repo; if it does, link to it instead of duplicating it. Duplication drifts: the moment one copy is updated and the other isn't, future sessions can't tell which copy is authoritative. This principle applies to rule files, reference files, templates, and set files alike.
 - **No code.** CoffeeBreak is a markdown-only project. Do not write executable scripts, code files, configuration files for code tooling, or any non-markdown output. The project's value is in the rules and the rosters they produce, not in tooling. If a task seems to call for a script, find a way to express it as a rule or workflow instead.
 - **Every rule matters.** Never skip, relax, or approximate a rule. If a conflict is discovered, flag it to the user before proceeding.
 - **Sets are chained.** Bench history carries forward. Always read all prior sets before generating a new one.
-- **Self-referencing.** Every active project file — everything under `rules/`, `config/`, `reference/`, `sets/`, and `derived/` — becomes input for the next session. This recursion is intentional: past rosters constrain future ones, prior rules constrain new edits, derived state reflects accumulated history. Always read what's already there before adding to it; never write something that ignores the existing context. (Changelogs are deliberately *not* in this loop — they're a human-readable audit trail, not session input. See the changelog exclusion warning under "Before generating a raid roster" below.)
+- **Self-referencing.** Every active project file — everything under `rules/`, `config/`, `reference/`, `sets/`, and `derived/` — becomes input for the next session. This recursion is intentional: past rosters constrain future ones, prior rules constrain new edits, derived state reflects accumulated history. Always read what's already there before adding to it; never write something that ignores the existing context.
 - **Never assume player info.** If you don't know a player's class, spec, or role — ask. Do not guess.
-- **Rules evolve.** When the user updates rules, re-evaluate affected sets, and write a changelog entry **only if** the change clears the threshold in `reference/file-operations-manual.md` → "Writing a changelog entry" → "When to write a changelog entry at all". Most edits don't.
+- **Rules evolve.** When the user updates rules, re-evaluate affected sets.
 - **Research is allowed.** TBC class mechanics, raid requirements, etc. can be researched online. Store findings in `reference/`.
 
 ## Before any file edit
@@ -111,11 +110,5 @@ The Grep is non-optional — "I already know it's not duplicated" does not subst
 After any edit that changes rule text (`rules/*.md`), config semantics (`config/*.md`), reference material (`reference/*.md`, excluding icons), or a derived-file schema (sub-table or column layout in `derived/*.md`), grep the project for the term(s) you changed. Stale cross-file references are the primary failure mode this catches — single-source-of-truth depends on the grep to keep pointers live.
 
 ## Before generating a raid roster
-
-> ⚠️ **Do NOT read `changelog/*.md` when forming a raid roster or performing any session task that consumes active rules.**
-
-The changelog is a historical audit trail of rule *transitions*, not a source of active rules. Reading it during roster formation risks confusing superseded wordings with the current rule, or applying transition-specific interaction notes that are no longer load-bearing. Active rules live in `rules/`, `config/`, and `reference/` (except the one you're reading, which is also a rule file). When in doubt about any rule, read the rule file directly. The changelog only tells you *when and why* something became what it is — never *what it is now*.
-
-The only legitimate reasons to read a changelog entry are: the user explicitly asks "what changed on date X", the user asks for a history of rule Y, or you are writing a new changelog entry and want to match the existing style. Roster formation is never one of those reasons.
 
 For every roster-generation task, follow `reference/file-operations-manual.md`. That document is the **single source of truth** for the end-to-end workflow (reading list, parsing, roster building, presentation, set-writing). Do not paraphrase or summarize its steps here or anywhere else — read it fresh each session. The two events most relevant to roster generation are `"Event: New signup screenshot received"` and `"Event: User asks me to form raid groups"`; start from whichever matches the user's trigger.
