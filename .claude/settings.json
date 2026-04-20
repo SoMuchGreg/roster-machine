@@ -18,7 +18,9 @@
       "Bash(git check-ignore:*)"
     ],
     "deny": [
-      "Bash(git -C:*)"
+      "Bash(git -C:*)",
+      "Write(.claude/settings.local.json)",
+      "Edit(.claude/settings.local.json)"
     ]
   }
 }
