@@ -22,7 +22,7 @@ For cadence (when to re-read the applicable tier within a session), see `CLAUDE.
 | `config/project.md` | Raid schedule, terminology, active settings |
 | `rules/01-raid-compositions.md` | Composition targets, dual-spec flex rule, under-cap behavior, Resto Druid cap |
 | `rules/02-bench-rotation.md` | Selection algorithm, raid spot priority, fair rotation, tiebreakers |
-| `rules/03-player-constraints.md` | Must-together / must-not-together / availability / loot / enchanter constraints |
+| `rules/03-player-constraints.md` | Must-together / must-not-together / availability / Needlist / enchanter constraints |
 | `rules/04-players.md` | Existing players' classes, specs, raid spot priority, notes |
 | `reference/file-operations-manual.md` | This file — workflow procedures for every event type |
 
@@ -193,6 +193,7 @@ Run the post-edit consistency grep per `CLAUDE.md` → "Post-edit consistency gr
 | File | What to update |
 |------|----------------|
 | `rules/04-players.md` | Update the `Player` column to the new canonical name. Update the `Character(s)` column to match. If the old name should remain discoverable for cross-referencing older Discord screenshots, add a brief *"Previously known as X"* note in the `Notes` column. |
+| `rules/03-player-constraints.md` | Rename every reference to the player across the Availability, Must-be-together, Must-not-be-together, Needlist, and Enchanters sub-sections. These cells reference canonical names — normalize them, don't preserve the old label. |
 | `derived/bench-history-tbc.md` | Update every row that references the old player name to the new canonical name. This is derived data, not a historical record — normalize it, don't preserve the old label. |
 | `derived/signup-history-total.md` | Same as `bench-history-tbc.md` — rename the `Player` column value to the new canonical name. Derived data, normalize it. |
 | `derived/signup-stats-tbc.md` | Rename the `Player` cell. Derived data, normalize it. Row only exists if the player has in-scope signups; if absent, no action. Re-sort only if the alphabetical tiebreak position changes. |

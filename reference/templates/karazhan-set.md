@@ -160,7 +160,7 @@ Status: "✓ split" if all competitors are on different teams (or benched).
 After the table, add a one-line summary: how many items are fully split out of
 how many listed, plus a note on whether the violations are unavoidable
 (competitor count exceeds team count, interlocking constraint triangles, etc.).
-Delete this whole section if no loot competition items have 2+ competitors in
+Delete this whole section if no Needlist items have 2+ competitors in
 this raid.
 -->
 

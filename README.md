@@ -28,6 +28,6 @@ Claude Code reads the rule files, parses Discord signup screenshots provided by 
 - `config/project.md` — Raid schedule, terminology, settings
 - `rules/01-raid-compositions.md` — Tank/healer/DPS targets per raid location, plus dual-spec flex policy
 - `rules/02-bench-rotation.md` — Bench fairness, raid spot priority, selection algorithm, tiebreakers
-- `rules/03-player-constraints.md` — Must-be-together / must-not-be-together / availability constraints
+- `rules/03-player-constraints.md` — Must-be-together / must-not-be-together / availability / Needlist / enchanter constraints
 - `rules/04-players.md` — Player classes, specializations, and raid spot priority
 - `reference/file-operations-manual.md` — Step-by-step guide for every type of session interaction

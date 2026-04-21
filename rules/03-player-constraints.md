@@ -23,9 +23,20 @@ Players listed here **must not be placed in the same raid team** on any given ni
 |----------|----------|------------|-------|
 | OomToDoom | Gresac | Karazhan only | |
 
-## Loot competition — split across Karazhan teams
+## Needlist
 
-Players competing for the same item drop **must be placed in different Karazhan teams** so they don't compete against each other for the same loot in the same run.
+The **Needlist** lists high-value loot drops players want to roll "need" on, paired with the players competing for each drop. Competitors for the same item **must be placed in different Karazhan teams** so they don't compete against each other for the same loot in the same run.
+
+### Maintenance
+
+- **Single-competitor rows are kept.** They record declared interest even when no one else competes. They don't affect the split-across-teams rule on their own, and they don't surface in a set's `## Loot conflicts` section (which filters to 2+ competitors in that raid). When a second player later wants the same drop, the existing row becomes a valid conflict without having to reconstruct history.
+- **Claude never modifies the Needlist from signup screenshots, roster generation, or raid outcomes — only from explicit user instruction.** Triggers:
+  - Player declares interest in an item → add the pairing. Insert a new row in alphabetical position if the item is not yet listed.
+  - Player withdraws interest or obtains the item → remove the pairing. Drop the row if no competitors remain.
+  - Player renamed → update every competitor cell to the new canonical name. Also invoked by the rename workflow in `reference/file-operations-manual.md`.
+  - Player leaves the guild → remove them from every row; drop any row that empties.
+- **Batch updates replace, not merge.** When a single user instruction covers current needs for several players at once, treat it as a full replacement for those players — **never** layer the new pairings on top of their existing entries. Steps, in order: (1) collect every player named in the update; (2) remove each of them from every Needlist row, dropping any row that empties; (3) apply the update's pairings, inserting new rows alphabetically when items aren't yet listed. Players not named keep their entries unchanged. A player named in the update with no items is valid — after step 2 they exit the Needlist entirely, correctly recording "I need nothing right now."
+- **Invariants.** Items sorted alphabetically by name; competitors sorted alphabetically within each row; all names are canonical per `rules/04-players.md`.
 
 | Item                                | Players competing                                        | Notes |
 |-------------------------------------|----------------------------------------------------------|-------|
