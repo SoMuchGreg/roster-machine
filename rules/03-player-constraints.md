@@ -38,45 +38,48 @@ The **Needlist** lists high-value loot drops players want to roll "need" on, pai
 - **Batch updates replace, not merge.** When a single user instruction covers current needs for several players at once, treat it as a full replacement for those players — **never** layer the new pairings on top of their existing entries. Steps, in order: (1) collect every player named in the update; (2) remove each of them from every Needlist row, dropping any row that empties; (3) apply the update's pairings, inserting new rows alphabetically when items aren't yet listed. Players not named keep their entries unchanged. A player named in the update with no items is valid — after step 2 they exit the Needlist entirely, correctly recording "I need nothing right now."
 - **Invariants.** Items sorted alphabetically by name; competitors sorted alphabetically within each row; all names are canonical per `rules/04-players.md`.
 
-| Item                                | Players competing                                        | Notes |
-|-------------------------------------|----------------------------------------------------------|-------|
-| Adornment of Stolen Souls           | Pergatori                                                |       |
-| Bands of Indwelling                 | Lightweit                                                |       |
-| Barbed Choker of Discipline         | Mcjudgin, Varthier                                       |       |
-| Battlescar Boots                    | Cptkavior                                                |       |
-| Blade of the Unrequited             | Vaelruna                                                 |       |
-| Boots of Foretelling                | Jar, Ucannotpass                                         |       |
-| Boots of the Incorrupt              | Siljes                                                   |       |
-| Cowl of Defiance                    | Yxanb                                                    |       |
-| Crimson Girdle of the Indomitable   | Cptkavior                                                |       |
-| Fiery Warhorse's Reins              | Bestpractice, Jar, Varthier                              |       |
-| Girdle of Treachery                 | Vaelruna, Yxanb                                          |       |
-| Gloves of the Fallen Champion       | Thordrel                                                 |       |
-| Gloves of the Fallen Defender       | Lightweit                                                |       |
-| Grips of Deftness                   | Mirohl                                                   |       |
-| Helm of the Fallen Champion         | Leontes, Lynelen                                         |       |
-| Helm of the Fallen Defender         | Beaverfist, Bombzor, Gigakox, Keatala, Lightweit, Mirohl |       |
-| Iron Gauntlets of the Maiden        | Mcjudgin                                                 |       |
-| King's Defender                     | Cptkavior, Doughball                                     |       |
-| Light's Justice                     | Bombzor, Siljes                                          |       |
-| Nathrezim Mindblade                 | Beaverfist, Pergatori                                    |       |
-| Nethershard Girdle                  | Ucannotpass                                              |       |
-| Pendant of the Violet Eye           | Thordrel                                                 |       |
-| Ribbon of Sacrifice                 | Thordrel                                                 |       |
-| Ring of a Thousand Marks            | Gigakox, Leontes, Verysadge, Yorekbarn                   |       |
-| Ring of Recurrence                  | Bestpractice, Pergatori, Ucannotpass                     |       |
-| Ring of Unrelenting Storms          | Pergatori                                                |       |
-| Ruby Drape of the Mysticant         | Bestpractice                                             |       |
-| Shield of Impenetrable Darkness     | Mirohl                                                   |       |
-| Shining Chain of the Afterworld     | Lightweit                                                |       |
-| Skulker's Greaves                   | Dankyn, Gigakox, Vaelruna                                |       |
-| Spiteblade                          | Baebay, Dankyn, Gigakox                                  |       |
-| Stainless Cloak of the Pure Hearted | Keatala                                                  |       |
-| Stonebough Jerkin                   | Keatala                                                  |       |
-| The Decapitator                     | Bergamotka, Lynelen, Yorekbarn                           |       |
-| The Lightning Capacitor             | Oomtoodoom                                               |       |
-| Vambraces of Courage                | Cptkavior                                                |       |
-| Wrynn Dynasty Greaves               | Doughball, Ostbirger                                     |       |
+| Item                                | Players competing                                                  | Notes |
+|-------------------------------------|--------------------------------------------------------------------|-------|
+| Adornment of Stolen Souls           | Pergatori                                                          |       |
+| Bands of Indwelling                 | Lightweit                                                          |       |
+| Barbed Choker of Discipline         | Mcjudgin, Varthier                                                 |       |
+| Battlescar Boots                    | Cptkavior                                                          |       |
+| Blade of the Unrequited             | Vaelruna                                                           |       |
+| Boots of Foretelling                | Jar, Ucannotpass                                                   |       |
+| Boots of the Incorrupt              | Siljes                                                             |       |
+| Cowl of Defiance                    | Yxanb                                                              |       |
+| Crimson Girdle of the Indomitable   | Cptkavior                                                          |       |
+| Fiery Warhorse's Reins              | Bestpractice, Jar, Varthier                                        |       |
+| Girdle of Treachery                 | Vaelruna, Yxanb                                                    |       |
+| Gloves of the Fallen Champion       | Leontes, Thordrel                                                  |       |
+| Gloves of the Fallen Defender       | Lightweit                                                          |       |
+| Grips of Deftness                   | Leontes, Mirohl                                                    |       |
+| Helm of the Fallen Champion         | Lynelen                                                            |       |
+| Helm of the Fallen Defender         | Beaverfist, Bombzor, Gigakox, Keatala, Kresniik, Lightweit, Mirohl |       |
+| Iron Gauntlets of the Maiden        | Mcjudgin                                                           |       |
+| Ironstriders of Urgency             | Leontes                                                            |       |
+| King's Defender                     | Cptkavior, Doughball                                               |       |
+| Light's Justice                     | Bombzor, Siljes                                                    |       |
+| Nathrezim Mindblade                 | Beaverfist, Pergatori                                              |       |
+| Nethershard Girdle                  | Ucannotpass                                                        |       |
+| Pendant of the Violet Eye           | Thordrel                                                           |       |
+| Ribbon of Sacrifice                 | Thordrel                                                           |       |
+| Ring of a Thousand Marks            | Gigakox, Leontes, Verysadge, Yorekbarn                             |       |
+| Ring of Recurrence                  | Bestpractice, Pergatori, Ucannotpass                               |       |
+| Ring of Unrelenting Storms          | Pergatori                                                          |       |
+| Ruby Drape of the Mysticant         | Bestpractice                                                       |       |
+| Shield of Impenetrable Darkness     | Mirohl                                                             |       |
+| Shining Chain of the Afterworld     | Lightweit                                                          |       |
+| Skulker's Greaves                   | Bergamotka, Dankyn, Gigakox, Vaelruna                              |       |
+| Spiteblade                          | Baebay, Dankyn, Gigakox                                            |       |
+| Stainless Cloak of the Pure Hearted | Keatala                                                            |       |
+| Stonebough Jerkin                   | Keatala                                                            |       |
+| The Decapitator                     | Bergamotka, Lynelen, Yorekbarn                                     |       |
+| The Lightning Capacitor             | Oomtoodoom                                                         |       |
+| Tirisfal Wand of Ascendancy         | Kresniik                                                           |       |
+| Trial-Fire Trousers                 | Kresniik                                                           |       |
+| Vambraces of Courage                | Cptkavior                                                          |       |
+| Wrynn Dynasty Greaves               | Doughball, Ostbirger                                               |       |
 
 **Applies to:** Karazhan only.
 
