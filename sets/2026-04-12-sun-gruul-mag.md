@@ -14,7 +14,6 @@
 **Shamans (4):** Pergatori, Lynelen, Ebonybolt, Bergamotka/Tymoti
 
 **Bench (3):** Roossy/Keatala, Heligeman/Fugleman, OomToDoom
-**Absent (2):** Kres/Dissi, Bombzor
 
 **Header stats:** Melee 9, Ranged 8, Healers 6
 

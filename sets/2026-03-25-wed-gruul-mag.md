@@ -15,7 +15,6 @@
 **Warlocks (2):** McHughes, Jabbadhutt
 **Shamans (4):** Bergamotka/Tymoti, Ebonybolt, Lynelen, Pergatori
 
-**Absent (2):** Rhoator, Tonsen
 **Bench (2):** Gresac, Roossy/Keatala
 
 **Header stats:** Melee 7, Ranged 9, Healers 7

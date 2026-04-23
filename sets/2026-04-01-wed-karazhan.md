@@ -15,7 +15,6 @@
 **Shamans (5):** Pergatori, Bergamotka/Tymoti, Lynelen, Ebonybolt, CodeHunt
 
 **Late (1):** GlaivemasterBaebay
-**Absent (3):** Bombzor, Rhoator, Drillbabe
 
 **Header stats:** Melee 7, Ranged 10, Healers 8
 

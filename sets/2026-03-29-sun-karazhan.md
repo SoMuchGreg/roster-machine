@@ -7,15 +7,12 @@
 **Druids (5):** Gresac, Roossy/Keatala, Eselman, Yxanb, Beaverfist
 **Paladin (1):** Thordrel
 **Rogues (2):** GlaivemasterBaeb, Drillbabe
-**Hunters (3):** Tonsen, Dwarfytron, Vaelruna
+**Hunters (4):** Tonsen, Dwarfytron, Vaelruna, Rhoator
 **Priests (3):** Bombzor, Kres/Dissi, Siljes/Ejlis
 **Mages (2):** OomToDoom, Greg/Ucannotpass
 **Warlocks (3):** McHughes, BestPractice, Jabbadhutt
 **Shamans (4):** Lynelen, Bergamotka/Tymoti, Ebonybolt, Pergatori
 **Late signup:** McJudgin
-
-**Originally absent but raided:** Rhoator
-**Absent (2):** Dankyn, CodeHunt
 
 ---
 

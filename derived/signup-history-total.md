@@ -54,11 +54,11 @@ A player's sub-table is determined solely by where they live in `rules/04-player
 
 | #  | Player              | Signups |
 |----|---------------------|---------|
-| 1  | Mirohl              | 26      |
+| 1  | Mirohl              | 25      |
 | 2  | Greg                | 24      |
-| 3  | Kres/Dissi          | 23      |
-| 4  | Glaivemaster Baebay | 19      |
-| 5  | Jar                 | 15      |
+| 3  | Kres/Dissi          | 20      |
+| 4  | Glaivemaster Baebay | 18      |
+| 5  | Jar                 | 14      |
 
 ### Current members
 
@@ -66,49 +66,48 @@ A player's sub-table is determined solely by where they live in `rules/04-player
 |----|---------------------|---------|
 | 1  | Marino-Varthier     | 25      |
 | 2  | Vaelruna            | 22      |
-| 3  | Verysadge           | 22      |
-| 4  | Gresac              | 21      |
+| 3  | Gresac              | 21      |
+| 4  | Verysadge           | 20      |
 | 5  | Thordrel            | 19      |
-| 6  | OomToDoom           | 18      |
+| 6  | OomToDoom           | 17      |
 | 7  | McHughes            | 16      |
-| 8  | Dankyn              | 14      |
-| 9  | Roossy/Keatala      | 14      |
-| 10 | Yxanb               | 14      |
-| 11 | BestPractice        | 13      |
-| 12 | Lynelen             | 13      |
-| 13 | Beaverfist          | 12      |
-| 14 | Bergamotka/Tymoti   | 12      |
-| 15 | Jabbadhutt          | 11      |
-| 16 | Ebonybolt           | 10      |
+| 8  | Roossy/Keatala      | 14      |
+| 9  | Yxanb               | 14      |
+| 10 | Dankyn              | 13      |
+| 11 | Lynelen             | 13      |
+| 12 | Beaverfist          | 12      |
+| 13 | Bergamotka/Tymoti   | 12      |
+| 14 | BestPractice        | 11      |
+| 15 | Ebonybolt           | 10      |
+| 16 | Jabbadhutt          | 10      |
 | 17 | Pergatori           | 10      |
-| 18 | Tonsen              | 10      |
-| 19 | Bombzor             | 9       |
-| 20 | Ostbirger           | 9       |
-| 21 | Gigakox             | 8       |
-| 22 | Heligeman/Fugleman  | 8       |
-| 23 | Dwarfytron          | 7       |
+| 18 | Ostbirger           | 9       |
+| 19 | Tonsen              | 9       |
+| 20 | Gigakox             | 8       |
+| 21 | Dwarfytron          | 7       |
+| 22 | Heligeman/Fugleman  | 7       |
+| 23 | Bombzor             | 6       |
 | 24 | Doughball           | 6       |
 | 25 | McJudgin            | 6       |
-| 26 | Ōtsu                | 6       |
-| 27 | Siljes/Ejlis        | 6       |
-| 28 | CodeHunt/Rainbound  | 5       |
-| 29 | Leontes             | 5       |
-| 30 | Lightweit           | 5       |
-| 31 | Blacksi             | 4       |
-| 32 | CptKavior           | 4       |
-| 33 | Sjwammie            | 4       |
-| 34 | Drillbabe           | 3       |
-| 35 | Eselman             | 3       |
-| 36 | Lightstarr          | 3       |
-| 37 | Medianos            | 3       |
+| 26 | Siljes/Ejlis        | 6       |
+| 27 | Lightweit           | 5       |
+| 28 | Ōtsu                | 5       |
+| 29 | Blacksi             | 4       |
+| 30 | CptKavior           | 4       |
+| 31 | Leontes             | 4       |
+| 32 | Sjwammie            | 4       |
+| 33 | CodeHunt/Rainbound  | 3       |
+| 34 | Eselman             | 3       |
+| 35 | Lightstarr          | 3       |
+| 36 | Medianos            | 3       |
+| 37 | Drillbabe           | 2       |
 | 38 | Spot/Yorekbarn      | 1       |
-| 39 | Varva               | 1       |
 
 ### Former members
 
 | #  | Player              | Signups |
 |----|---------------------|---------|
-| 1  | Rhoator             | 14      |
+| 1  | Rhoator             | 13      |
 | 2  | Mairen/Zorÿa        | 10      |
 | 3  | Buns/Sourbuns       | 8       |
 | 4  | Faroula             | 7       |

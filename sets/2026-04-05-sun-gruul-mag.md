@@ -14,7 +14,6 @@
 **Warlocks (3):** McHughes, Jabbadhutt
 
 **Bench (1):** Jar (signed up but couldn't come)
-**Absent (3):** Kres/Dissi, Verysadge, BestPractice
 
 ## Actual Roster (24-man, short one player)
 

@@ -13,7 +13,6 @@
 **Shamans (5):** Rainbound, Pergatori, Lynelen, Bergamotka/Tymoti, Ebonybolt
 
 **Late (1):** GlaivemasterBaebay
-**Absent (1):** Varva
 
 **Header stats:** Melee 7, Ranged 11, Healers 8
 
@@ -67,12 +66,11 @@
 
 *(GlaivemasterBaebay signed up late but did NOT attend this raid)*
 
-## Bench (4)
+## Bench (3)
 
 | Player         | Bench count (cumulative) |
 |----------------|--------------------------|
 | McJudgin       | 1                        |
-| Varva          | 1 (also absent)          |
 | CptKavior      | 1                        |
 | Leontes        | 1                        |
 

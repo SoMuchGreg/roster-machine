@@ -1,19 +1,27 @@
 # Karazhan — Wednesday 22.04.2026
 
-## Signups (from Discord) — 26 (+0)
+## Signups (from Discord) — 20 (+0)
 
-**Tanks (6):** Mirohl, Gigakox, CptKavior, Ostbirger, Marino-Varthier, McJudgin
-**Warriors (1):** Verysadge
+**Tanks (5):** Gigakox, CptKavior, Ostbirger, Marino-Varthier, McJudgin
 **Druids (5):** Yxanb, Gresac, Roossy/Keatala, Beaverfist, Jar
-**Paladins (1):** Leontes
-**Rogues (1):** Glaivemaster Baebay
 **Hunters (1):** Vaelruna
 **Priests (3):** Kres/Dissi, Lightweit, Siljes/Ejlis
-**Mages (2):** Greg, OomToDoom
-**Warlocks (2):** BestPractice, Jabbadhutt
+**Mages (1):** Greg
+**Warlocks (1):** Jabbadhutt
 **Shamans (4):** Pergatori, Lynelen, Bergamotka/Tymoti, Ebonybolt
 
 **Header stats:** Tanks 6, Melee 7, Ranged 9, Healers 4
+
+## Withdrawn signups (6)
+
+| Player              |
+|---------------------|
+| BestPractice        |
+| Glaivemaster Baebay |
+| Leontes             |
+| Mirohl              |
+| OomToDoom           |
+| Verysadge           |
 
 ## Actual Raid Rosters
 

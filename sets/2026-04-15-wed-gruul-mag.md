@@ -1,6 +1,6 @@
 # Gruul's Lair + Magtheridon — Wednesday 15.04.2026
 
-## Signups (from Discord) — 29 (+0)
+## Signups (from Discord) — 27 (+0)
 
 **Tanks (4):** Mirohl, CptKavior, Marino-Varthier, Ostbirger
 **Warriors (3):** Dankyn, Gigakox, Verysadge
@@ -10,13 +10,17 @@
 **Hunters (2):** Vaelruna, Tonsen
 **Priests (3):** Kres/Dissi, Bombzor, Lightweit
 **Mages (2):** OomToDoom, Greg (Ucannotpass)
-**Warlocks (3):** Jabbadhutt, McHughes, Ōtsu
+**Warlocks (1):** McHughes
 **Shamans (4):** Pergatori, Lynelen, Bergamotka/Tymoti, Ebonybolt
 
-**Withdrew before raid (2):** Ōtsu, Jabbadhutt
-**Absent (3):** Heligeman/Fugleman, CodeHunt/Rainbound, Jar
-
 **Header stats:** Melee 9, Ranged 9, Healers 7
+
+## Withdrawn signups (2)
+
+| Player     |
+|------------|
+| Jabbadhutt |
+| Ōtsu       |
 
 ## Actual Roster (Gruul + Magtheridon)
 
