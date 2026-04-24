@@ -24,6 +24,7 @@ For cadence (when to re-read the applicable tier within a session), see `CLAUDE.
 | `rules/02-bench-rotation.md` | Selection algorithm, raid spot priority, fair rotation, tiebreakers |
 | `rules/03-player-constraints.md` | Must-together / must-not-together / availability / Needlist / enchanter constraints |
 | `rules/04-players.md` | Existing players' classes, specs, raid spot priority, notes |
+| `rules/05-encounter-assignments.md` | Gruul+Mag encounter role table, fixed cube marker mapping, continuity algorithm, general raid instructions |
 | `reference/file-operations-manual.md` | This file — workflow procedures for every event type |
 
 ### Tier 2
@@ -37,7 +38,7 @@ For cadence (when to re-read the applicable tier within a session), see `CLAUDE.
 | `reference/icons/specs/*.jpg` | Spec icon reference images (compare side-by-side when unsure) |
 | `reference/icons/classes/*.png` | Class icon reference images (compare side-by-side when unsure) |
 | `reference/raid-composition-guide.md` | Comprehensive TBC raid composition reference: buff scope, Shaman totems, raid-wide debuffs, per-spec target counts (§8 — used by the 25-man fair-rotation tiebreaker in `rules/02-bench-rotation.md`). **§3, §4, §9 (party-group templates and assignment framework) are out of scope for roster formation — see `rules/01-raid-compositions.md` → "Party groups (out of scope)" for the rule.** |
-| All files in `records/` | Predecessor context, especially recent bench history |
+| All files in `records/` | Predecessor context, especially recent bench history. Includes the non-date-indexed outlier `records/_historical-gruul-mag-assignments.md` — a pre-template Gruul+Mag encounter-assignment corpus (datasets A-G) consulted by `rules/05-encounter-assignments.md` → "Continuity data sources". |
 
 ---
 
@@ -84,13 +85,14 @@ Read both **Tier 1** and **Tier 2** of the **Reading list** at the top of this f
    - Make **no** changes to the roster, the record file, or any other project file. It is read-only.
 
    After the sub-agent returns, **you must not modify the roster** based on its output, even if it reports violations. Present the roster exactly as it stood when you sent it to the sub-agent, paired with the sub-agent's verdict verbatim. The user decides what to do with any flagged violations.
-7. Present roster to user for approval, together with the sub-agent's verdict (YES / GOOD ENOUGH / NO) and any violations it listed.
+7. **For Gruul+Mag raids only:** assign encounter roles per `rules/05-encounter-assignments.md` (Maulgar council + Magtheridon cube clickers). Follow the algorithm and continuity sources defined in that rule; skip this step entirely for any other raid location. The sub-agent sanity check does **not** re-run for encounter assignments (they never change who plays).
+8. Present roster to user for approval, together with the sub-agent's verdict (YES / GOOD ENOUGH / NO), any violations it listed, and — for Gruul+Mag — the proposed encounter assignments.
 
 ### Step 4 — Write/Update (after user confirms)
 
 | File | What to update |
 |------|----------------|
-| `records/YYYY-MM-DD-day-raid.md` | **Create new file.** Start from `reference/templates/karazhan-record.md` (for Karazhan nights) or `reference/templates/25man-record.md` (for any 25-man raid). Copy the template into `records/` with the date-based filename, fill in every `{placeholder}`, delete every section/sub-line marked with an HTML comment like `delete line if none` if its condition applies, and follow the section order as-is. |
+| `records/YYYY-MM-DD-day-raid.md` | **Create new file.** Start from the template that matches the raid location: `reference/templates/karazhan-record.md` for Karazhan nights, `reference/templates/gruul-mag-record.md` for Gruul+Mag (adds the `## Encounter assignments` section per `rules/05-encounter-assignments.md`), or `reference/templates/25man-record.md` for any other 25-man raid location (SSC/TK/Hyjal/BT when content unlocks). Copy the template into `records/` with the date-based filename, fill in every `{placeholder}`, delete every section/sub-line marked with an HTML comment like `delete line if none` if its condition applies, and follow the section order as-is. |
 | `derived/bench-history-tbc.md` | **Update.** For each player benched this raid: find their row (or insert a new one in alphabetical position if absent), increment the count cell for the relevant raid-location column, append the new date to that location's dates cell, and recompute the **Total** cell. The `Total` column is a sum across all raid-location count columns — keep it in sync on every edit. |
 | `derived/signup-history-total.md` | **Update.** For each distinct canonical player appearing anywhere in the new record file's `## Signups` section (any sub-line — class lists, Tentative, Late, Bench): find their row in the sub-table matching their `rules/04-players.md` classification (Officers / Current members / Former members), or add a new row in that sub-table if absent. Increment **Signups** by 1. Then re-sort each sub-table whose rows changed (by `Signups` desc, alphabetical case-insensitive tiebreak) and renumber `#` from `1`. Count each player once per record file regardless of how many sub-lines mention them. **Never** count Discord "Absent" reactions (ignored per Step 2) or players in `## Withdrawn signups` (see `Event: Player withdraws signup`). See that file's own "What counts as a signup" and "Maintenance" sections for the full rule. |
 | `derived/signup-stats-tbc.md` | **Update IF** the new/edited record file is in scope per that file's **Scope** section (currently TBC-era record files: Karazhan, Gruul's Lair, Magtheridon's Lair). See its **Maintenance** section for the full delta logic — in brief: apply per-player Signups deltas, record First signup for new rows, recompute Signup rate for every row whose Raids-in-window changed, refresh the "Computed as of" header, re-sort by Signup rate desc (alphabetical tiebreak), renumber. Former players are excluded. Skip entirely for out-of-scope record files (currently any old-world record file). |
@@ -100,7 +102,7 @@ Read both **Tier 1** and **Tier 2** of the **Reading list** at the top of this f
 
 ### Writing the `## Notes` section of a record file
 
-The `## Notes` section is for **per-raid facts that aren't derivable from the rules + the rest of the record file**. It is not free-form commentary, and it is not a place to log rule compliance. Both record-file templates (`reference/templates/25man-record.md`, `reference/templates/karazhan-record.md`) point at this subsection — do not duplicate this guidance into the templates themselves.
+The `## Notes` section is for **per-raid facts that aren't derivable from the rules + the rest of the record file**. It is not free-form commentary, and it is not a place to log rule compliance. Every record-file template (`reference/templates/25man-record.md`, `reference/templates/gruul-mag-record.md`, `reference/templates/karazhan-record.md`) points at this subsection — do not duplicate this guidance into the templates themselves.
 
 #### What belongs in Notes
 
@@ -163,7 +165,7 @@ Discord "Absent" reactions are handled by Step 2 of "New signup screenshot recei
 
 | File | When it needs updating | What to update |
 |------|------------------------|----------------|
-| `records/YYYY-MM-DD-day-raid.md` | Always — withdrawal touches the record file. | (a) Remove the player from every sub-line of `## Signups (from Discord)` — class lists (Tanks / Warriors / Druids / Paladins / Rogues / Hunters / Priests / Mages / Warlocks / Shamans), `Tentative`, `Late`. Decrement the sub-line's `({N})` count. Decrement the main header's `X (+Y)` — `X` if they were in a class list or `Late`, `Y` if they were in `Tentative` or `## Bench`. (b) Add the player to `## Withdrawn signups` (structure defined in `reference/templates/karazhan-record.md` and `reference/templates/25man-record.md`), incrementing its `({N})` header count. Canonical name per `rules/04-players.md`. (c) If the player appeared in `## Actual Raid Rosters`, remove them there too; see "Two sub-cases" below for the roster-side procedure (invoke `Event: Full-roster recalculation` pre-raid; `Event: Quick (ad-hoc) roster update` post-raid). (d) If the player appeared in `## Bench`, remove them from `## Bench` (a withdrawal is not a bench). (e) Add a `## Notes` bullet recording the withdrawal and any roster consequence, consistent with the Notes guidance in "Writing the `## Notes` section of a record file" above. |
+| `records/YYYY-MM-DD-day-raid.md` | Always — withdrawal touches the record file. | (a) Remove the player from every sub-line of `## Signups (from Discord)` — class lists (Tanks / Warriors / Druids / Paladins / Rogues / Hunters / Priests / Mages / Warlocks / Shamans), `Tentative`, `Late`. Decrement the sub-line's `({N})` count. Decrement the main header's `X (+Y)` — `X` if they were in a class list or `Late`, `Y` if they were in `Tentative` or `## Bench`. (b) Add the player to `## Withdrawn signups` (structure defined in the record-file templates under `reference/templates/`), incrementing its `({N})` header count. Canonical name per `rules/04-players.md`. (c) If the player appeared in `## Actual Raid Rosters`, remove them there too; see "Two sub-cases" below for the roster-side procedure (invoke `Event: Full-roster recalculation` pre-raid; `Event: Quick (ad-hoc) roster update` post-raid). (d) If the player appeared in `## Bench`, remove them from `## Bench` (a withdrawal is not a bench). (e) Add a `## Notes` bullet recording the withdrawal and any roster consequence, consistent with the Notes guidance in "Writing the `## Notes` section of a record file" above. |
 | `derived/signup-history-total.md` | Only if the player's signup count was previously incremented for this record file — i.e., the record file was already written before the withdrawal. For a pre-build withdrawal (see "Two sub-cases" below), skip — the increment never happened. | Decrement the player's `Signups` count by 1 in the appropriate sub-table (Officers / Current members / Former members). Re-sort (by `Signups` desc, alphabetical case-insensitive tiebreak) and renumber `#` from `1`. If `Signups` reaches 0, remove the row. |
 | `derived/signup-stats-tbc.md` | Only if the record file is in-scope (TBC-era, per that file's Scope section) **and** the increment was previously applied (post-build withdrawal). | Decrement the player's `Signups` by 1. If `Signups` hits 0, remove the row. Otherwise, if this record file was the player's `First signup`, recompute `First signup` to the next-earliest in-scope record file containing them and recompute `Raids-in-window` + `Signup rate` for their row; if not their first, `Raids-in-window` is unchanged and only `Signup rate` recomputes. Re-sort by `Signup rate` desc (alphabetical tiebreak), renumber `#`, refresh the `Computed as of` header. |
 | `derived/bench-history-tbc.md` | Only if the withdrawn player was previously in the record file's `## Bench` table (i.e., the withdrawal converts an already-recorded bench). | Decrement the player's count for this raid-location column, remove this record file's date from the `{location} dates` cell, recompute `Total`. If all counts reach 0, drop the row (for priority-1 players) or rely on the "All other priority-2 and priority-3 players: 0 benches at every location" footer (for priority-2/3). |
@@ -333,24 +335,26 @@ INPUTS for generating a record file:
   ├── rules/02-bench-rotation.md
   ├── rules/03-player-constraints.md
   ├── rules/04-players.md
+  ├── rules/05-encounter-assignments.md   ← Gruul+Mag only — Maulgar council + Magtheridon cube clicker assignment
   ├── derived/bench-history-tbc.md     ← summary derived from records/, kept as a fast-lookup index
   ├── derived/signup-history-total.md    ← derived from records/ — statistic only, not used by any active rule
   └── derived/signup-stats-tbc.md  ← combined signup count + signup rate (percentage), TBC-era record files only (statistic only)
 
 REFERENCE for parsing screenshots and raid composition decisions:
-  ├── reference/class-colors-and-spec-icons.md       ← parsing screenshots (class colors, spec icons)
-  ├── reference/icons/**/*                            ← parsing screenshots (icon image files)
-  └── reference/raid-composition-guide.md      ← TBC raid composition reference (§8 used by tiebreaker)
+  ├── reference/class-colors-and-spec-icons.md          ← parsing screenshots (class colors, spec icons)
+  ├── reference/icons/**/*                              ← parsing screenshots (icon image files)
+  └── reference/raid-composition-guide.md               ← TBC raid composition reference (§8 used by tiebreaker)
 
 OUTPUTS:
-  ├── records/*.md                    ← actual record files, one per raid night (each record file is also INPUT for the next)
+  ├── records/*.md                    ← actual record files, one per raid night (each record file is also INPUT for the next). Includes `records/_historical-gruul-mag-assignments.md` — a non-date-indexed pre-template Gruul+Mag continuity corpus (INPUT only, static, read by `rules/05-encounter-assignments.md`)
   ├── derived/bench-history-tbc.md     ← updated whenever a new record file is created
   ├── derived/signup-history-total.md    ← updated whenever a new record file is created or edited
   └── derived/signup-stats-tbc.md  ← same, but only for TBC-era record files; also recomputes Signup rate
 
 REFERENCE for writing new record files (canonical structure for record files):
   ├── reference/templates/karazhan-record.md   ← canonical structure for Karazhan record files
-  └── reference/templates/25man-record.md      ← canonical structure for 25-man record files
+  ├── reference/templates/gruul-mag-record.md  ← canonical structure for Gruul+Mag record files (adds Encounter assignments)
+  └── reference/templates/25man-record.md      ← canonical structure for any other 25-man record file (SSC/TK/Hyjal/BT)
 
 META (read every session):
   ├── CLAUDE.md
@@ -370,5 +374,6 @@ After any interaction, check:
 - [ ] Spec changed from previous? → `04-players.md`
 - [ ] Rule added/changed? → `rules/*.md`
 - [ ] Player left/joined? → `04-players.md` + `03-player-constraints.md` + `bench-history-tbc.md`
-- [ ] New record file created? → `records/YYYY-MM-DD-day-raid.md`
+- [ ] New record file created? → `records/YYYY-MM-DD-day-raid.md` (Gruul+Mag uses `reference/templates/gruul-mag-record.md`; other 25-mans use `25man-record.md`)
+- [ ] New Gruul+Mag record? → fill in `## Encounter assignments` per `rules/05-encounter-assignments.md`
 - [ ] Constraint added? → `03-player-constraints.md`
