@@ -54,11 +54,9 @@ A player's sub-table is determined solely by where they live in `rules/04-player
 
 | #  | Player              | Signups |
 |----|---------------------|---------|
-| 1  | Mirohl              | 26      |
-| 2  | Greg                | 25      |
-| 3  | Kres/Dissi          | 21      |
-| 4  | Glaivemaster Baebay | 18      |
-| 5  | Jar                 | 15      |
+| 1  | Greg                | 25      |
+| 2  | Kres/Dissi          | 21      |
+| 3  | Jar                 | 15      |
 
 ### Current members
 
@@ -107,38 +105,40 @@ A player's sub-table is determined solely by where they live in `rules/04-player
 
 | #  | Player              | Signups |
 |----|---------------------|---------|
-| 1  | Rhoator             | 13      |
-| 2  | Mairen/Zorÿa        | 10      |
-| 3  | Buns/Sourbuns       | 8       |
-| 4  | Faroula             | 7       |
-| 5  | Jinothy             | 7       |
-| 6  | Bombzor             | 6       |
-| 7  | Zemp                | 6       |
-| 8  | Fredfull            | 5       |
-| 9  | Ryro                | 5       |
-| 10 | Kryxs               | 4       |
-| 11 | Lixly               | 4       |
-| 12 | Trisslott           | 4       |
-| 13 | Venguard            | 4       |
-| 14 | Alaan               | 3       |
-| 15 | Aserrah             | 3       |
-| 16 | Bhandage            | 3       |
-| 17 | Aenra               | 2       |
-| 18 | Ayujinzhu           | 2       |
-| 19 | Erushi              | 2       |
-| 20 | Molgrod             | 2       |
-| 21 | Stonebelly          | 2       |
-| 22 | Thalynora           | 2       |
-| 23 | blep                | 1       |
-| 24 | Calendril           | 1       |
-| 25 | CoffeeBean          | 1       |
-| 26 | David/Dejv          | 1       |
-| 27 | Dikkins             | 1       |
-| 28 | Eebowai             | 1       |
-| 29 | ErAleX              | 1       |
-| 30 | Flippkisi           | 1       |
-| 31 | Lovepotion94        | 1       |
-| 32 | overaggro           | 1       |
-| 33 | Rasputin            | 1       |
-| 34 | Sickdeer            | 1       |
-| 35 | Tøbb                | 1       |
+| 1  | Mirohl              | 25      |
+| 2  | Glaivemaster Baebay | 18      |
+| 3  | Rhoator             | 13      |
+| 4  | Mairen/Zorÿa        | 10      |
+| 5  | Buns/Sourbuns       | 8       |
+| 6  | Faroula             | 7       |
+| 7  | Jinothy             | 7       |
+| 8  | Bombzor             | 6       |
+| 9  | Zemp                | 6       |
+| 10 | Fredfull            | 5       |
+| 11 | Ryro                | 5       |
+| 12 | Kryxs               | 4       |
+| 13 | Lixly               | 4       |
+| 14 | Trisslott           | 4       |
+| 15 | Venguard            | 4       |
+| 16 | Alaan               | 3       |
+| 17 | Aserrah             | 3       |
+| 18 | Bhandage            | 3       |
+| 19 | Aenra               | 2       |
+| 20 | Ayujinzhu           | 2       |
+| 21 | Erushi              | 2       |
+| 22 | Molgrod             | 2       |
+| 23 | Stonebelly          | 2       |
+| 24 | Thalynora           | 2       |
+| 25 | blep                | 1       |
+| 26 | Calendril           | 1       |
+| 27 | CoffeeBean          | 1       |
+| 28 | David/Dejv          | 1       |
+| 29 | Dikkins             | 1       |
+| 30 | Eebowai             | 1       |
+| 31 | ErAleX              | 1       |
+| 32 | Flippkisi           | 1       |
+| 33 | Lovepotion94        | 1       |
+| 34 | overaggro           | 1       |
+| 35 | Rasputin            | 1       |
+| 36 | Sickdeer            | 1       |
+| 37 | Tøbb                | 1       |

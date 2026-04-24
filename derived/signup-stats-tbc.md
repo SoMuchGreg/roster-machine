@@ -39,7 +39,7 @@ For renames: update the `Player` cell in-place; re-sort only if the alphabetical
 
 ## Computed as of
 
-**2026-04-24**
+**2026-04-25**
 
 ## Players — signup stats (TBC in-scope record files)
 
@@ -53,37 +53,35 @@ For renames: update the `Player` cell in-place; re-sort only if the alphabetical
 | 6  | Pergatori           | 2026-03-22   | 11      | 100.0%      |
 | 7  | Roossy/Keatala      | 2026-03-15   | 13      | 100.0%      |
 | 8  | Greg                | 2026-02-22   | 19      | 95.0%       |
-| 9  | Mirohl              | 2026-02-22   | 19      | 95.0%       |
-| 10 | Vaelruna            | 2026-02-22   | 19      | 95.0%       |
-| 11 | Yxanb               | 2026-03-04   | 15      | 93.8%       |
-| 12 | Beaverfist          | 2026-03-15   | 12      | 92.3%       |
-| 13 | Bergamotka/Tymoti   | 2026-03-15   | 12      | 92.3%       |
-| 14 | Ostbirger           | 2026-03-22   | 10      | 90.9%       |
-| 15 | Gigakox             | 2026-03-25   | 9       | 90.0%       |
-| 16 | Marino-Varthier     | 2026-02-22   | 18      | 90.0%       |
-| 17 | OomToDoom           | 2026-02-22   | 18      | 90.0%       |
-| 18 | Thordrel            | 2026-02-22   | 18      | 90.0%       |
-| 19 | Verysadge           | 2026-02-22   | 18      | 90.0%       |
-| 20 | Dankyn              | 2026-03-04   | 14      | 87.5%       |
-| 21 | Jabbadhutt          | 2026-03-15   | 11      | 84.6%       |
-| 22 | CptKavior           | 2026-04-08   | 5       | 83.3%       |
-| 23 | Leontes             | 2026-04-08   | 5       | 83.3%       |
-| 24 | Tonsen              | 2026-03-15   | 10      | 76.9%       |
-| 25 | Kres/Dissi          | 2026-02-22   | 15      | 75.0%       |
-| 26 | McHughes            | 2026-02-22   | 15      | 75.0%       |
-| 27 | Siljes/Ejlis        | 2026-03-25   | 7       | 70.0%       |
-| 28 | McJudgin            | 2026-03-29   | 6       | 66.7%       |
-| 29 | Spot/Yorekbarn      | 2026-04-19   | 2       | 66.7%       |
-| 30 | Glaivemaster Baebay | 2026-02-22   | 13      | 65.0%       |
-| 31 | Dwarfytron          | 2026-03-22   | 7       | 63.6%       |
-| 32 | Jar                 | 2026-02-25   | 11      | 61.1%       |
-| 33 | BestPractice        | 2026-02-22   | 11      | 55.0%       |
-| 34 | Doughball           | 2026-03-11   | 6       | 42.9%       |
-| 35 | Heligeman/Fugleman  | 2026-04-05   | 3       | 42.9%       |
-| 36 | Ōtsu                | 2026-03-04   | 5       | 31.3%       |
-| 37 | CodeHunt/Rainbound  | 2026-03-25   | 3       | 30.0%       |
-| 38 | Sjwammie            | 2026-03-11   | 4       | 28.6%       |
-| 39 | Eselman             | 2026-03-22   | 3       | 27.3%       |
-| 40 | Lightstarr          | 2026-03-18   | 3       | 25.0%       |
-| 41 | Drillbabe           | 2026-03-04   | 2       | 12.5%       |
-| 42 | Blacksi             | 2026-02-22   | 1       | 5.0%        |
+| 9  | Vaelruna            | 2026-02-22   | 19      | 95.0%       |
+| 10 | Yxanb               | 2026-03-04   | 15      | 93.8%       |
+| 11 | Beaverfist          | 2026-03-15   | 12      | 92.3%       |
+| 12 | Bergamotka/Tymoti   | 2026-03-15   | 12      | 92.3%       |
+| 13 | Ostbirger           | 2026-03-22   | 10      | 90.9%       |
+| 14 | Gigakox             | 2026-03-25   | 9       | 90.0%       |
+| 15 | Marino-Varthier     | 2026-02-22   | 18      | 90.0%       |
+| 16 | OomToDoom           | 2026-02-22   | 18      | 90.0%       |
+| 17 | Thordrel            | 2026-02-22   | 18      | 90.0%       |
+| 18 | Verysadge           | 2026-02-22   | 18      | 90.0%       |
+| 19 | Dankyn              | 2026-03-04   | 14      | 87.5%       |
+| 20 | Jabbadhutt          | 2026-03-15   | 11      | 84.6%       |
+| 21 | CptKavior           | 2026-04-08   | 5       | 83.3%       |
+| 22 | Leontes             | 2026-04-08   | 5       | 83.3%       |
+| 23 | Tonsen              | 2026-03-15   | 10      | 76.9%       |
+| 24 | Kres/Dissi          | 2026-02-22   | 15      | 75.0%       |
+| 25 | McHughes            | 2026-02-22   | 15      | 75.0%       |
+| 26 | Siljes/Ejlis        | 2026-03-25   | 7       | 70.0%       |
+| 27 | McJudgin            | 2026-03-29   | 6       | 66.7%       |
+| 28 | Spot/Yorekbarn      | 2026-04-19   | 2       | 66.7%       |
+| 29 | Dwarfytron          | 2026-03-22   | 7       | 63.6%       |
+| 30 | Jar                 | 2026-02-25   | 11      | 61.1%       |
+| 31 | BestPractice        | 2026-02-22   | 11      | 55.0%       |
+| 32 | Doughball           | 2026-03-11   | 6       | 42.9%       |
+| 33 | Heligeman/Fugleman  | 2026-04-05   | 3       | 42.9%       |
+| 34 | Ōtsu                | 2026-03-04   | 5       | 31.3%       |
+| 35 | CodeHunt/Rainbound  | 2026-03-25   | 3       | 30.0%       |
+| 36 | Sjwammie            | 2026-03-11   | 4       | 28.6%       |
+| 37 | Eselman             | 2026-03-22   | 3       | 27.3%       |
+| 38 | Lightstarr          | 2026-03-18   | 3       | 25.0%       |
+| 39 | Drillbabe           | 2026-03-04   | 2       | 12.5%       |
+| 40 | Blacksi             | 2026-02-22   | 1       | 5.0%        |

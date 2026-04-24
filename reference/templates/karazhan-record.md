@@ -65,9 +65,9 @@ Sort alphabetically case-insensitive by canonical player name (rules/04-players.
 
 <!--
 Three teams, each exactly 10 players: 1 MT, 1 OT, 6 DPS, 2 Healers (target).
-Team order MUST be: Restaurant, Bakery, BaeGlaives (matches rules/01-raid-compositions.md
-fixed-assignments table). Fixed players: Mirohl on Restaurant, Glaivemaster Baebay on
-BaeGlaives, Greg OR Kres/Dissi on Bakery (the other goes to Restaurant for enchanting).
+Team order MUST be: Restaurant, Bakery, BestPrepared (matches rules/01-raid-compositions.md
+→ "Team names"). No team is anchored to a specific player. Enchanter distribution across
+teams follows rules/03-player-constraints.md → "Enchanters".
 
 The Class column should record what the player ACTUALLY played that night (per the spec
 icon in the signup screenshot), not their default spec from rules/04-players.md.
@@ -105,7 +105,7 @@ not obvious from the role column.
 | ...                 | Healer | ...                  |
 | ...                 | Healer | ...                  |
 
-### Team BaeGlaives
+### Team BestPrepared
 
 | Player              | Role   | Class                |
 |---------------------|--------|----------------------|
@@ -171,7 +171,7 @@ Per `rules/03-player-constraints.md` — list every item where 2+ competing play
 are in this raid (playing or benched). Skip items where fewer than 2 competitors
 signed up.
 
-Competitors column: player name + team abbreviation (R / Bak / BG) or (bench).
+Competitors column: player name + team abbreviation (R / Bak / BP) or (bench).
 Status: "✓ split" if all competitors are on different teams (or benched).
 "⚠️ X + Y" naming the pair(s) that share a team — these are loot-split violations.
 
@@ -184,7 +184,7 @@ this raid.
 
 | Item                        | Competitors                  | Status                       |
 |-----------------------------|------------------------------|------------------------------|
-| ...                         | ... (R), ... (BG)            | ✓ split / ⚠️ ... + ...       |
+| ...                         | ... (R), ... (BP)            | ✓ split / ⚠️ ... + ...       |
 
 ## Sanity check
 

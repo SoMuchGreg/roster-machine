@@ -26,7 +26,7 @@ If signups don't include enough players for a required role at a raid's composit
 
 The mirror of the dual-spec flex rule above: when **more tanks sign up than the raid's composition target calls for**, dual-spec tank players can flex to their offspec rather than being auto-benched for the surplus. The principle is the same — prefer to use a player's offspec over sitting them on the bench, as long as the composition actually needs what their offspec provides.
 
-**Identify the excess tank(s).** The raid's "core" tanks for that format are the tanks the raid leader relies on to fill the main-tank / off-tank / third-tank duties for that specific raid (e.g., for Gruul+Mag: Mirohl, Marino-Varthier, Ostbirger). Any tank-column signup beyond the core set is **excess** — they are not needed as a tank for this raid.
+**Identify the excess tank(s).** The raid's "core" tanks for that format are the tanks the raid leader relies on to fill the primary tank duties for that specific raid (e.g., for Gruul+Mag: Marino-Varthier, Ostbirger). When the format calls for more tanks than the core list provides (e.g., Gruul+Mag's 3-tank target vs. 2 core tanks), the extra slot is filled per-raid from other tank signups. Any tank-column signup beyond the core set plus the raid's chosen extra tanks is **excess** — they are not needed as a tank for this raid.
 
 **Offer the offspec switch first.** Before benching the excess tank, check their `Spec 2 (role)` in `rules/04-players.md`. If they have a usable DPS or Healer offspec that the raid has room for, ask whether they'd play that offspec instead. This is a voluntary swap — never unilaterally reassign.
 
@@ -71,18 +71,20 @@ Each Karazhan raid team should target the following composition:
 
 Three Karazhan raids are formed per Karazhan night (30 players total if full).
 
-### Team names and fixed assignments
+### Team names
 
-| Team | Fixed player |
-|------|-------------|
-| Team Restaurant | Mirohl |
-| Team BaeGlaives | Glaivemaster Baebay |
-| Team Bakery | Greg (Ucannotpass) OR Kres/Dissi (Kresniik) — never both, since one must be in Team Restaurant for enchanting |
+The three Karazhan teams are:
+
+- Team Restaurant
+- Team Bakery
+- Team BestPrepared
+
+No team is anchored to a specific player. Enchanter distribution across teams is handled by `rules/03-player-constraints.md` → "Enchanters".
 
 ### Tank composition
 
 Each Karazhan team needs **2 tanks** that can collectively cover **3 duties**:
-- **Main tanking** — Warriors or Paladins (our usual MTs: Mirohl, Varthier, Ostbirger)
+- **Main tanking** — Warriors or Paladins (our usual MTs: Varthier, Ostbirger)
 - **Off-tanking** — Warriors, Paladins, or Feral Druids
 - **AoE tanking** — **Paladins only** (Consecration-based threat)
 

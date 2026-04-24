@@ -13,7 +13,6 @@ Players listed here **must be placed in the same raid team** on any given night.
 | Player A | Player B | Applies to | Notes |
 |----------|----------|------------|-------|
 | Ostbirger | Ebonybolt | Karazhan only | |
-| Lynelen | Glaivemaster Baebay | Karazhan only | Strong preference, not absolute |
 
 ## Must-not-be-together
 
@@ -53,9 +52,9 @@ The **Needlist** lists high-value loot drops players want to roll "need" on, pai
 | Girdle of Treachery                 | Vaelruna, Yxanb                                                    |       |
 | Gloves of the Fallen Champion       | Leontes, Thordrel                                                  |       |
 | Gloves of the Fallen Defender       | Lightweit                                                          |       |
-| Grips of Deftness                   | Leontes, Mirohl                                                    |       |
+| Grips of Deftness                   | Leontes                                                            |       |
 | Helm of the Fallen Champion         | Lynelen                                                            |       |
-| Helm of the Fallen Defender         | Beaverfist, Gigakox, Keatala, Kresniik, Lightweit, Mirohl          |       |
+| Helm of the Fallen Defender         | Beaverfist, Gigakox, Keatala, Kresniik, Lightweit                  |       |
 | Iron Gauntlets of the Maiden        | Mcjudgin                                                           |       |
 | Ironstriders of Urgency             | Leontes                                                            |       |
 | King's Defender                     | Cptkavior, Doughball                                               |       |
@@ -68,10 +67,9 @@ The **Needlist** lists high-value loot drops players want to roll "need" on, pai
 | Ring of Recurrence                  | Bestpractice, Pergatori, Ucannotpass                               |       |
 | Ring of Unrelenting Storms          | Pergatori                                                          |       |
 | Ruby Drape of the Mysticant         | Bestpractice                                                       |       |
-| Shield of Impenetrable Darkness     | Mirohl                                                             |       |
 | Shining Chain of the Afterworld     | Lightweit                                                          |       |
 | Skulker's Greaves                   | Bergamotka, Dankyn, Gigakox, Vaelruna                              |       |
-| Spiteblade                          | Baebay, Dankyn, Gigakox                                            |       |
+| Spiteblade                          | Dankyn, Gigakox                                                    |       |
 | Stainless Cloak of the Pure Hearted | Keatala                                                            |       |
 | Stonebough Jerkin                   | Keatala                                                            |       |
 | The Decapitator                     | Bergamotka, Lynelen, Yorekbarn                                     |       |
@@ -87,17 +85,16 @@ The **Needlist** lists high-value loot drops players want to roll "need" on, pai
 
 Some player professions affect raid group assignments.
 
-### Enchanters — must be spread across Karazhan raid teams
+### Enchanters — spread across Karazhan raid teams
 
-Each Karazhan raid team must have exactly one enchanter. The guild's enchanters are:
+No two enchanters on the same Karazhan team. With only 2 enchanters currently in the guild, one of the 3 Karazhan teams will go without a dedicated enchanter when 3 teams are formed.
 
-| Player              | Character     |
-|---------------------|---------------|
-| Glaivemaster Baebay | BaeBay        |
-| Kres/Dissi          | Kresniik      |
-| Greg                | Ucannotpass   |
+| Player     | Character     |
+|------------|---------------|
+| Kres/Dissi | Kresniik      |
+| Greg       | Ucannotpass   |
 
-**Applies to:** Karazhan nights only (3 raid teams, 3 enchanters — one per team).
+**Applies to:** Karazhan nights only.
 
 ## Notes
 
