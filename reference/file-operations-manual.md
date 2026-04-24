@@ -38,7 +38,7 @@ For cadence (when to re-read the applicable tier within a session), see `CLAUDE.
 | `reference/icons/specs/*.jpg` | Spec icon reference images (compare side-by-side when unsure) |
 | `reference/icons/classes/*.png` | Class icon reference images (compare side-by-side when unsure) |
 | `reference/raid-composition-guide.md` | Comprehensive TBC raid composition reference: buff scope, Shaman totems, raid-wide debuffs, per-spec target counts (§8 — used by the 25-man fair-rotation tiebreaker in `rules/02-bench-rotation.md`). **§3, §4, §9 (party-group templates and assignment framework) are out of scope for roster formation — see `rules/01-raid-compositions.md` → "Party groups (out of scope)" for the rule.** |
-| All files in `records/` | Predecessor context, especially recent bench history. Includes the non-date-indexed outlier `records/_historical-gruul-mag-assignments.md` — a pre-template Gruul+Mag encounter-assignment corpus (datasets A-G) consulted by `rules/05-encounter-assignments.md` → "Continuity data sources". |
+| All files in `records/` | Predecessor context, especially recent bench history. Gruul+Mag records carry `## Encounter assignments` sections (retro-recorded for raids back to 2026-03-01) — consulted by `rules/05-encounter-assignments.md` → "Continuity data sources". |
 
 ---
 
@@ -346,7 +346,7 @@ REFERENCE for parsing screenshots and raid composition decisions:
   └── reference/raid-composition-guide.md               ← TBC raid composition reference (§8 used by tiebreaker)
 
 OUTPUTS:
-  ├── records/*.md                    ← actual record files, one per raid night (each record file is also INPUT for the next). Includes `records/_historical-gruul-mag-assignments.md` — a non-date-indexed pre-template Gruul+Mag continuity corpus (INPUT only, static, read by `rules/05-encounter-assignments.md`)
+  ├── records/*.md                    ← actual record files, one per raid night (each record file is also INPUT for the next); Gruul+Mag records carry `## Encounter assignments` sections read by `rules/05-encounter-assignments.md`
   ├── derived/bench-history-tbc.md     ← updated whenever a new record file is created
   ├── derived/signup-history-total.md    ← updated whenever a new record file is created or edited
   └── derived/signup-stats-tbc.md  ← same, but only for TBC-era record files; also recomputes Signup rate

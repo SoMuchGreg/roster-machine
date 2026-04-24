@@ -81,7 +81,7 @@ Kiggler Tank is the one role whose composition depends on roster content: **1 Ba
 
 1. **Is any Balance Druid in the roster for this raid** (spec determined by the signup screenshot's spec icon or any recorded Dual-spec flex)?
    - **Yes** → treat Kiggler Tank as a **single-player role** filtered to Balance Druids. Run the general five-step algorithm; continuity in step 2 picks the specific Balance druid when multiple are available.
-   - **No** → treat Kiggler Tank as **two co-tank slots**. For each slot, run the general five-step algorithm filtered to Ranged DPS (any roster member whose spec this raid is a ranged DPS spec). Continuity from the historical corpus and prior records still applies — a player who has co-tanked Kiggler before retains that claim for one of the two slots.
+   - **No** → treat Kiggler Tank as **two co-tank slots**. For each slot, run the general five-step algorithm filtered to Ranged DPS (any roster member whose spec this raid is a ranged DPS spec). Continuity from prior records' `## Encounter assignments` sections still applies — a player who has co-tanked Kiggler before retains that claim for one of the two slots.
 
 The preference is **class/role-based, not named-player**: the rule does not hardcode a specific player, so the current Balance-druid main (Beaverfist as of this writing, per `rules/04-players.md`) gets picked by continuity rather than by name — which means the rule stays correct if the guild's Balance-druid pool changes.
 
@@ -93,7 +93,7 @@ Felhunter Subjugate's slot count depends on how many Warlocks are in the roster:
 
 - **0 Warlocks in roster** → hard constraint fails; flag to the user (no one can subjugate the felhunter, so the Olm Tank holds Olm for the entire fight — a significant strategy shift the raid leader must address).
 - **1 Warlock in roster** → 1 slot. Run the general five-step algorithm filtered to Warlocks — the one Warlock holds the slot.
-- **2 or more Warlocks in roster** → 2 slots. For each slot, run the general five-step algorithm filtered to Warlocks; exclude any Warlock already assigned to the first slot from candidates for the second. Continuity from the historical corpus and prior records applies per slot. Never assign more than 2 slots even if 3+ Warlocks are in the roster — the cap is 2.
+- **2 or more Warlocks in roster** → 2 slots. For each slot, run the general five-step algorithm filtered to Warlocks; exclude any Warlock already assigned to the first slot from candidates for the second. Continuity from prior records' `## Encounter assignments` sections applies per slot. Never assign more than 2 slots even if 3+ Warlocks are in the roster — the cap is 2.
 
 ### Cube clicker assignment
 
@@ -106,18 +106,15 @@ Cube clicker follows the same five steps above, but continuity is scoped **per c
 
 ### Continuity data sources
 
-Consulted in the order below; earlier sources win ties:
-
-1. **Prior `records/*.md` with an `## Encounter assignments` section.** Primary source once record files start carrying the new section.
-2. **`records/_historical-gruul-mag-assignments.md`** — pre-template historical corpus (datasets A-G), consulted when no prior record file with an `## Encounter assignments` section holds a match for the role. Lives in `records/` as the lone non-date-indexed outlier (the leading underscore signals the exceptional naming); see that file's header for scope, canonical-name handling, and why it is static.
+The sole source: **prior `records/*.md` files with an `## Encounter assignments` section**, walked in reverse chronological order by the record's date prefix (most recent first). This includes retro-recorded sections in earlier record files — each such record's section carries an HTML comment identifying the source Discord assignments post and its date. No separate historical corpus exists; the pre-template datasets were distributed into their corresponding records.
 
 ## Intentionally out of scope
 
-The following Gruul+Mag mechanics have named player roles in standard TBC strategy, and some appear in `records/_historical-gruul-mag-assignments.md` dataset A, but this rule **does not track them** — the user has scoped them out. Do not add them back without explicit user instruction, even if a future research pass re-surfaces them.
+The following Gruul+Mag mechanics have named player roles in standard TBC strategy, and some appeared in the raid leader's historical Discord assignments posts, but this rule **does not track them** — the user has scoped them out. Do not add them back without explicit user instruction, even if a future research pass re-surfaces them.
 
 - **Gruul the Dragonkiller tank subdivision** (MT on Gruul / OT on Hurtful Strike / 3rd tank for Intervene during Reverberation silence). The 3-tank composition target lives in `rules/01-raid-compositions.md`; who does what during the Gruul fight is a raid-leader call made live, not a pre-raid assignment.
-- **Magtheridon Phase 1 add tanks** — the 5 Hellfire Channelers each need a tank (dataset A records them per compass direction). Not assigned here; the raid's tanks pick up channelers ad hoc.
-- **Burning Abyssal banishers** — the warlock/hunter/mage crowd control on the Channelers' demon adds (dataset A assigns this to specific warlocks). Not assigned here.
+- **Magtheridon Phase 1 add tanks** — the 5 Hellfire Channelers each need a tank; historical raids recorded these per compass direction but this rule does not track them. The raid's tanks pick up channelers ad hoc.
+- **Burning Abyssal banishers** — the warlock/hunter/mage crowd control on the Channelers' demon adds; historical raids named specific warlocks for this but this rule does not track them.
 - **Blindeye interrupt squad** — Blindeye's Prayer of Mending must be interrupted (the "Interrupt heals" instruction under *General raid instructions*), but no named interrupter is assigned here. The raid leader organizes interrupts live.
 - **Magtheridon Channeler interrupt squad** — Shadow Volley and Dark Mending are interruptible during Phase 1; no named interrupter is assigned here.
 - **Misdirections (MDs)** — hunter Misdirect onto tanks for initial threat is recorded as a *Notes* annotation inside the existing role rows (e.g., *"Dwarfytron MD"* in the Notes column of the Maulgar Tank row), never as a standalone role.

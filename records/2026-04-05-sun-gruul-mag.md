@@ -48,6 +48,36 @@ Raid ran with 24 instead of 25 because Jar couldn't make it.
 
 **Composition:** 3 tanks, 14 DPS, 7 healers (24 total)
 
+## Encounter assignments
+
+<!-- Retro-recorded from Discord assignments post dated 04.04.2026 10:35. -->
+
+### High King Maulgar
+
+| Role                 | Player                 | Notes                                                    |
+|----------------------|------------------------|----------------------------------------------------------|
+| Maulgar Tank         | Mirohl                 |                                                          |
+| Maulgar Healer       | Thordrel, Siljes/Ejlis |                                                          |
+| Mage Tank (Krosh)    | OomToDoom              | Dwarfytron MD                                            |
+| Mage Tank Healer     | Roossy/Keatala         |                                                          |
+| Kiggler Tank         | Beaverfist             | Balance druid solo (spec-miscording caveat — see Notes); Tonsen MD |
+| Kiggler Tank Healer  | Bombzor                |                                                          |
+| Olm Tank             | Ostbirger              | until felhunter                                          |
+| Felhunter Subjugate  | BestPractice, McHughes |                                                          |
+| Olm Tank Healer      | Heligeman/Fugleman     |                                                          |
+| Blindeye Tank        | Marino-Varthier        | Vaelruna MD                                              |
+| Blindeye Tank Healer | Gresac                 |                                                          |
+
+### Magtheridon — Cube Clickers
+
+| Location    | Marker   | Player          |
+|-------------|----------|-----------------|
+| South       | Star     | Greg            |
+| South East  | Triangle | McHughes        |
+| South West  | Circle   | BestPractice    |
+| North East  | Square   | Marino-Varthier |
+| North West  | Diamond  | Ostbirger       |
+
 ## Bench
 
 *(Jar was benched on signup but couldn't attend, so effectively no bench)*
@@ -61,3 +91,5 @@ McJudgin, Drillbabe, Rhoator, CodeHunt/Rainbound, Gigakox
 - Ran with 3 tanks instead of the usual 2 (all 3 tank mains signed up).
 - 7 healers instead of 6, 14 DPS instead of 17 — adjusted for being short one player.
 - Heligeman/Fugleman is a new player — Paladin healer.
+- **Beaverfist spec miscording likely.** Recorded in the Actual Roster as Healer, but the published encounter assignments (04.04.2026 10:35) list him as Kiggler Tank (Balance druid solo). This matches the pattern documented for 2026-04-08 Karazhan (`rules/04-players.md` → Druid row: "Beaverfist and Jar were both initially recorded as Resto healers but actually ran Balance DPS"). If Beaverfist actually ran Balance here, the raid's healer count was 6 (not 7 as recorded) and DPS was 15 (not 14).
+- **Warlocks signup count mismatch.** The `**Warlocks (3):**` line names only 2 (McHughes, Jabbadhutt), but the published assignments place BestPractice as Felhunter Subjugate and SW cube clicker — so BestPractice was present at the raid; the signup list is missing him.

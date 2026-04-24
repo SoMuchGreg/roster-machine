@@ -15,3 +15,33 @@
 **Warlocks (2):** Mairen/Zorÿa, Ōtsu
 
 **Header stats:** Melee 2/4, Ranged 6, Healers 3
+
+## Encounter assignments
+
+<!-- Retro-recorded from Discord assignments post dated 08.03.2026 14:41. Maulgar Healer slot 2 was a PUG ("(Pug)" in source post) — recorded as `PUG Heal` per `rules/01-raid-compositions.md` → "Recording outside recruits (PUGs)". -->
+
+### High King Maulgar
+
+| Role                 | Player             | Notes                                     |
+|----------------------|--------------------|-------------------------------------------|
+| Maulgar Tank         | Mirohl             |                                           |
+| Maulgar Healer       | Thordrel, PUG Heal |                                           |
+| Mage Tank (Krosh)    | OomToDoom          |                                           |
+| Mage Tank Healer     | Kres/Dissi         |                                           |
+| Kiggler Tank         | Vaelruna, Greg     | 2 ranged DPS (no Balance druid available) |
+| Kiggler Tank Healer  | Gresac             |                                           |
+| Olm Tank             | Dankyn             | until felhunter                           |
+| Felhunter Subjugate  | Ōtsu               |                                           |
+| Olm Tank Healer      | —                  |                                           |
+| Blindeye Tank        | Marino-Varthier    |                                           |
+| Blindeye Tank Healer | —                  |                                           |
+
+### Magtheridon — Cube Clickers
+
+| Location    | Marker   | Player       |
+|-------------|----------|--------------|
+| South       | Star     | Greg         |
+| South East  | Triangle | Mairen/Zorÿa |
+| South West  | Circle   | Vaelruna     |
+| North East  | Square   | Ōtsu         |
+| North West  | Diamond  | Jinothy      |

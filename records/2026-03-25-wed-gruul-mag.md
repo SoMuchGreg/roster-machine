@@ -70,6 +70,36 @@
 
 **Shamans (4):** Bergamotka/Tymoti, Ebonybolt, Lynelen, Pergatori — exact role split (DPS vs healer) uncertain.
 
+## Encounter assignments
+
+<!-- Retro-recorded from Discord assignments post dated 24.03.2026 17:34. -->
+
+### High King Maulgar
+
+| Role                 | Player                   | Notes                                                                              |
+|----------------------|--------------------------|------------------------------------------------------------------------------------|
+| Maulgar Tank         | Marino-Varthier          |                                                                                    |
+| Maulgar Healer       | Thordrel, Bombzor        |                                                                                    |
+| Mage Tank (Krosh)    | OomToDoom                |                                                                                    |
+| Mage Tank Healer     | Beaverfist               |                                                                                    |
+| Kiggler Tank         | CodeHunt/Rainbound, Greg | 2 ranged DPS (no Balance druid available); CodeHunt was hunter at this date       |
+| Kiggler Tank Healer  | Sjwammie                 |                                                                                    |
+| Olm Tank             | Eselman                  | until felhunter                                                                    |
+| Felhunter Subjugate  | Jabbadhutt, McHughes     |                                                                                    |
+| Olm Tank Healer      | Siljes/Ejlis             |                                                                                    |
+| Blindeye Tank        | Doughball                |                                                                                    |
+| Blindeye Tank Healer | Jar                      |                                                                                    |
+
+### Magtheridon — Cube Clickers
+
+| Location    | Marker   | Player    |
+|-------------|----------|-----------|
+| South       | Star     | Greg      |
+| South East  | Triangle | McHughes  |
+| South West  | Circle   | Pergatori |
+| North East  | Square   | Doughball |
+| North West  | Diamond  | Mirohl    |
+
 ## Notes
 
 - Ran on Wednesday instead of the usual raid day.

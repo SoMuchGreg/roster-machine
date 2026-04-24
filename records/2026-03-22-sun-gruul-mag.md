@@ -16,8 +16,42 @@
 
 **Header stats:** Melee 4/5, Ranged 11, Healers 6
 
+## Encounter assignments
+
+<!-- Retro-recorded from Discord assignments post dated 22.03.2026 10:22. -->
+
+### High King Maulgar
+
+| Role                 | Player               | Notes                                     |
+|----------------------|----------------------|-------------------------------------------|
+| Maulgar Tank         | Mirohl               |                                           |
+| Maulgar Healer       | Thordrel, Beaverfist | Thordrel absent from signups — see Notes  |
+| Mage Tank (Krosh)    | OomToDoom            |                                           |
+| Mage Tank Healer     | Kres/Dissi           |                                           |
+| Kiggler Tank         | Tonsen, Greg         | 2 ranged DPS (no Balance druid available) |
+| Kiggler Tank Healer  | Gresac               |                                           |
+| Olm Tank             | Eselman              | until felhunter                           |
+| Felhunter Subjugate  | Ōtsu, McHughes       |                                           |
+| Olm Tank Healer      | Bombzor              |                                           |
+| Blindeye Tank        | Marino-Varthier      |                                           |
+| Blindeye Tank Healer | Roossy/Keatala       |                                           |
+
+### Magtheridon — Cube Clickers
+
+| Location    | Marker   | Player   |
+|-------------|----------|----------|
+| South       | Star     | Greg     |
+| South East  | Triangle | McHughes |
+| South West  | Circle   | Rhoator  |
+| North East  | Square   | Mirohl   |
+| North West  | Diamond  | Ōtsu     |
+
 ## Bench (1)
 
 | Player             | Priority | Bench count (cumulative, after this raid) | Reason        |
 |--------------------|----------|-------------------------------------------|---------------|
 | Yxanb              | 2        | 1                                         | fair rotation |
+
+## Notes
+
+- Thordrel was in the 22.03.2026 10:22 published assignments as Maulgar Healer but does not appear in the signup screenshot; likely withdrew between assignment post and signup capture — actual Maulgar healing presumably fell solo to Beaverfist.
