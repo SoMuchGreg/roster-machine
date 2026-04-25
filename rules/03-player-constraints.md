@@ -41,11 +41,10 @@ The **Needlist** lists high-value loot drops players want to roll "need" on, pai
 |-------------------------------------|--------------------------------------------------------------------|-------|
 | Adornment of Stolen Souls           | Pergatori                                                          |       |
 | Bands of Indwelling                 | Lightweit                                                          |       |
-| Barbed Choker of Discipline         | Mcjudgin, Varthier                                                 |       |
+| Barbed Choker of Discipline         | Mcjudgin                                                           |       |
 | Battlescar Boots                    | Cptkavior                                                          |       |
 | Blade of the Unrequited             | Vaelruna                                                           |       |
 | Boots of Foretelling                | Jar, Ucannotpass                                                   |       |
-| Boots of the Incorrupt              | Siljes                                                             |       |
 | Cowl of Defiance                    | Yxanb                                                              |       |
 | Crimson Girdle of the Indomitable   | Cptkavior                                                          |       |
 | Fiery Warhorse's Reins              | Bestpractice, Jar, Varthier                                        |       |
@@ -53,8 +52,7 @@ The **Needlist** lists high-value loot drops players want to roll "need" on, pai
 | Gloves of the Fallen Champion       | Leontes, Thordrel                                                  |       |
 | Gloves of the Fallen Defender       | Lightweit                                                          |       |
 | Grips of Deftness                   | Leontes                                                            |       |
-| Helm of the Fallen Champion         | Lynelen                                                            |       |
-| Helm of the Fallen Defender         | Beaverfist, Gigakox, Keatala, Kresniik, Lightweit                  |       |
+| Helm of the Fallen Defender         | Beaverfist, Gigakox, Keatala, Kresniik                             |       |
 | Iron Gauntlets of the Maiden        | Mcjudgin                                                           |       |
 | Ironstriders of Urgency             | Leontes                                                            |       |
 | King's Defender                     | Cptkavior, Doughball                                               |       |
@@ -70,7 +68,6 @@ The **Needlist** lists high-value loot drops players want to roll "need" on, pai
 | Shining Chain of the Afterworld     | Lightweit                                                          |       |
 | Skulker's Greaves                   | Bergamotka, Dankyn, Gigakox, Vaelruna                              |       |
 | Spiteblade                          | Dankyn, Gigakox                                                    |       |
-| Stainless Cloak of the Pure Hearted | Keatala                                                            |       |
 | Stonebough Jerkin                   | Keatala                                                            |       |
 | The Decapitator                     | Bergamotka, Lynelen, Yorekbarn                                     |       |
 | The Lightning Capacitor             | Oomtoodoom                                                         |       |
