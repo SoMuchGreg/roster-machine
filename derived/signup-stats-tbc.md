@@ -2,11 +2,11 @@
 
 Per-player signup count and signup rate across TBC-era record files in `records/`. Combines the former `derived/signup-history-karazhan-gruul-mag.md` (raw count) and `derived/signup-rate-karazhan-gruul-mag.md` (percentage) into a single view sorted by Signup rate.
 
-Officers and Regular players share a single flat table here; former players are excluded. For canonical-name handling, what counts as a signup, and per-player counting mechanics, see `signup-history-total.md` — those rules apply identically.
+Officers, Core tanks, and Regular players share a single flat table here; former players are excluded. For canonical-name handling, what counts as a signup, and per-player counting mechanics, see `signup-history-total.md` — those rules apply identically.
 
 ## What each column means
 
-- **Player** — canonical name from `rules/04-players.md` (Officers or Regular players sub-table). Former players are excluded.
+- **Player** — canonical name from `rules/04-players.md` (Officers, Core tanks, or Regular players sub-table). Former players are excluded.
 - **First signup** — earliest date the player appears in the `## Signups (from Discord)` section of any **in-scope** record file in `records/`.
 - **Signups** — cumulative count of in-scope record files containing the player in `## Signups`. One signup per record file per canonical player.
 - **Signup rate** — `Signups ÷ Raids-in-window`, expressed as a percentage (0.0% to 100.0%). **Raids-in-window** is the count of in-scope record files dated on or after the player's First signup. Each player has their own window; fully cumulative, no rolling, no cap.
@@ -33,7 +33,7 @@ For edits that change an existing record file's Signups section, apply the net d
 
 For a withdrawal (user-notified signup rescission): follow `reference/file-operations-manual.md` → "Event: Player withdraws signup". That event is the canonical workflow for both pre-build and post-build cases and specifies this file's decrement behavior, including the `First signup` recompute path.
 
-For guild events: joining the guild shows up organically on a player's first in-scope signup; leaving the guild removes the row (move-out happens when the player's row moves to Former players in `rules/04-players.md`). Officer promotions/demotions need no action here — Officers and Regular players share this flat table.
+For guild events: joining the guild shows up organically on a player's first in-scope signup; leaving the guild removes the row (move-out happens when the player's row moves to Former players in `rules/04-players.md`). Officer promotions/demotions and core-tank status changes need no action here — Officers, Core tanks, and Regular players share this flat table.
 
 For renames: update the `Player` cell in-place; re-sort only if the alphabetical tiebreak position changes.
 

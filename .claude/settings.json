@@ -16,6 +16,8 @@
       "Bash(git status:*)",
       "Bash(git ls-files:*)",
       "Bash(git check-ignore:*)",
+      "Bash(git -P diff:*)",
+      "Bash(git -P status:*)",
       "Bash(grep:*)",
       "Bash(awk:*)",
       "Bash(sed -n:*)"

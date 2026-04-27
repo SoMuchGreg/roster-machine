@@ -24,15 +24,19 @@ If signups don't include enough players for a required role at a raid's composit
 
 ### Core tanks
 
-The raid's "core" tanks for that format are the tanks the raid leader relies on to fill the primary tank duties for that specific raid (e.g., for Gruul+Mag: Marino-Varthier, Ostbirger).
+Core tanks are the named tanks the raid leader relies on to fill tank duties at any raid format we run. The set is **format-independent** — a signed-up core tank takes a tank slot at whatever format the raid is (Gruul+Mag's 3 slots, each Karazhan team's 2, future raid locations). The set is currently stable but may evolve as signups and player availability shift.
 
-**Substitutes are not core tanks.** A tank filling a core slot in a specific raid because a named core tank is absent (e.g., CptKavior covering for Marino-Varthier when Marino isn't signed up) is **not** a core tank for any rule that references core-tank status. Core-tank membership is tied to the named list above, not to who happens to be filling tank duties this raid.
+**Canonical membership.** Core tanks are listed in the **Core tanks** sub-table of `rules/04-players.md`. Membership changes only on explicit user instruction.
+
+**Selection precedence over surplus flex.** When more tanks sign up than the format has slots for, `Handling role surpluses` (below) applies only to tank signups *beyond* the core set. Core tanks are never the "excess" in tank-surplus flex.
+
+**Substitutes are not core tanks.** A tank filling a core slot in a specific raid because a named core tank is absent (e.g., CptKavior covering for Marino-Varthier when Marino isn't signed up) is **not** a core tank for any rule that references core-tank status. Core-tank membership is tied to the **Core tanks** sub-table in `rules/04-players.md`, not to who happens to be filling tank duties this raid.
 
 ### Handling role surpluses (tank-surplus flex)
 
 The mirror of the dual-spec flex rule above: when **more tanks sign up than the raid's composition target calls for**, dual-spec tank players can flex to their offspec rather than being auto-benched for the surplus. The principle is the same — prefer to use a player's offspec over sitting them on the bench, as long as the composition actually needs what their offspec provides.
 
-**Identify the excess tank(s).** When the format calls for more tanks than the core list provides (e.g., Gruul+Mag's 3-tank target vs. 2 core tanks), the extra slot is filled per-raid from other tank signups. Any tank-column signup beyond the core set plus the raid's chosen extra tanks is **excess** — they are not needed as a tank for this raid.
+**Identify the excess tank(s).** When the format calls for more tanks than the core list provides (e.g., Karazhan's 6 tank slots across 3 teams vs. 3 core tanks), the extra slots are filled per-raid from other tank signups. Any tank-column signup beyond the core set plus the raid's chosen extra tanks is **excess** — they are not needed as a tank for this raid.
 
 **Offer the offspec switch first.** Before benching the excess tank, check their `Spec 2 (role)` in `rules/04-players.md`. If they have a usable DPS or Healer offspec that the raid has room for, ask whether they'd play that offspec instead. This is a voluntary swap — never unilaterally reassign.
 
@@ -90,7 +94,7 @@ No team is anchored to a specific player. Enchanter distribution across teams is
 ### Tank composition
 
 Each Karazhan team needs **2 tanks** that can collectively cover **3 duties**:
-- **Main tanking** — Warriors or Paladins (our usual MTs: Varthier, Ostbirger)
+- **Main tanking** — Warriors or Paladins
 - **Off-tanking** — Warriors, Paladins, or Feral Druids
 - **AoE tanking** — **Paladins only** (Consecration-based threat)
 

@@ -15,9 +15,10 @@ Total number of times each player has appeared in the `## Signups (from Discord)
 
 **Update this file on the same trigger as `derived/bench-history-tbc.md`** (see `reference/file-operations-manual.md` Step 4 — both files are listed in the write/update table for "New signup screenshot received" and the record-file-level events downstream of it).
 
-**Table structure.** Three sub-tables, each with its own `#` column starting at `1`:
+**Table structure.** Four sub-tables, each with its own `#` column starting at `1`:
 
 - **Officers** — mirrors the Officers sub-table in `rules/04-players.md`.
+- **Core tanks** — mirrors the Core tanks sub-table in `rules/04-players.md`.
 - **Current members** — mirrors the Regular players sub-table in `rules/04-players.md`.
 - **Former members** — mirrors the Former players sub-table in `rules/04-players.md`.
 
@@ -46,7 +47,7 @@ A player's sub-table is determined solely by where they live in `rules/04-player
 
 ### For a player who leaves the guild
 
-(See `reference/file-operations-manual.md` → "A player joins or leaves the guild".) Move the row from **Current members** (or **Officers**) to **Former members**. Re-sort and renumber both the source and destination sub-tables. Do **not** strike through.
+(See `reference/file-operations-manual.md` → "A player joins or leaves the guild".) Move the row from **Officers**, **Core tanks**, or **Current members** to **Former members**. Re-sort and renumber both the source and destination sub-tables. Do **not** strike through.
 
 ## Cumulative signup counts
 
@@ -58,48 +59,53 @@ A player's sub-table is determined solely by where they live in `rules/04-player
 | 2  | Kres/Dissi          | 21      |
 | 3  | Jar                 | 15      |
 
-### Current members
+### Core tanks
 
 | #  | Player              | Signups |
 |----|---------------------|---------|
 | 1  | Marino-Varthier     | 25      |
-| 2  | Vaelruna            | 23      |
-| 3  | Gresac              | 22      |
-| 4  | Verysadge           | 21      |
-| 5  | Thordrel            | 20      |
-| 6  | OomToDoom           | 18      |
-| 7  | McHughes            | 16      |
-| 8  | Roossy/Keatala      | 15      |
-| 9  | Yxanb               | 15      |
-| 10 | Dankyn              | 14      |
-| 11 | Lynelen             | 14      |
-| 12 | Beaverfist          | 13      |
-| 13 | Bergamotka/Tymoti   | 13      |
-| 14 | BestPractice        | 11      |
-| 15 | Ebonybolt           | 11      |
-| 16 | Jabbadhutt          | 11      |
-| 17 | Pergatori           | 11      |
-| 18 | Ostbirger           | 10      |
-| 19 | Tonsen              | 10      |
-| 20 | Gigakox             | 9       |
-| 21 | Heligeman/Fugleman  | 8       |
-| 22 | Dwarfytron          | 7       |
-| 23 | Siljes/Ejlis        | 7       |
-| 24 | Doughball           | 6       |
-| 25 | Lightweit           | 6       |
-| 26 | McJudgin            | 6       |
-| 27 | CptKavior           | 5       |
-| 28 | Leontes             | 5       |
-| 29 | Ōtsu                | 5       |
-| 30 | Blacksi             | 4       |
-| 31 | Sjwammie            | 4       |
-| 32 | CodeHunt/Rainbound  | 3       |
-| 33 | Eselman             | 3       |
-| 34 | Lightstarr          | 3       |
-| 35 | Medianos            | 3       |
-| 36 | Drillbabe           | 2       |
-| 37 | Spot/Yorekbarn      | 2       |
-| 38 | Lenno/Mellymel      | 1       |
+| 2  | Ostbirger           | 10      |
+| 3  | Gigakox             | 9       |
+
+### Current members
+
+| #  | Player              | Signups |
+|----|---------------------|---------|
+| 1  | Vaelruna            | 23      |
+| 2  | Gresac              | 22      |
+| 3  | Verysadge           | 21      |
+| 4  | Thordrel            | 20      |
+| 5  | OomToDoom           | 18      |
+| 6  | McHughes            | 16      |
+| 7  | Roossy/Keatala      | 15      |
+| 8  | Yxanb               | 15      |
+| 9  | Dankyn              | 14      |
+| 10 | Lynelen             | 14      |
+| 11 | Beaverfist          | 13      |
+| 12 | Bergamotka/Tymoti   | 13      |
+| 13 | BestPractice        | 11      |
+| 14 | Ebonybolt           | 11      |
+| 15 | Jabbadhutt          | 11      |
+| 16 | Pergatori           | 11      |
+| 17 | Tonsen              | 10      |
+| 18 | Heligeman/Fugleman  | 8       |
+| 19 | Dwarfytron          | 7       |
+| 20 | Siljes/Ejlis        | 7       |
+| 21 | Doughball           | 6       |
+| 22 | Lightweit           | 6       |
+| 23 | McJudgin            | 6       |
+| 24 | CptKavior           | 5       |
+| 25 | Leontes             | 5       |
+| 26 | Ōtsu                | 5       |
+| 27 | Blacksi             | 4       |
+| 28 | Sjwammie            | 4       |
+| 29 | CodeHunt/Rainbound  | 3       |
+| 30 | Eselman             | 3       |
+| 31 | Lightstarr          | 3       |
+| 32 | Medianos            | 3       |
+| 33 | Drillbabe           | 2       |
+| 34 | Spot/Yorekbarn      | 2       |
+| 35 | Lenno/Mellymel      | 1       |
 
 ### Former members
 
