@@ -30,22 +30,22 @@ priority (selection order)" — the single source of truth for the system's beha
 Priority is a property of the player, not of a specific raid. It changes only when the user explicitly updates it.
 
 **Default priority for new players: `2`.** When a player who isn't already in the roster table appears in a Discord signup screenshot and the user provides
-their class, add them to the Regular players table with priority `2` unless the user explicitly says otherwise. Do not guess priority `1` (always plays) or
+their class, add them to the **Regular players → Priority 2** sub-table unless the user explicitly says otherwise. Do not guess priority `1` (always plays) or
 priority `3` (last resort) without explicit user instruction.
 
 ## Known player roster
 
-**Table ordering.** Rows in every roster sub-table below (Officers, Core tanks, Regular players, Former players) are sorted first by **class alphabetically**, then by **player name alphabetically** within each class. When adding or renaming a player, place the row in its correct sorted position rather than appending to the end. When a player leaves the guild, move their row out of Officers, Core tanks, or Regular players into the Former players sub-table — do not leave a tombstoned row behind in the active tables.
+**Table ordering.** Rows in every roster sub-table below (Officers, Core tanks, Regular players → Priority 1, Regular players → Priority 2, Regular players → Priority 3, Former players) are sorted first by **class alphabetically**, then by **player name alphabetically** within each class. When adding or renaming a player, place the row in its correct sorted position rather than appending to the end. When a Regular player's priority changes among `1`, `2`, and `3`, move their row to the matching priority sub-table. When a player leaves the guild, move their row out of Officers, Core tanks, or Regular players into the Former players sub-table — do not leave a tombstoned row behind in the active tables.
 
 **Row index (`#` column).** Each sub-table below has its own `#` column that starts at `1`. It is derived from sort order, not a stable ID — whenever the order changes, or a row is added, removed, or moved between sub-tables, renumber every affected sub-table from `1` so the sequence stays gap-free and monotonic within each sub-table.
 
 ### Officers
 
-| #  | Player              | Character(s)             | Class   | Spec 1 (role)  | Spec 2 (role) | Priority | Notes                                                                    |
-|----|---------------------|--------------------------|---------|----------------|---------------|----------|--------------------------------------------------------------------------|
-| 1  | Jar                 | Jar, Jardepli            | Druid   | Healer (Resto) | DPS (Balance) | 1        | Officer, 2 specs. Go-to Boomkin                                          |
-| 2  | Greg                | Ucannotpass              | Mage    | DPS            | —             | 1        | Officer                                                                  |
-| 3  | Kres/Dissi          | Kresniik, Dissi, Griever | Priest  | DPS (Shadow)   | Healer (Holy) | 1        | Officer, multiple chars. Dissi = Druid alt; Griever = alt, class unknown | 
+| #  | Player              | Character(s)             | Class   | Spec 1 (role) | Spec 2 (role) | Priority | Notes |
+|----|---------------------|--------------------------|---------|---------------|---------------|----------|-------|
+| 1  | Jar                 | Jar, Jardepli            | Druid   | DPS (Balance) | Healer        | 1        |       |
+| 2  | Greg                | Ucannotpass              | Mage    | DPS           | —             | 1        |       |
+| 3  | Kres/Dissi          | Kresniik, Dissi, Griever | Priest  | DPS           | Healer        | 1        |       |
 
 ### Core tanks
 
@@ -59,44 +59,58 @@ Tanks the raid leader relies on to fill tank duties at any raid format. Concept 
 
 ### Regular players
 
+#### Priority 1
+
+Currently empty. Kept so a Regular player promoted to priority `1` has a place to live.
+
 | #  | Player             | Character(s)          | Class   | Spec 1 (role)       | Spec 2 (role)   | Priority | Notes                                                                                                       |
 |----|--------------------|-----------------------|---------|---------------------|-----------------|----------|-------------------------------------------------------------------------------------------------------------|
-| 1  | Beaverfist         | Beaverfist, Bävernäve | Druid   | DPS (Balance)       | Healer (Resto)  | 2        | Plays balance now, asks for healing spot in the future                                                      |
-| 2  | Eselman            | Eselman               | Druid   | DPS (Feral, 25-man) | Tank (OT, Kara) | 3        | Feral druid, flexes between tank and DPS                                                                    |
-| 3  | Gresac             | Gresac, Grounddog     | Druid   | Healer (Resto)      | DPS (Balance)   | 2        | Reluctant to switch spec. He is fine with being benched on Karazhan even if fair rotation says he should go |
-| 4  | Roossy/Keatala     | Roossy, Keatala       | Druid   | Healer (Resto)      | —               | 2        |                                                                                                             |
-| 5  | Yxanb              | Yxanb                 | Druid   | DPS (Feral)         | —               | 2        |                                                                                                             |
-| 6  | Dwarfytron         | Dwarfytron            | Hunter  | DPS                 | —               | 2        |                                                                                                             |
-| 7  | Tonsen             | Tonsen                | Hunter  | DPS                 | —               | 2        |                                                                                                             |
-| 8  | Vaelruna           | Vaelruna              | Hunter  | DPS                 | —               | 2        |                                                                                                             |
-| 9  | Lenno/Mellymel     | Lenno, Mellymel       | Mage    | DPS (Arcane)        | —               | 2        |                                                                                                             |
-| 10 | OomToDoom          | OomToDoom             | Mage    | DPS (Arcane)        | DPS (Fire)      | 2        |                                                                                                             |
-| 11 | Heligeman/Fugleman | Heligeman, Fugleman   | Paladin | Healer              | —               | 2        |                                                                                                             |
-| 12 | Leontes            | Leontes               | Paladin | DPS (Ret)           | —               | 2        |                                                                                                             |
-| 13 | Lightstarr         | Lightstarr            | Paladin | DPS (Ret)           | Tank            | 3        |                                                                                                             |
-| 14 | McJudgin           | McJudgin              | Paladin | DPS (25-man)        | Tank (Kara)     | 2        |                                                                                                             |
-| 15 | Sjwammie           | Sjwammie              | Paladin | Healer              | —               | 3        |                                                                                                             |
-| 16 | Thordrel           | Thordrel              | Paladin | Healer              | —               | 2        |                                                                                                             |
-| 17 | Lightweit          | Lightweit             | Priest  | Healer (Holy)       | ?               | 2        |                                                                                                             |
-| 18 | Medianos           | Medianos              | Priest  | DPS (Shadow)        | ?               | 3        |                                                                                                             |
-| 19 | Siljes/Ejlis       | Ejlis, Siljes         | Priest  | Healer              | DPS (Shadow)    | 2        |                                                                                                             |
-| 20 | Drillbabe          | Drillbabe             | Rogue   | DPS (Subtlety)      | —               | 3        | Reliability concern — history of no-shows after signing up                                                  |
-| 21 | Bergamotka/Tymoti  | Bergamotka, Tymoti    | Shaman  | DPS (Enhancement)   | DPS (Elemental) | 2        | Switches spec willingly if needed, Ele gear much worse                                                      |
-| 22 | Blacksi            | Blacksi               | Shaman  | DPS (Elemental)     | ?               | 2        |                                                                                                             |
-| 23 | CodeHunt/Rainbound | CodeHunt, Rainbound   | Shaman  | Healer              | —               | 3        |                                                                                                             |
-| 24 | Ebonybolt          | Ebonybolt             | Shaman  | DPS (Enhancement)   | Healer (Resto)  | 2        | Strongly prefers DPS, can help with healing every now and then                                              |
-| 25 | Lynelen            | Lynelen, Kalyl        | Shaman  | DPS (Enhancement)   | DPS (Elemental) | 2        | Switches spec willingly if needed                                                                           |
-| 26 | Pergatori          | Pergatori             | Shaman  | Healer              | DPS (Elemental) | 2        | Switches spec willingly if needed                                                                           |
-| 27 | BestPractice       | BestPractice          | Warlock | DPS                 | —               | 2        |                                                                                                             |
-| 28 | Jabbadhutt         | Jabbadhutt            | Warlock | DPS                 | —               | 2        |                                                                                                             |
-| 29 | McHughes           | McHughes              | Warlock | DPS                 | —               | 2        |                                                                                                             |
-| 30 | Ōtsu               | Ōtsu                  | Warlock | DPS (Affliction)    | —               | 3        |                                                                                                             |
-| 31 | CptKavior          | CptKavior             | Warrior | DPS                 | Tank            | 2        |                                                                                                             |
-| 32 | Dankyn             | Dankyn                | Warrior | DPS (Fury)          | —               | 2        |                                                                                                             |
-| 33 | Doughball          | Doughball             | Warrior | Tank (Kara)         | DPS (25-man)    | 2        | Switches role by raid format                                                                                |
-| 34 | Spot/Yorekbarn     | Spot, Yorekbarn       | Warrior | DPS                 | —               | 2        |                                                                                                             |
-| 35 | Varva              | Varva                 | Warrior | DPS                 | —               | 3        |                                                                                                             |
-| 36 | Verysadge          | Verysadge             | Warrior | DPS (Fury)          | —               | 2        |                                                                                                             |
+
+#### Priority 2
+
+| #  | Player             | Character(s)          | Class   | Spec 1 (role)     | Spec 2 (role)   | Priority | Notes                                                                                                       |
+|----|--------------------|-----------------------|---------|-------------------|-----------------|----------|-------------------------------------------------------------------------------------------------------------|
+| 1  | Beaverfist         | Beaverfist, Bävernäve | Druid   | DPS (Balance)     | Healer          | 2        |                                                                                                             |
+| 2  | Gresac             | Gresac, Grounddog     | Druid   | Healer            | DPS (Balance)   | 2        | Reluctant to switch spec. He is fine with being benched on Karazhan even if fair rotation says he should go |
+| 3  | Roossy/Keatala     | Roossy, Keatala       | Druid   | Healer            | —               | 2        |                                                                                                             |
+| 4  | Yxanb              | Yxanb                 | Druid   | DPS (Feral)       | Tank (Feral)    | 2        |                                                                                                             |
+| 5  | Dwarfytron         | Dwarfytron            | Hunter  | DPS               | —               | 2        |                                                                                                             |
+| 6  | Tonsen             | Tonsen                | Hunter  | DPS               | —               | 2        |                                                                                                             |
+| 7  | Vaelruna           | Vaelruna              | Hunter  | DPS               | —               | 2        |                                                                                                             |
+| 8  | Lenno/Mellymel     | Lenno, Mellymel       | Mage    | DPS (Arcane)      | —               | 2        |                                                                                                             |
+| 9  | OomToDoom          | OomToDoom             | Mage    | DPS (Arcane)      | DPS (Fire)      | 2        |                                                                                                             |
+| 10 | Heligeman/Fugleman | Heligeman, Fugleman   | Paladin | Healer            | —               | 2        |                                                                                                             |
+| 11 | Leontes            | Leontes               | Paladin | DPS               | —               | 2        |                                                                                                             |
+| 12 | McJudgin           | McJudgin              | Paladin | DPS               | Tank            | 2        |                                                                                                             |
+| 13 | Thordrel           | Thordrel              | Paladin | Healer            | —               | 2        |                                                                                                             |
+| 14 | Lightweit          | Lightweit             | Priest  | Healer            | ?               | 2        |                                                                                                             |
+| 15 | Siljes/Ejlis       | Ejlis, Siljes         | Priest  | Healer            | DPS             | 2        |                                                                                                             |
+| 16 | Bergamotka/Tymoti  | Bergamotka, Tymoti    | Shaman  | DPS (Enhancement) | DPS (Elemental) | 2        | Switches spec willingly if needed, Ele gear much worse                                                      |
+| 17 | Ebonybolt          | Ebonybolt             | Shaman  | DPS (Enhancement) | Healer          | 2        | Strongly prefers DPS, can help with healing every now and then                                              |
+| 18 | Lynelen            | Lynelen, Kalyl        | Shaman  | DPS (Enhancement) | DPS (Elemental) | 2        | Switches spec willingly if needed                                                                           |
+| 19 | Pergatori          | Pergatori             | Shaman  | Healer            | DPS (Elemental) | 2        | Switches spec willingly if needed                                                                           |
+| 20 | BestPractice       | BestPractice          | Warlock | DPS               | —               | 2        |                                                                                                             |
+| 21 | Jabbadhutt         | Jabbadhutt            | Warlock | DPS               | —               | 2        |                                                                                                             |
+| 22 | McHughes           | McHughes              | Warlock | DPS               | —               | 2        |                                                                                                             |
+| 23 | CptKavior          | CptKavior             | Warrior | DPS (Fury)        | Tank            | 2        |                                                                                                             |
+| 24 | Dankyn             | Dankyn                | Warrior | DPS (Fury)        | —               | 2        |                                                                                                             |
+| 25 | Doughball          | Doughball             | Warrior | DPS (Fury)        | Tank            | 2        | Switches role by raid format                                                                                |
+| 26 | Spot/Yorekbarn     | Spot, Yorekbarn       | Warrior | DPS (Fury)        | —               | 2        |                                                                                                             |
+| 27 | Verysadge          | Verysadge             | Warrior | DPS (Fury)        | —               | 2        |                                                                                                             |
+
+#### Priority 3
+
+| #  | Player             | Character(s)          | Class   | Spec 1 (role)    | Spec 2 (role) | Priority | Notes                                                                                                       |
+|----|--------------------|-----------------------|---------|------------------|--------------|----------|-------------------------------------------------------------------------------------------------------------|
+| 1  | Eselman            | Eselman               | Druid   | DPS (Feral)      | Tank (OT)    | 3        | Feral druid, flexes between tank and DPS                                                                    |
+| 2  | Lightstarr         | Lightstarr            | Paladin | DPS              | Tank         | 3        |                                                                                                             |
+| 3  | Sjwammie           | Sjwammie              | Paladin | Healer           | —            | 3        |                                                                                                             |
+| 4  | Medianos           | Medianos              | Priest  | DPS              | ?            | 3        |                                                                                                             |
+| 5  | Drillbabe          | Drillbabe             | Rogue   | DPS (Subtlety)   | —            | 3        | Reliability concern — history of no-shows after signing up                                                  |
+| 6  | Blacksi            | Blacksi               | Shaman  | DPS (Elemental)  | ?            | 3        |                                                                                                             |
+| 7  | CodeHunt/Rainbound | CodeHunt, Rainbound   | Shaman  | Healer           | —            | 3        |                                                                                                             |
+| 8  | Ōtsu               | Ōtsu                  | Warlock | DPS (Affliction) | —            | 3        |                                                                                                             |
+| 9  | Varva              | Varva                 | Warrior | DPS              | —            | 3        |                                                                                                             |
 
 ### Former players
 

@@ -4,7 +4,7 @@ Players with **raid spot priority 1** normally never bench (priority 1 means "al
 
 > **Read down columns, never across rows.** Bench counts are tracked **independently per raid location** (`rules/02-bench-rotation.md` → "Fairness requirement"). For the primary fair-rotation comparison, compare players within a single location column — never compare a Karazhan count to a Gruul+Mag count, and never compare either to the Total column. The **Total** column on the right is a convenience for the cross-location bench-total tiebreaker (`rules/02-bench-rotation.md` → "Cross-location bench total (any raid format)"); it is *only* consulted when that tiebreaker fires, never for primary fair-rotation decisions.
 
-Players are sorted alphabetically by name within each table below. A player appears as soon as they are benched at any location for the first time; priority-2/3 players with 0 benches everywhere are covered by the footer line below the current-members table. Departed-guild players are moved to the **Former guild members** table at the bottom — do not strike through their names there, since table placement already conveys departed status (matching `rules/04-players.md` → Former players).
+Players are sorted alphabetically by name within each table below. A player appears as soon as they are benched at any location for the first time; priority-2 and priority-3 players with 0 benches everywhere are covered by the footer line below the current-members table. Departed-guild players are moved to the **Former guild members** table at the bottom — do not strike through their names there, since table placement already conveys departed status (matching `rules/04-players.md` → Former players).
 
 ## Cumulative bench counts
 
