@@ -14,11 +14,12 @@ If signups don't include enough players for a required role at a raid's composit
 
 **Consent.** The decision is the player's. They may decline. Never unilaterally reassign a player's spec — always ask first. If the player declines, the raid runs short on that role rather than forcing the swap. Move on and ask the next eligible dual-spec player; if no one accepts, the raid runs under-target.
 
-**Asking order (three tiers).** Notes in `rules/04-players.md` reveal each player's flex disposition. Ask in this order, exhausting each tier before moving to the next:
+**Asking order (four tiers).** Notes in `rules/04-players.md` reveal each player's flex disposition. Ask in this order, exhausting each tier before moving to the next:
 
+0. **First line offspec (pre-committed) — asked first.** A player whose `Notes` column in `rules/04-players.md` contains the literal phrase "first line offspec" (case-insensitive) has pre-committed to switching to their offspec when both (a) their mainspec role is over-represented *and* (b) their offspec covers an under-represented role. The note is standing consent — no per-raid prompt; the player may still decline. Tier 0 fires only when both (a) and (b) hold; otherwise fall through to Tiers 1–3. Applies symmetrically in `Handling role surpluses` below. A Tier 0 decline that results in the player being benched is recorded as `declined flex` per `rules/02-bench-rotation.md` (not `fair rotation`/`leader choice`) — the decline is the proximate cause.
 1. **Most flexible first** — players explicitly noted as flexible across roles (e.g., "Switches role by raid format", "flexes between tank and DPS"). They actively flex specs across raids and are the easiest first ask.
 2. **No-preference second** — players with confirmed dual specs but no note recording a strong preference one way or the other. Neutral.
-3. **Last resort last** — players with reluctance notes (e.g., "Strong Resto preference", "extremely reluctant Balance", "Balance spec only as absolute last resort"). Ask only if tiers 1 and 2 didn't fill the role. Respect the spirit of "absolute last resort" notes — these players genuinely don't want to play their off-spec.
+3. **Last resort last** — players with reluctance notes (e.g., "Strong Resto preference", "extremely reluctant Balance", "Balance spec only as absolute last resort"). Ask only if tiers 0, 1, and 2 didn't fill the role. Respect the spirit of "absolute last resort" notes — these players genuinely don't want to play their off-spec.
 
 **Timing.** This flex is composition-time, before the final bench cut. Once a flex swap is accepted, recompute the priority + bench rotation against the new role distribution.
 
@@ -39,6 +40,8 @@ The mirror of the dual-spec flex rule above: when **more tanks sign up than the 
 **Identify the excess tank(s).** When the format calls for more tanks than the core list provides (e.g., Karazhan's 6 tank slots across 3 teams vs. 3 core tanks), the extra slots are filled per-raid from other tank signups. Any tank-column signup beyond the core set plus the raid's chosen extra tanks is **excess** — they are not needed as a tank for this raid.
 
 **Offer the offspec switch first.** Before benching the excess tank, check their `Offspec (role)` in `rules/04-players.md`. If they have a usable DPS or Healer offspec that the raid has room for, ask whether they'd play that offspec instead. This is a voluntary swap — never unilaterally reassign.
+
+**Asking order.** When multiple excess players qualify for the offspec switch, follow the asking order from `Handling role shortages → Asking order` above (Tier 0 → Tier 3).
 
 **If accepted**, the excess tank joins as a DPS/Healer and is treated as that role for every subsequent step (raid-spot priority, fair bench rotation, composition targets). Recompute the roster against the new role distribution.
 

@@ -126,9 +126,9 @@ not obvious from the role column.
 
 <!--
 Record any cases where a player was asked to switch to their secondary spec
-because the raid was short on a role (per rules/01-raid-compositions.md →
-"Handling role shortages"). Tier 1 = explicitly flexible note in 04-players;
-Tier 2 = no preference; Tier 3 = reluctance / "absolute last resort" note.
+because the raid was short on a role. The Tier value comes from
+rules/01-raid-compositions.md → "Handling role shortages (dual-spec flex)
+→ Asking order" — see that section for the canonical tier definitions.
 -->
 
 | Player             | Asked to switch from → to      | Tier | Accepted? | Notes |
