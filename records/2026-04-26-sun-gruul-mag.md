@@ -6,9 +6,9 @@
 **Warriors (4):** Verysadge, Dankyn, Gigakox, Spot/Yorekbarn
 **Druids (5):** Gresac, Roossy/Keatala, Yxanb, Jar, Beaverfist
 **Paladins (2):** Leontes, Thordrel
-**Hunters (2):** Vaelruna, Tonsen
+**Hunters (3):** Vaelruna, Tonsen, Grundiger
 **Priests (3):** Kres/Dissi, Siljes/Ejlis, Lightweit
-**Mages (3):** OomToDoom, Lenno/Mellymel, Greg (Ucannotpass)
+**Mages (2):** OomToDoom, Greg (Ucannotpass)
 **Warlocks (1):** Jabbadhutt
 **Shamans (4):** Pergatori, Lynelen, Ebonybolt, Bergamotka/Tymoti
 
@@ -16,11 +16,12 @@
 
 **Header stats:** Melee 9, Ranged 10, Healers 5
 
-## Withdrawn signups (1)
+## Withdrawn signups (2)
 
-| Player |
-|--------|
-| Mirohl |
+| Player         |
+|----------------|
+| Lenno/Mellymel |
+| Mirohl         |
 
 ## Actual Roster (Gruul + Magtheridon)
 
@@ -56,8 +57,8 @@
 | Kres/Dissi         | Priest (Shadow)      |
 | Vaelruna           | Hunter               |
 | Tonsen             | Hunter               |
+| Grundiger          | Hunter               |
 | OomToDoom          | Mage (Arcane)        |
-| Lenno/Mellymel     | Mage (Arcane)        |
 | Greg (Ucannotpass) | Mage (Arcane)        |
 | Jabbadhutt         | Warlock              |
 | Lynelen            | Shaman (Enhancement) |
@@ -120,6 +121,7 @@
 ## Notes
 
 - **New player:** Lenno/Mellymel — Arcane Mage, priority 2. Recorded in `rules/04-players.md`.
+- **New player:** Grundiger — Hunter DPS, priority 2. Recorded in `rules/04-players.md`. Signed up post-screenshot, replacing Mellymel after withdrawal (see Post-check changes).
 - **Mirohl left the guild 2026-04-24** — withdrawn from this raid's signups; first recalc on 2026-04-25.
 - **Tank composition:** Ostbirger is the only core tank present (Varthier absent) and is reserved as Magtheridon MT. CptKavior (Prot offspec) and Gigakox (Prot offspec, Tier-2 flex from Fury) fill the non-core tank slots per `rules/01-raid-compositions.md` → "Handling role surpluses".
 - **Dual-spec flexes:**
@@ -144,3 +146,6 @@
 **Previous verdicts:**
 - **Original build: YES** — all rules satisfied; superseded.
 - **Mirohl-recalc: GOOD ENOUGH** — composition under DPS target by 1 (24 vs 25; under-cap behavior); superseded by this finalization.
+
+**Post-check changes** (not re-verified by sub-agent):
+- **Post-build roster change.** Mellymel (Lenno/Mellymel) withdrew on raid night and was moved to Withdrawn signups. Grundiger — new guild member (Hunter DPS, priority 2) — signed up post-screenshot and took the vacated DPS slot. Composition unchanged: Mage DPS replaced 1-for-1 by Hunter DPS, total 3/6/16 = 25 holds. No encounter-assignment impact (Mellymel held no encounter role). Not re-sanity-checked (post-raid).

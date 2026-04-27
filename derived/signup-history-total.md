@@ -105,7 +105,7 @@ A player's sub-table here is determined solely by their top-level grouping in `r
 | 32 | Medianos            | 3       |
 | 33 | Drillbabe           | 2       |
 | 34 | Spot/Yorekbarn      | 2       |
-| 35 | Lenno/Mellymel      | 1       |
+| 35 | Grundiger           | 1       |
 
 ### Former members
 
